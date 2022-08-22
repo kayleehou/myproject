@@ -18,6 +18,9 @@ title: My First Markdown Post
 - Singing 
 - Playing Electric and Classical guitar 
 - Reading
+- I also enjoy playing chess occasionally!
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/71/ChessPawnSpecialMoves.gif)
 
 ---
 
