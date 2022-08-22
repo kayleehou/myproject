@@ -33,6 +33,28 @@
         
     
   
+    
+        ,"post3": {
+            "title": "My Jupyter Notebook",
+            "content": "My First Jupyter Notebook Using Python . print(&#39;hello world&#39;) . hello world .",
+            "url": "https://kayleehou.github.io/myproject/2020/02/20/test-copy.html",
+            "relUrl": "/2020/02/20/test-copy.html",
+            "date": " • Feb 20, 2020"
+        }
+        
+    
+  
+    
+        ,"post4": {
+            "title": "My Jupyter Notebook With Python",
+            "content": "print(&#39;hello world&#39;) . hello world .",
+            "url": "https://kayleehou.github.io/myproject/2020/02/20/test-copy-2.html",
+            "relUrl": "/2020/02/20/test-copy-2.html",
+            "date": " • Feb 20, 2020"
+        }
+        
+    
+  
 
   
   
