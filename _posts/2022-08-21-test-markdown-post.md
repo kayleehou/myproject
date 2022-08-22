@@ -5,7 +5,6 @@ description: here are some facts about me
 categories: [markdown]
 title: My First Markdown Post
 ---
-# My First Markdown Post
 
 ## Get to know me!
 - My favorite color: purple 
