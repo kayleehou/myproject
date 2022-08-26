@@ -1,24 +1,38 @@
 ---
 toc: true
 layout: post
-description: we have to take notes everyday, here are my econ notes so far!
+description: here's what I've read in my APLit class so far as well as what I'm currently reading:
 categories: [markdown]
-title: My Econ Daily Notes
+comments: true
+title: APLit Reading Log
 ---
 
-```diff
-@@ Here are my Econ Notes @@
-{google_docs}document_<iframe src="https://docs.google.com/document/d/e/2PACX-1vRFFnYX1hSHQrd05TZpk1N7HZcAyxSk_QviIYfxDpKDgocRTP49Vkewoh5hGGCL3Doo9Saw3IpjyTCN/pub?embedded=true"></iframe>|width:200|height:200|border:1|border_style:solid|border_color:#7732a8{/google_docs}
+## What I've Already Read: 
+### Short Stories
+- Volar by Cofer
+- Girl by Kincaid
+- The Tell-Tale Heart by Poe
+- Lusus Naturea by Atwood
+- Interpreter of Maladies by Lahiri
+---
 
+## What I'm Currently Reading:
+### Plays:
+- A Street Car Named Desire by Williams 
 
-
-
-![image](https://user-images.githubusercontent.com/90804195/186951914-30aa4fd6-ca34-4e09-8e40-7d0e9ffb4619.png)
-
+![image](https://images-na.ssl-images-amazon.com/images/I/611KgNG-SQL.jpg)
 
 ---
 
-> Know your financial limitations! 
+## To Be Read: 
+### Plays and Books:
+- Frankenstein by Shelley
+- The Importance of Being Earnest by Wilde
+
+![image](https://pictures.abebooks.com/isbn/9781926444314-us.jpg)
+![image](https://user-images.githubusercontent.com/90804195/186992146-077ba0af-b49d-4d7a-beae-9cd21cb951bb.png)
+
+> The more that you read, the more things you will know. The more that you learn, the more places you’ll go.
 
 
 
