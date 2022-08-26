@@ -20,7 +20,7 @@ title: APLit Reading Log
 ### Plays:
 - A Street Car Named Desire by Williams 
 
-![image](https://images-na.ssl-images-amazon.com/images/I/611KgNG-SQL.jpg)
+![image](https://d3525k1ryd2155.cloudfront.net/h/997/840/1321840997.0.m.jpg)
 
 ---
 
