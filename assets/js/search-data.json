@@ -2,21 +2,21 @@
   
     
         "post0": {
-            "title": "My First Markdown Post",
-            "content": "Get to know me! . My favorite color: purple | My favorite food: sushi | My favorite show: Schitts Creek | . . Hobbies: . Singing | Playing Electric and Classical guitar | Reading | I also enjoy playing chess occasionally! | . . . If you don’t see a ship, swim out to it! .",
-            "url": "https://kayleehou.github.io/myproject/markdown/2022/08/21/test-markdown-post.html",
-            "relUrl": "/markdown/2022/08/21/test-markdown-post.html",
-            "date": " • Aug 21, 2022"
+            "title": "My Econ Daily Notes",
+            "content": "diff @@ Here are my Econ Notes @@ {google_docs}document_&lt;iframe src=&quot;https://docs.google.com/document/d/e/2PACX-1vRFFnYX1hSHQrd05TZpk1N7HZcAyxSk_QviIYfxDpKDgocRTP49Vkewoh5hGGCL3Doo9Saw3IpjyTCN/pub?embedded=true&quot;&gt;&lt;/iframe&gt;|width:200|height:200|border:1|border_style:solid|border_color:#7732a8{/google_docs} . . . Know your financial limitations! .",
+            "url": "https://kayleehou.github.io/myproject/markdown/2022/08/26/test-markdown-post.html",
+            "relUrl": "/markdown/2022/08/26/test-markdown-post.html",
+            "date": " • Aug 26, 2022"
         }
         
     
   
     
         ,"post1": {
-            "title": "Title",
-            "content": "My First Jupyter Notebook Using Python . print(&#39;hello world&#39;) . hello world .",
-            "url": "https://kayleehou.github.io/myproject/2022/08/21/test-copy.html",
-            "relUrl": "/2022/08/21/test-copy.html",
+            "title": "My First Markdown Post",
+            "content": "Get to know me! . My favorite color: purple | My favorite food: sushi | My favorite show: Schitts Creek | . . Hobbies: . Singing | Playing Electric and Classical guitar | Reading | I also enjoy playing chess occasionally! | . . . If you don’t see a ship, swim out to it! .",
+            "url": "https://kayleehou.github.io/myproject/markdown/2022/08/21/test-markdown-post.html",
+            "relUrl": "/markdown/2022/08/21/test-markdown-post.html",
             "date": " • Aug 21, 2022"
         }
         
