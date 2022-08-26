@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: we have to take notes everyday, here are my econ notes so far!
 categories: [markdown]
-title: **My Econ Daily Notes**
+title: My Econ Daily Notes
 ---
 
 ```diff
