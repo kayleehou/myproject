@@ -9,7 +9,11 @@ title: My APLit Reading Log
 
 ## What I've Already Read: 
 ### Short Stories
+<<<<<<< HEAD
 - Volar by Cofe
+=======
+- Volar by Cofer
+>>>>>>> 323b250db3e0602c5f148fed66b5efd1ea3e25f3
 - Girl by Kincaid
 - The Tell-Tale Heart by Poe
 - Lusus Naturea by Atwood
@@ -25,7 +29,11 @@ title: My APLit Reading Log
 ---
 
 ## To Be Read: 
+<<<<<<< HEAD
 ### Plays and Books I would like to read:
+=======
+### Plays and Books:
+>>>>>>> 323b250db3e0602c5f148fed66b5efd1ea3e25f3
 - Frankenstein by Shelley
 - The Importance of Being Earnest by Wilde
 
