@@ -4,6 +4,7 @@ layout: post
 description: here are some facts about me
 categories: [markdown]
 title: My First Markdown Post
+comments: true
 ---
 
 ## Get to know me!
