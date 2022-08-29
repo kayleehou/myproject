@@ -4,7 +4,7 @@ layout: post
 description: here are some facts about me
 categories: [markdown]
 title: My First Markdown Post
-image: images/first.png
+image: images/first.jpg
 comments: true
 ---
 
