@@ -482,4 +482,40 @@ pre code { font-size: 15px !important; }
 
 p code { font-size: 19px; }
 
+html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #d299de !important; }
+
+a { color: #4bbaff !important; }
+
+a:hover { color: rgba(255, 255, 255, 0.87) !important; }
+
+.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.87) !important; }
+
+.site-nav { background-color: #d299de; border-color: #d8a7e3; }
+
+* { scrollbar-color: #d299de #d8a7e3; }
+
+pre, code { border-color: #d8a7e3; background-color: #d49ee0; }
+
+.page-description { color: rgba(255, 255, 255, 0.69); }
+
+.post-meta { color: rgba(255, 255, 255, 0.38); }
+
+.post-content p, .post-content li { color: rgba(255, 255, 255, 0.69); }
+
+.btn { background-color: #d49ee0 !important; color: rgba(255, 255, 255, 0.87) !important; border-color: #d8a7e3 !important; }
+
+.btn:hover { background-color: #d299de !important; }
+
+table th { background-color: #d49ee0; border-color: #d8a7e3; color: rgba(255, 255, 255, 0.87); }
+
+table td { background-color: #d299de; border-color: #d8a7e3; color: rgba(255, 255, 255, 0.69); }
+
+.flash { color: #d299de !important; filter: brightness(80%); }
+
+canvas { filter: invert(100%); }
+
+.post-list > li > div { box-shadow: none !important; background-color: #d49ee0; border: none !important; }
+
+li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
+
 /*# sourceMappingURL=style.css.map */
