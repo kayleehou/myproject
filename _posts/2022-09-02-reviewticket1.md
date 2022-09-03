@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 layout: post
 description: here is a list of everything I did in week 1
 categories: [markdown]
@@ -8,6 +8,8 @@ image: images/week1.png
 comments: true
 
 ---
+Click on the titles to access!
+
 <a href="https://kayleehou.github.io/myproject/2022/08/26/quiz.html" rel="nofollow">python quiz with percentages</a>
 
 - I added the questions Mr. Mortensen and added one of my own. I incorporated strings, if else statements, and inputs. I also used the python string method lower() so that it didn't matter whether or not the input had capitalized or lowercase letters. 
