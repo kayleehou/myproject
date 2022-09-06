@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://kayleehou.github.io/myproject/jupyter/2020/02/20/test.html</loc>
+<loc>https://kayleehou.github.io/myproject/tutorial/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://kayleehou.github.io/myproject/2022/08/21/test-copy-2.html</loc>
+<loc>https://kayleehou.github.io/myproject/python/2022/08/21/test-copy-2.html</loc>
 <lastmod>2022-08-21T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -21,7 +21,7 @@
 <lastmod>2022-08-26T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://kayleehou.github.io/myproject/2022/08/28/bashcheck.html</loc>
+<loc>https://kayleehou.github.io/myproject/bash/2022/08/28/bashcheck.html</loc>
 <lastmod>2022-08-28T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -29,7 +29,7 @@
 <lastmod>2022-08-28T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://kayleehou.github.io/myproject/markdown/2022/09/02/reviewticket1.html</loc>
+<loc>https://kayleehou.github.io/myproject/review%20tickets/2022/09/02/reviewticket1.html</loc>
 <lastmod>2022-09-02T00:00:00-05:00</lastmod>
 </url>
 <url>
