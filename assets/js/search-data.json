@@ -92,8 +92,8 @@
         ,"post8": {
             "title": "Week 1 CS Terms",
             "content": "push/pull: to send/receive code to and from GitHub . | def: define a function or method . | print: input that prints a specific method on the screen . | key/value: key is left in blue, value is right in orange–&gt; for example: key is toc, value is true . | front matter: top of the code with key-values . | variable: word that holds information . | string: series of characters . | if/else: executes a block of code if a specified condition is true, if the condition is false, another block of code (else) can be executed. . | boolean: value that is either true or false . | .",
-            "url": "https://kayleehou.github.io/myproject/markdown/2022/08/28/csterms.html",
-            "relUrl": "/markdown/2022/08/28/csterms.html",
+            "url": "https://kayleehou.github.io/myproject/cs%20terms/2022/08/28/csterms.html",
+            "relUrl": "/cs%20terms/2022/08/28/csterms.html",
             "date": " • Aug 28, 2022"
         }
         
@@ -195,7 +195,7 @@
   
       ,"page7": {
           "title": "Trimester 1",
-          "content": "Week Review Ticket Important Terms Fun GIF of the Week . 0 | Week 0 Hacks | N/A | | . 1 | Review Ticket 1 | CS Terms 1 |   | . 2 | Review Ticket 2 | CS Terms 2 |   | . 3 | Review Ticket 3 | CS Terms Week 3 |   | .",
+          "content": "Week Review Ticket Important Terms Fun GIF of the Week . 0 | Week 0 Hacks | N/A | | . 1 | Review Ticket 1 | CS Terms 1 | | . 2 | ReviewTicket2 | CS Terms 2 | | . 3 | Review Ticket 3 | CS Terms Week 3 |   | .",
           "url": "https://kayleehou.github.io/myproject/_pages/tri1table.html",
           "relUrl": "/_pages/tri1table.html",
           "date": ""
