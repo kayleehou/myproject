@@ -10,11 +10,15 @@ comments: true
 ---
 Click on the titles to access!
 
+## Python
+
 <a href="https://kayleehou.github.io/myproject/python/2022/09/04/listsdictionaries.html" rel="nofollow">python tech talk</a>
 
 - Python List Dictionaries Iteration Tech Talk: includes lists, dictionaries, for loop with break, for loop with index, for loop inside for loop, range function, while loop, recursion, and two ways to reverse a list 
 - each cell block has comments, and a markdown that explains the purpose and objective of the function 
 - I included pair programming by creating a dictionary and list with his and my information
+
+## HTML Fragments
 
 <a href="https://kayleehou.github.io/myproject/markdown/2022/09/05/themes.html" rel="nofollow">changing themes</a>
 
@@ -28,8 +32,12 @@ Click on the titles to access!
 <a href="https://kayleehou.github.io/myproject/_pages/tri1table.html" rel="nofollow">Tri 1 Table</a>
 
 - I created a table that documents what I do each week in CS, which helps me keep organized, it helps me keep track of my review tickets, important CS terms, and what I did each week. 
+- Table also includes liquid syntax ↓ 
+![](https://github.com/kayleehou/myproject/blob/master/images/liquidsyntax.PNG?raw=true)
 
 <a href="https://kayleehou.github.io/myproject/cs%20terms/2022/09/05/csterms2.html" rel="nofollow">week 2 cs terms</a>
+
+## ETC
 
 - important cs terms from week 2
 
