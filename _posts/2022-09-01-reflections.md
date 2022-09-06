@@ -14,6 +14,9 @@ I joined Girls in CS my freshmen year, but I quit after the first day because I 
 <img src="https://github.com/kayleehou/myproject/blob/master/images/policecar.jpg?raw=true"
      width="200" 
      height="300" />
+<img src="https://github.com/kayleehou/myproject/blob/master/images/redpanda.JPG?raw=true"
+     width="200" 
+     height="300" />
 
 I coded on Repl.it using Python, and volunteered at hackathons over the years, even helping make content. But this content was for mainly elementary school kids, and I wasn't satisfied with my coding skills. No matter how many times I tried, I just couldn't understand coding at all. 
 
