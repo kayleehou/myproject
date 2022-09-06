@@ -9,8 +9,11 @@ comments: true
 ---
 
 ## Before this Class 
-I joined Girls in CS my freshmen year, but I quit after the first day because I thought it was too hard, and I didn't know anyone in the club. However, I decided I wanted to rejoin my Sophomore year because I was really interested in CS and over the summer I had started learning basic scratch and learned Sony's Robot Programming KOOV kit. 
+I joined Girls in CS my freshmen year, but I quit after the first day because I thought it was too hard, and I didn't know anyone in the club. However, I decided I wanted to rejoin my Sophomore year because I was really interested in CS and over the summer I had started learning basic scratch and learned from Sony's Robot Programming KOOV kit  ↓ 
 
+<img src="https://github.com/kayleehou/myproject/blob/master/images/policecar.jpg?raw=true"
+     width="200" 
+     height="300" />
 
 I coded on Repl.it using Python, and volunteered at hackathons over the years, even helping make content. But this content was for mainly elementary school kids, and I wasn't satisfied with my coding skills. No matter how many times I tried, I just couldn't understand coding at all. 
 
