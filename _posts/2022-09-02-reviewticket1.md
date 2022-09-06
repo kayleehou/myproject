@@ -2,7 +2,7 @@
 toc: false
 layout: post
 description: here is a list of everything I did in week 1
-categories: [markdown]
+categories: [review tickets]
 title: Week 1 Review Ticket
 image: images/week1.png
 comments: true
