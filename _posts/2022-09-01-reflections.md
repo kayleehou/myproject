@@ -11,9 +11,10 @@ comments: true
 ## Before this Class 
 I joined Girls in CS my freshmen year, but I quit after the first day because I thought it was too hard, and I didn't know anyone in the club. However, I decided I wanted to rejoin my Sophomore year because I was really interested in CS and over the summer I had started learning basic scratch and learned from Sony's Robot Programming KOOV kit  ↓ 
 
-<img src="https://github.com/kayleehou/myproject/blob/master/images/policecar.jpg?raw=true"
+<img src="https://github.com/kayleehou/myproject/blob/master/images/policecar.jpg?raw=true" 
      width="200" 
      height="300" />
+
 <img src="https://github.com/kayleehou/myproject/blob/master/images/redpanda.JPG?raw=true"
      width="200" 
      height="300" />
@@ -27,6 +28,6 @@ Even just taking this class for three weeks, I have already noticed that I am mu
 
 ---
 ## Right Now 
-This summer I started working as a Research Assistant at UCSD's Comparative Cognition Lab and from talking to the professionals there as well as the panel from last week, I have more clarity on what I want to major in the future. I would like to major in cognitive science with a specialization in machine learning! This is really exciting and I am very excited to learn important tools for this class that can help me!
+This summer I started working as a Research Assistant at UCSD's Comparative Cognition Lab and from talking to the professionals there as well as the panel from last week, I have more clarity on what I want to major in the future. I would like to major in cognitive science with a specialization in machine learning! This is really exciting and I am very excited to learn important tools from this class that can help me!
 
 
