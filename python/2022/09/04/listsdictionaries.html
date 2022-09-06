@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Python Tech Talk" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="welcome to my blog :)" />
-<meta property="og:description" content="welcome to my blog :)" />
+<meta name="description" content="lists, dictionaries, for loop, for loop with index, while loop, recursion, reversed list" />
+<meta property="og:description" content="lists, dictionaries, for loop, for loop with index, while loop, recursion, reversed list" />
 <link rel="canonical" href="https://kayleehou.github.io/myproject/python/2022/09/04/listsdictionaries.html" />
 <meta property="og:url" content="https://kayleehou.github.io/myproject/python/2022/09/04/listsdictionaries.html" />
 <meta property="og:site_name" content="Kaylee’s Blog" />
@@ -20,7 +20,7 @@
 <meta property="twitter:image" content="https://kayleehou.github.io/myproject/images/forloop_whileloop.jpeg" />
 <meta property="twitter:title" content="Python Tech Talk" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T00:00:00-05:00","datePublished":"2022-09-04T00:00:00-05:00","description":"welcome to my blog :)","headline":"Python Tech Talk","image":"https://kayleehou.github.io/myproject/images/forloop_whileloop.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://kayleehou.github.io/myproject/python/2022/09/04/listsdictionaries.html"},"url":"https://kayleehou.github.io/myproject/python/2022/09/04/listsdictionaries.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-04T00:00:00-05:00","datePublished":"2022-09-04T00:00:00-05:00","description":"lists, dictionaries, for loop, for loop with index, while loop, recursion, reversed list","headline":"Python Tech Talk","image":"https://kayleehou.github.io/myproject/images/forloop_whileloop.jpeg","mainEntityOfPage":{"@type":"WebPage","@id":"https://kayleehou.github.io/myproject/python/2022/09/04/listsdictionaries.html"},"url":"https://kayleehou.github.io/myproject/python/2022/09/04/listsdictionaries.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/myproject/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kayleehou.github.io/myproject/feed.xml" title="Kaylee's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/myproject/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -75,13 +75,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Python Tech Talk</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-04T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Python Tech Talk</h1><p class="page-description">lists, dictionaries, for loop, for loop with index, while loop, recursion, reversed list</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-04T00:00:00-05:00" itemprop="datePublished">
         Sep 4, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      1200 min read
+      1202 min read
     
 </span></p>
 
@@ -126,6 +126,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Lists-and-Dictionaries">Lists and Dictionaries </a></li>
 <li class="toc-entry toc-h2"><a href="#My-InfoDb-(List)-with-Data-Abstraction-and-Data-Definition">My InfoDb (List) with Data Abstraction and Data Definition </a></li>
 <li class="toc-entry toc-h1"><a href="#For-Loop-with-Break-Statement">For Loop with Break Statement </a>
 <ul>
@@ -144,6 +145,109 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lists-and-Dictionaries">
+<a class="anchor" href="#Lists-and-Dictionaries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lists and Dictionaries<a class="anchor-link" href="#Lists-and-Dictionaries"> </a>
+</h2>
+<ul>
+<li>ordered sequence of elements </li>
+<li>lists can be modified unlike tuples which cannot be changed 
+Purpose/Objective: can store multiple items in a single variable </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">"Kaylee Hou"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"name"</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+
+<span class="c1"># variable of type integer</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"age"</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># variable of type float</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mf">8.16</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"score"</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">score</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># variable of type list (many values in one variable)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection?"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is different about the list output?"</span><span class="p">)</span>
+<span class="n">langs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Python"</span><span class="p">,</span> <span class="s2">"JavaScript"</span><span class="p">,</span> <span class="s2">"Java"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"R"</span><span class="p">,</span> <span class="s2">"Bash"</span><span class="p">,</span> <span class="s2">"C++"</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"langs"</span><span class="p">,</span> <span class="n">langs</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">),</span> <span class="s2">"length"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">langs</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"- langs[0]"</span><span class="p">,</span> <span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">langs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># variable of type dictionary (a group of keys and values)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is the variable name/key?"</span><span class="p">,</span> <span class="s2">"value?"</span><span class="p">,</span> <span class="s2">"type?"</span><span class="p">,</span> <span class="s2">"primitive or collection, why?"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"What is different about the dictionary output?"</span><span class="p">)</span>
+<span class="n">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+    <span class="s2">"age"</span><span class="p">:</span> <span class="n">age</span><span class="p">,</span>
+    <span class="s2">"score"</span><span class="p">:</span> <span class="n">score</span><span class="p">,</span>
+    <span class="s2">"langs"</span><span class="p">:</span> <span class="n">langs</span>
+<span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"person"</span><span class="p">,</span> <span class="n">person</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">),</span> <span class="s2">"length"</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">person</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'- person["name"]'</span><span class="p">,</span> <span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">],</span> <span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>What is the variable name/key? value? type? primitive or collection, why?
+name Kaylee Hou &lt;class 'str'&gt;
+
+What is the variable name/key? value? type? primitive or collection, why?
+age 16 &lt;class 'int'&gt;
+
+What is the variable name/key? value? type? primitive or collection, why?
+score 8.16 &lt;class 'float'&gt;
+
+What is variable name/key? value? type? primitive or collection?
+What is different about the list output?
+langs ['Python', 'JavaScript', 'Java', 'C', 'R', 'Bash', 'C++'] &lt;class 'list'&gt; length 7
+- langs[0] Python &lt;class 'str'&gt;
+
+What is the variable name/key? value? type? primitive or collection, why?
+What is different about the dictionary output?
+person {'name': 'Kaylee Hou', 'age': 16, 'score': 8.16, 'langs': ['Python', 'JavaScript', 'Java', 'C', 'R', 'Bash', 'C++']} &lt;class 'dict'&gt; length 4
+- person["name"] Kaylee Hou &lt;class 'str'&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
