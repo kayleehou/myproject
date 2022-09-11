@@ -2,6 +2,28 @@
   
     
         "post0": {
+            "title": "Tri 1 Schedule",
+            "content": "My School Schedule for Trimester 1: . Period 1: Econ with Mr. Curry . | Period 2: APLit with Dr. Hall . | Period 3: HBS with Ms. Barnett . | Period 4: APCSP with Mr. Mortensen . | Period 5: Stats with Mrs. Derksen . | .",
+            "url": "https://kayleehou.github.io/myproject/2022/09/10/tri-1-schedule.html",
+            "relUrl": "/2022/09/10/tri-1-schedule.html",
+            "date": " • Sep 10, 2022"
+        }
+        
+    
+  
+    
+        ,"post1": {
+            "title": "_29 Cs Panel",
+            "content": "8/29 CS Panel Notes + Key Takeaways . 1. How did you pick your major and how did csa or csp help? . I’ve always liked problem solving, figuring things out . | I took time to reflect on what I wanted to do . | I didn’t really like cs, but I knew it was important to learn, and the logical thinking background you get from programming is always helpful with many majors, not just CS.i . | I was always interested in computer science, but in middle and high school is when I took it more seriously . | . 2. Biggest CS challenge: . Starting is difficult and keeping motivation. Understand there is a solution on the internet, google your errors . | Clashing egos is a big challenge, focus on your own path, don’t worry about what other people are doing, work on your own stuff. . | You are not expected to know everything . | Fight temptation to not try on assignments, make sure you don’t cut corners, don’t check boxes for points, going above and beyond solves more problems than just cookie cutting . | CS is interconnected, you have to put pieces together, don’t get bogged down on plan, remember why you started coding. . | . 3. Are there PBL scenarios in computer science colleges in college? . When problem solving on a project that I’m building, we use scrum methodology and talk to people, so project based learning classes won’t go away in college. . | PBL is largely embedded with science at UCs. . | Teacher doesn’t have time to answer all questions, so you have to study and work with groups especially in big classes to understand better. . | . 4. Have you applied CS in a major not CS? . Coding will serve you well . | Different applications for CS, optimizing things, making it faster so you don’t have to do things manually, problem solving logic, CS doesn’t apply only to coding . | With high level math classes, CS can definitely help . | What I’m learning now is applicable to anything, take it seriously . | . 5. For existing college students, have you had a job/internship with your school or professor? . Apply for jobs, talk to teachers, push yourself to be above and beyond, stand out to teachers. There are 200 other students in the lecture hall, what makes you different? Show up to office hours, ask a bunch of questions on the form. This way, when you go to your professor, you can reference how you have stood out. . | Interact with TAs at school . | Northrop grumman highschool program . | . Q &amp;A Session: . People managing and organization skills from clubs at school is important to learn . | Know when to apply for internships, a lot of companies will hire in september or november the year before, have a resume done by early september or mid november for larger companies → qualcomm, google, northrop grumman . | Have proof of work I’ve done . | Engineering is the same at every school, personal projects and clubs are important because that’s what differentiates you from other students, so many people in stem, ask local companies, smaller companies take high school interns, and find things you’re interested in . | Make a LinkedIn . | . My Question: Why did you transition to Machine learning? . Wanted to stay in stem major, UCSD is hard to get into CS major if you want to transfer in, it’s a lottery system. . | I enjoyed cogsci classes, you can pick 6 technical electives instead of a strict schedule . | Robotics team does a lot of machine learning, a lot of art ai that is popping up interested me . | . Key Takeaways- What I need to do: . I should always do the extra credit or go above and beyond for the weekly assignments because that is how I will get the most out of this class. . | I should focus on my goals and not get distracted by what everyone else is doing, I need to remember why I wanted to take the class. . | This classes is mainly focused on learning how to problem solve. . | It is important to collaborate with my group members because I will learn more that way. . | .",
+            "url": "https://kayleehou.github.io/myproject/2022/09/10/_29-CS-Panel.html",
+            "relUrl": "/2022/09/10/_29-CS-Panel.html",
+            "date": " • Sep 10, 2022"
+        }
+        
+    
+  
+    
+        ,"post2": {
             "title": "Week 2 Review Ticket",
             "content": "Click on the titles to access! . Python . python tech talk . Python List Dictionaries Iteration Tech Talk: includes lists, dictionaries, for loop with break, for loop with index, for loop inside for loop, range function, while loop, recursion, and two ways to reverse a list | each cell block has comments, and a markdown that explains the purpose and objective of the function | I included pair programming by creating a dictionary and list with his and my information | . HTML Fragments . changing themes . I changed the remote theme of my fastpages and took screenshots and explained the steps to change the theme. At the end, I also and listed the problems that occurred after. | I also changed the color of my blog from white to dark purple, which I did through the sass folder! | . tags . I reorganized my tags page so that I could find my posts easier! I added new tags by changing the front matter of my posts. | . Tri 1 Table . I created a table that documents what I do each week in CS, which helps me keep organized, it helps me keep track of my review tickets, important CS terms, and what I did each week. | Table also includes liquid syntax ↓ | . week 2 cs terms . ETC . important cs terms from week 2 | . review ticket from week 1 . comment from pair is below | . reflections on cs . I was inspired by human prep and wanted to start my own post documenting my cs journey, I haven’t finished yet, I still need to add some personal pictures, but I will keep adding more material throughout the year! | . Return to home: . my fastpages .",
             "url": "https://kayleehou.github.io/myproject/review%20tickets/2022/09/06/reviewticket2.html",
@@ -12,18 +34,7 @@
     
   
     
-        ,"post1": {
-            "title": "Tri 1 Schedule",
-            "content": "My School Schedule for Trimester 1: . Period 1: Econ with Mr. Curry . | Period 2: APLit with Dr. Hall . | Period 3: HBS with Ms. Barnett . | Period 4: APCSP with Mr. Mortensen . | Period 5: Stats with Mrs. Derksen . | .",
-            "url": "https://kayleehou.github.io/myproject/2022/09/05/tri-1-schedule.html",
-            "relUrl": "/2022/09/05/tri-1-schedule.html",
-            "date": " • Sep 5, 2022"
-        }
-        
-    
-  
-    
-        ,"post2": {
+        ,"post3": {
             "title": "Changing Themes",
             "content": "Changing Theme Code . I went into GitHub’s supported themes, and selected the tactile theme, then I copied: remote_theme: pages-themes/tactile@v0.2.0 and placed it into my _config.yml directory as shown below ↓ | . . . What my Fastpages Looked Like After Committing ↓ . . . Problems: . text and background color changed | text size and font changed | images were enlarged and showed up below rather than to the side of the post | the pages that show up on the top like tags and search aren’t on the blog anymore | format also changed, more space on left and right | .",
             "url": "https://kayleehou.github.io/myproject/markdown/2022/09/05/themes.html",
@@ -34,22 +45,11 @@
     
   
     
-        ,"post3": {
+        ,"post4": {
             "title": "Week 2 CS Terms",
             "content": "list- store multiple items in a single variable, ordered sequence of elements, can be changed, lists use square brackets [] . | dictionary- store date values in key-value pairs, dictionaries make your code more readable, dictionaries use curly braces {} . | float- this function converts specified values into a number with decimals. . | for loop- used for iterating over a sequence (list, dictionary, string) . | index()- built in function which searches for a given element from the start of the list and returns the position of the element . | while loop- to run code a certain amount of times until the condition is met . | recursion- means a defined function can call on itself . | data abstraction/procedural abstraction- taking code and putting it in a place so something bigger can consume them, extract shared features to generalize functionality instead of duplicating code. Reduction of a particular body of data to a simplified representation of the whole. . | sequence- ordered collection of items . | selection- allows program to test several conditions and execute instructions based on what is true, selection statements can also be called conditional statements. . | iteration- repetition of process to generate sequence of outcomes . | range()- function that returns a sequence of numbers starting from 0 and stops at a specified number. It increments by 1. . | HTML fragments- examples include: images, tables, links that use HTML . | .",
             "url": "https://kayleehou.github.io/myproject/cs%20terms/2022/09/05/csterms2.html",
             "relUrl": "/cs%20terms/2022/09/05/csterms2.html",
-            "date": " • Sep 5, 2022"
-        }
-        
-    
-  
-    
-        ,"post4": {
-            "title": "_29 Cs Panel",
-            "content": "8/29 CS Panel Notes + Key Takeaways . 1. How did you pick your major and how did csa or csp help? . I’ve always liked problem solving, figuring things out . | I took time to reflect on what I wanted to do . | I didn’t really like cs, but I knew it was important to learn, and the logical thinking background you get from programming is always helpful with many majors, not just CS.i . | I was always interested in computer science, but in middle and high school is when I took it more seriously . | . 2. Biggest CS challenge: . Starting is difficult and keeping motivation. Understand there is a solution on the internet, google your errors . | Clashing egos is a big challenge, focus on your own path, don’t worry about what other people are doing, work on your own stuff. . | You are not expected to know everything . | Fight temptation to not try on assignments, make sure you don’t cut corners, don’t check boxes for points, going above and beyond solves more problems than just cookie cutting . | CS is interconnected, you have to put pieces together, don’t get bogged down on plan, remember why you started coding. . | . 3. Are there PBL scenarios in computer science colleges in college? . When problem solving on a project that I’m building, we use scrum methodology and talk to people, so project based learning classes won’t go away in college. . | PBL is largely embedded with science at UCs. . | Teacher doesn’t have time to answer all questions, so you have to study and work with groups especially in big classes to understand better. . | . 4. Have you applied CS in a major not CS? . Coding will serve you well . | Different applications for CS, optimizing things, making it faster so you don’t have to do things manually, problem solving logic, CS doesn’t apply only to coding . | With high level math classes, CS can definitely help . | What I’m learning now is applicable to anything, take it seriously . | . 5. For existing college students, have you had a job/internship with your school or professor? . Apply for jobs, talk to teachers, push yourself to be above and beyond, stand out to teachers. There are 200 other students in the lecture hall, what makes you different? Show up to office hours, ask a bunch of questions on the form. This way, when you go to your professor, you can reference how you have stood out. . | Interact with TAs at school . | Northrop grumman highschool program . | . Q &amp;A Session: . People managing and organization skills from clubs at school is important to learn . | Know when to apply for internships, a lot of companies will hire in september or november the year before, have a resume done by early september or mid november for larger companies → qualcomm, google, northrop grumman . | Have proof of work I’ve done . | Engineering is the same at every school, personal projects and clubs are important because that’s what differentiates you from other students, so many people in stem, ask local companies, smaller companies take high school interns, and find things you’re interested in . | Make a LinkedIn . | . My Question: Why did you transition to Machine learning? . Wanted to stay in stem major, UCSD is hard to get into CS major if you want to transfer in, it’s a lottery system. . | I enjoyed cogsci classes, you can pick 6 technical electives instead of a strict schedule . | Robotics team does a lot of machine learning, a lot of art ai that is popping up interested me . | . Key Takeaways- What I need to do: . I should always do the extra credit or go above and beyond for the weekly assignments because that is how I will get the most out of this class. . | I should focus on my goals and not get distracted by what everyone else is doing, I need to remember why I wanted to take the class. . | This classes is mainly focused on learning how to problem solve. . | It is important to collaborate with my group members because I will learn more that way. . | .",
-            "url": "https://kayleehou.github.io/myproject/2022/09/05/_29-CS-Panel.html",
-            "relUrl": "/2022/09/05/_29-CS-Panel.html",
             "date": " • Sep 5, 2022"
         }
         
