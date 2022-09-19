@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Me
+title: billy bob joe
 permalink: /about/
 ---
 
