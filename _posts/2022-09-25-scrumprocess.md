@@ -42,3 +42,11 @@ Our group decided we wanted to follow this outline before our sprint, we split u
 10. Simplicity–the art of maximizing the amount of work not done–is essential.
 11. The best architectures, requirements, and designs emerge from self-organizing teams.
 12. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
+
+## TEAM PROJECT 
+project on flask: 
+![image](https://github.com/kayleehou/myproject/blob/master/images/Screen%20Shot%202022-09-26%20at%2012.32.08%20AM.png?raw=true)
+
+<a href="https://t-dev-ccm.github.io/Fastpage-setup/2022/09/23/Adventure-Game.html" rel="nofollow">draft of code</a>
+
+<a href="https://nicolasmosqueda.github.io/APCSP/week%205/2022/09/25/Program-Purpose.html" rel="nofollow">program purpose</a>
