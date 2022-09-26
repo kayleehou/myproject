@@ -260,6 +260,17 @@
   
 
   
+      ,"page3": {
+          "title": "Frontend",
+          "content": "Javascript Design Elements . | Javascript Tutorial | Team Project Plan/a&gt;&lt;/td&gt; CS Terms | &lt;/tr&gt; &lt;/table&gt; | .",
+          "url": "https://kayleehou.github.io/myproject/_pages/javascript.html",
+          "relUrl": "/_pages/javascript.html",
+          "date": ""
+      }
+      
+  
+
+  
   
 
   
@@ -270,7 +281,7 @@
   
 
   
-      ,"page7": {
+      ,"page8": {
           "title": "Trimester 1 Calendar",
           "content": "Week Review Ticket Important Terms Fun GIF/Pic of the Week . 0 | Week 0 Hacks | N/A | | . 1 | Review Ticket 1 | CS Terms 1 | | . 2 | Review Ticket 2 | CS Terms 2 | | . 3 | Review Ticket 3 | CS Terms 3 | | . 4 | Review Ticket 4 | N/A | | .",
           "url": "https://kayleehou.github.io/myproject/_pages/tri1table.html",
@@ -292,7 +303,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://kayleehou.github.io/myproject/robots.txt",
