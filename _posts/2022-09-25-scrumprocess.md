@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: here's our group's scrum process outline as well as how we plan to implement agile methodology
+description: here's our group's scrum process outline as well as how we plan to implement agile methodology. we also included our team project code draft and program purpose/function
 categories: [scrum]
-title: Scrum Process Outline
+title: Scrum Process Outline and Team Project 
 image: images/Pink Modern Abstract Business Flowchart Graph .png
 
 comments: true
