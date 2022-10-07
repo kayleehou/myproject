@@ -4,10 +4,12 @@ layout: post
 description: here's our group's scrum process outline as well as how we plan to implement agile methodology. we also included our team project code draft and program purpose/function
 categories: [scrum]
 title: Scrum Process Outline and Team Project 
+permalink: /frontend/scrum
 image: images/Pink Modern Abstract Business Flowchart Graph .png
-
 comments: true
 ---
+
+{% include nav_frontend.html %}
 ## Scrum Process
 
 ![image](https://github.com/kayleehou/myproject/blob/master/images/Pink%20Modern%20Abstract%20Business%20Flowchart%20Graph%20.png?raw=true)
