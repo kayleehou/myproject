@@ -20,6 +20,8 @@ Since we are doing a mcu themed escape room, I made a collage of pictures that i
 ## Brain Write and Program Purpose 
 <a href="https://benjaminlee24.github.io/gang-ds-blog/week%207/2022/10/07/Program-Design.html" rel="nofollow">Brain Write and Purpose</a>
 
+## What we are going to and not going to do:
+<a href="https://t-dev-ccm.github.io/Fastpage-setup/markdown/2022/10/07/Project-Program-Design.html" rel="nofollow">Overview, what we will and won't do</a>
 
 
 
