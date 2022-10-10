@@ -8,6 +8,7 @@ permalink: /frontend/scrum
 image: images/Pink Modern Abstract Business Flowchart Graph .png
 comments: true
 ---
+{% include nav_frontend.html %}
 ## Scrum Process
 
 ![image](https://github.com/kayleehou/myproject/blob/master/images/Pink%20Modern%20Abstract%20Business%20Flowchart%20Graph%20.png?raw=true)
