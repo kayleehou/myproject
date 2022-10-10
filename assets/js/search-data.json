@@ -213,8 +213,8 @@
         ,"post19": {
             "title": "Week 2 CS Terms",
             "content": "| Scrum Process and Team Outline | Week 2 CS Terms | API Example | . list- store multiple items in a single variable, ordered sequence of elements, can be changed, lists use square brackets [] . | dictionary- store date values in key-value pairs, dictionaries make your code more readable, dictionaries use curly braces {} . | float- this function converts specified values into a number with decimals. . | for loop- used for iterating over a sequence (list, dictionary, string) . | index()- built in function which searches for a given element from the start of the list and returns the position of the element . | while loop- to run code a certain amount of times until the condition is met . | recursion- means a defined function can call on itself . | data abstraction/procedural abstraction- taking code and putting it in a place so something bigger can consume them, extract shared features to generalize functionality instead of duplicating code. Reduction of a particular body of data to a simplified representation of the whole. . | sequence- ordered collection of items . | selection- allows program to test several conditions and execute instructions based on what is true, selection statements can also be called conditional statements. . | iteration- repetition of process to generate sequence of outcomes . | range()- function that returns a sequence of numbers starting from 0 and stops at a specified number. It increments by 1. . | HTML fragments- examples include: images, tables, links that use HTML . | .",
-            "url": "https://kayleehou.github.io/myproject/cs%20terms/2022/09/05/csterms2.html",
-            "relUrl": "/cs%20terms/2022/09/05/csterms2.html",
+            "url": "https://kayleehou.github.io/myproject/frontend/csterms",
+            "relUrl": "/frontend/csterms",
             "date": " • Sep 5, 2022"
         }
         
