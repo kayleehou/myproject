@@ -1,5 +1,5 @@
 ---
-toc: true
+toc: false
 layout: post
 description: here's our group's scrum process outline as well as how we plan to implement agile methodology. we also included our team project code draft and program purpose/function
 categories: [scrum]
