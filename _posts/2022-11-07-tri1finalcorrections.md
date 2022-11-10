@@ -46,7 +46,7 @@ Question: A video game character can face toward one of four directions: north, 
 ## 28
 Skill 2.B
 Question: The cost of a customer’s electricity bill is based on the number of units of electricity the customer uses. For the first 25 units of electricity, the cost is $5 per unit. For units of electricity after the first 25, the cost is $7 per unit. Which of the following code segments correctly sets the value of the variable cost to the cost, in dollars, of using numUnits units of electricity?
-my answer and correct answer: 
+- my answer and correct answer: 
 ![](https://media.discordapp.net/attachments/734598463324684389/1039302947818967072/image.png)
 - corrections: This code incorrectly charges customers who use more than 25 units of electricity. These customers are charged only for the number of units above 25. For examples, if a customer used 32 units of electricity, they should be charged $5 for the first 25 and $7 for the additional 7 units (32 – 25 = 7 units), for a total charge of $174. This code segment would incorrectly charge the customer $49 for the 32 units. Plugging in numbers would be helpful 
 
@@ -98,7 +98,5 @@ Question:
 for example: 
 a ← expression
 Evaluates expression and assigns the result to the variable a.
-
-- 
 
 
