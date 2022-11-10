@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -111,6 +111,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#50">50</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#overall">Overall</a></li>
 </ul><h1 id="corrections">
 <a class="anchor" href="#corrections" aria-hidden="true"><span class="octicon octicon-link"></span></a>Corrections</h1>
 <h2 id="1">
@@ -119,8 +120,8 @@ window.onload = wrap_img;
 <img src="https://media.discordapp.net/attachments/734598463324684389/1039294236572524674/image.png" alt=""></p>
 <ul>
   <li>my answer: The code segment displays the value of  2(5×3)  by initializing result to 2 and then multiplying result by 5 a total of three times.</li>
-  <li>correct answer: The code segment displays the value of  2(53)  by initializing result to 2 and then multiplying result by 5 a total of three times.
-Corrections: Initializing result to 2 and multiplying it by 5 a total of three times is 2(5^3). Multiplying five by five three times, not fives times three.</li>
+  <li>correct answer: The code segment displays the value of  2(53)  by initializing result to 2 and then multiplying result by 5 a total of three times.</li>
+  <li>Corrections: Initializing result to 2 and multiplying it by 5 a total of three times is 2(5^3). Multiplying five by five three times, not fives times three.</li>
 </ul>
 
 <h2 id="6">
@@ -129,8 +130,8 @@ Corrections: Initializing result to 2 and multiplying it by 5 a total of three t
 <img src="https://media.discordapp.net/attachments/734598463324684389/1039294101859860491/image.png" alt=""></p>
 <ul>
   <li>my answer: prints all positive odd integers that are greater than max.</li>
-  <li>correct answer: prints all positive odd integers that are less than or equal to max.
-corrections: plug in numbers to help make the pseudo code easier to understand. In this instance, the loop terminates when count exceeds max, so only values less than or equal to max are printed so b is the correct answer.</li>
+  <li>correct answer: prints all positive odd integers that are less than or equal to max.</li>
+  <li>corrections: plug in numbers to help make the pseudo code easier to understand. In this instance, the loop terminates when count exceeds max, so only values less than or equal to max are printed so b is the correct answer.</li>
 </ul>
 
 <h2 id="15">
@@ -139,8 +140,8 @@ corrections: plug in numbers to help make the pseudo code easier to understand. 
 Question: A company that develops mobile applications wants to involve users in the software development process. Which of the following best explains the benefit in having users participate?</p>
 <ul>
   <li>my answer: Users can identify and correct errors they encounter when using released versions of the software.</li>
-  <li>correct answer: Users can provide feedback that can be used to incorporate a variety of perspectives into the software.
-corrections: My answer was a half-right, while users may be able to identify any bugs, they likely don’t have the experience or skills to correct the bugs.</li>
+  <li>correct answer: Users can provide feedback that can be used to incorporate a variety of perspectives into the software.</li>
+  <li>corrections: My answer was a half-right, while users may be able to identify any bugs, they likely don’t have the experience or skills to correct the bugs.</li>
 </ul>
 
 <h2 id="19">
@@ -149,8 +150,8 @@ corrections: My answer was a half-right, while users may be able to identify any
 Question: A certain programming language uses 4-bit binary sequences to represent nonnegative integers. For example, the binary sequence 0101 represents the corresponding decimal value 5. Using this programming language, a programmer attempts to add the decimal values 14 and 15 and assign the sum to the variable total. Which of the following best describes the result of this operation?</p>
 <ul>
   <li>my answer: An overflow error will occur because 4 bits is not large enough to represent either of the values 14 or 15.</li>
-  <li>correct answer: An overflow error will occur because 4 bits is not large enough to represent 29, the sum of 14 and 15.
-corrections: The values 14 and 15 can each be represented using a 4-bit representation. However, their sum is too large to be represented with a 4-bit representation. The largest binary value that can be represented using 4 bits is 1111, which is equal to the decimal value 15. Since the sum is larger than the largest representable value, an overflow error will occur.</li>
+  <li>correct answer: An overflow error will occur because 4 bits is not large enough to represent 29, the sum of 14 and 15.</li>
+  <li>corrections: The values 14 and 15 can each be represented using a 4-bit representation. However, their sum is too large to be represented with a 4-bit representation. The largest binary value that can be represented using 4 bits is 1111, which is equal to the decimal value 15. Since the sum is larger than the largest representable value, an overflow error will occur.</li>
 </ul>
 
 <h2 id="20">
@@ -159,8 +160,8 @@ corrections: The values 14 and 15 can each be represented using a 4-bit represen
 Question: A video game character can face toward one of four directions: north, south, east, and west. Each direction is stored in memory as a sequence of four bits. A new version of the game is created in which the character can face toward one of eight directions, adding northwest, northeast, southwest, and southeast to the original four possibilities. Which of the following statements is true about how the eight directions must be stored in memory?</p>
 <ul>
   <li>my answer: Four bits are not enough to store the eight directions. Sixteen bits are needed for the new version of the game.</li>
-  <li>correct answer: Four bits are enough to store the eight directions.
-corrections: Four bits can represent 2^4, or 16 pieces of information, so its not necessary for extra bits. I researched bits after this problem and now I understand.</li>
+  <li>correct answer: Four bits are enough to store the eight directions.</li>
+  <li>corrections: Four bits can represent 2^4, or 16 pieces of information, so its not necessary for extra bits. I researched bits after this problem and now I understand.</li>
 </ul>
 
 <h2 id="28">
@@ -168,52 +169,81 @@ corrections: Four bits can represent 2^4, or 16 pieces of information, so its no
 <p>Skill 2.B
 Question: The cost of a customer’s electricity bill is based on the number of units of electricity the customer uses. For the first 25 units of electricity, the cost is $5 per unit. For units of electricity after the first 25, the cost is $7 per unit. Which of the following code segments correctly sets the value of the variable cost to the cost, in dollars, of using numUnits units of electricity?
 my answer and correct answer: 
-<img src="https://media.discordapp.net/attachments/734598463324684389/1039302947818967072/image.png" alt="">
-corrections: This code incorrectly charges customers who use more than 25 units of electricity. These customers are charged only for the number of units above 25. For examples, if a customer used 32 units of electricity, they should be charged $5 for the first 25 and $7 for the additional 7 units (32 – 25 = 7 units), for a total charge of $174. This code segment would incorrectly charge the customer $49 for the 32 units. Plugging in numbers would be helpful</p>
+<img src="https://media.discordapp.net/attachments/734598463324684389/1039302947818967072/image.png" alt=""></p>
+<ul>
+  <li>corrections: This code incorrectly charges customers who use more than 25 units of electricity. These customers are charged only for the number of units above 25. For examples, if a customer used 32 units of electricity, they should be charged $5 for the first 25 and $7 for the additional 7 units (32 – 25 = 7 units), for a total charge of $174. This code segment would incorrectly charge the customer $49 for the 32 units. Plugging in numbers would be helpful</li>
+</ul>
 
 <h2 id="36">
 <a class="anchor" href="#36" aria-hidden="true"><span class="octicon octicon-link"></span></a>36</h2>
 <p>Skill 2.B
 Question: 
-<img src="https://media.discordapp.net/attachments/734598463324684389/1039303635831636060/image.png" alt="">
-my answer: i  ←  i + 1, APPEND(evenList, 2 * i)
-correct answer: APPEND(evenList, 2 * i), i  ←  i + 1
-corrections: my answer would skip 2, it would be the correct solution if i were initialized to 0 instead of 1. For the first iteration of the loop, twice the value of i, or 2, is appended to evenList, and then i is incremented to 2. For the second iteration of the loop, twice the value of i, or 4, is appended to the list, and then i is incremented to 3. This continues eight more times, appending the next eight even numbers to evenList.</p>
+<img src="https://media.discordapp.net/attachments/734598463324684389/1039303635831636060/image.png" alt=""></p>
+<ul>
+  <li>my answer: i  ←  i + 1, APPEND(evenList, 2 * i)</li>
+  <li>correct answer: APPEND(evenList, 2 * i), i  ←  i + 1</li>
+  <li>corrections: my answer would skip 2, it would be the correct solution if i were initialized to 0 instead of 1. For the first iteration of the loop, twice the value of i, or 2, is appended to evenList, and then i is incremented to 2. For the second iteration of the loop, twice the value of i, or 4, is appended to the list, and then i is incremented to 3. This continues eight more times, appending the next eight even numbers to evenList.</li>
+</ul>
 
 <h2 id="39">
 <a class="anchor" href="#39" aria-hidden="true"><span class="octicon octicon-link"></span></a>39</h2>
 <p>Skill 3.A
-Question: The list wordList contains a list of 10 string values. Which of the following is a valid index for the list?
-my answer: “hello” 
-correct answer: 4
-corrections: While the list elements are strings, the indices of a list are typically nonnegative integers.</p>
+Question: The list wordList contains a list of 10 string values. Which of the following is a valid index for the list?</p>
+<ul>
+  <li>my answer: “hello”</li>
+  <li>correct answer: 4</li>
+  <li>corrections: While the list elements are strings, the indices of a list are typically nonnegative integers.</li>
+</ul>
 
 <h2 id="41">
 <a class="anchor" href="#41" aria-hidden="true"><span class="octicon octicon-link"></span></a>41</h2>
 <p>Skill 4.B
 Question: 
-<img src="" alt="">
-my answer: 10
-correct answer: 20
-corrections: the last statement sets equal to p, and we know from the lines above, that p is equal to q which is 20. Therefore, r is equal to 20.</p>
+<img src="https://files.slack.com/files-pri/TUDAF53UJ-F04AEDW8Q8H/image.png" alt=""></p>
+<ul>
+  <li>my answer: 10</li>
+  <li>correct answer: 20</li>
+  <li>corrections: the last statement sets equal to p, and we know from the lines above, that p is equal to q which is 20. Therefore, r is equal to 20.</li>
+</ul>
 
 <h2 id="46">
 <a class="anchor" href="#46" aria-hidden="true"><span class="octicon octicon-link"></span></a>46</h2>
 <p>Skill 4.B
 Question: 
-<img src="https://files.slack.com/files-pri/TUDAF53UJ-F04ARH44M24/image.png" alt="">
-my answer: The value of first is false, and the value of second is false.
-correct answer: The value of first is true, and the value of second is true.
-corrections: The third statement assigns the value of first (which is true) to second. The fourth statement assigns the value of second (which is true) to first. If second is first, and first is second, then second is false.</p>
+<img src="https://files.slack.com/files-pri/TUDAF53UJ-F04ARH44M24/image.png" alt=""></p>
+<ul>
+  <li>my answer: The value of first is false, and the value of second is false.</li>
+  <li>correct answer: The value of first is true, and the value of second is true.</li>
+  <li>corrections: The third statement assigns the value of first (which is true) to second. The fourth statement assigns the value of second (which is true) to first. If second is first, and first is second, then second is false.</li>
+</ul>
 
 <h2 id="50">
 <a class="anchor" href="#50" aria-hidden="true"><span class="octicon octicon-link"></span></a>50</h2>
 <p>Skill 4.B
 Question:
-<img src="https://files.slack.com/files-pri/TUDAF53UJ-F04A1SP6RGS/image.png" alt="">
-my answer: initials  ←  prefix(concat(firstName, lastName), 1)
-correct answer: initials  ←  concat(prefix(firstName, 1), prefix(lastName, 1))
-corrections: This statement concatenates firstName and lastName and then assigns the first character of the result (which is the first character of firstName) to initials. Don’t want to separate words, only want to take the prefix and apply 1 to each word.</p>
+<img src="https://files.slack.com/files-pri/TUDAF53UJ-F04A1SP6RGS/image.png" alt=""></p>
+<ul>
+  <li>my answer: initials  ←  prefix(concat(firstName, lastName), 1)</li>
+  <li>correct answer: initials  ←  concat(prefix(firstName, 1), prefix(lastName, 1))</li>
+  <li>corrections: This statement concatenates firstName and lastName and then assigns the first character of the result (which is the first character of firstName) to initials. Don’t want to separate words, only want to take the prefix and apply 1 to each word.</li>
+</ul>
+
+<h1 id="overall">
+<a class="anchor" href="#overall" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overall</h1>
+<ul>
+  <li>
+    <p>I learned how to read binary numbers from this article: 
+<a href="https://www.lifewire.com/how-to-read-binary-4692830" rel="nofollow">Binary Link</a></p>
+  </li>
+  <li>
+    <p>I became more familiar with pseudo code and read this helpful Khan Academy article: 
+<a href="https://www.khanacademy.org/computing/ap-computer-science-principles/ap-csp-exam-preparation/learn-ap-csp-exam-pseudocode/a/ap-csp-exam-pseudocode-reference" rel="nofollow">Khan Academy Link</a>
+for example: 
+a ← expression
+Evaluates expression and assigns the result to the variable a.</p>
+  </li>
+  <li>
+</ul>
 
 
   </div><!-- from https://github.com/utterance/utterances -->
