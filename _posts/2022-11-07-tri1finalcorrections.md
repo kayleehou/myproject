@@ -68,7 +68,7 @@ Question: The list wordList contains a list of 10 string values. Which of the fo
 ## 41
 Skill 4.B
 Question: 
-![](https://files.slack.com/files-pri/TUDAF53UJ-F04AEDW8Q8H/image.png)
+![](https://media.discordapp.net/attachments/734598463324684389/1040347537963495455/image.png?width=759&height=496)
 - my answer: 10
 - correct answer: 20
 - corrections: the last statement sets equal to p, and we know from the lines above, that p is equal to q which is 20. Therefore, r is equal to 20. 
@@ -76,7 +76,7 @@ Question:
 ## 46
 Skill 4.B
 Question: 
-![](https://files.slack.com/files-pri/TUDAF53UJ-F04ARH44M24/image.png)
+![](https://media.discordapp.net/attachments/734598463324684389/1040347694490714212/image.png)
 - my answer: The value of first is false, and the value of second is false.
 - correct answer: The value of first is true, and the value of second is true.
 - corrections: The third statement assigns the value of first (which is true) to second. The fourth statement assigns the value of second (which is true) to first. If second is first, and first is second, then second is false. 
@@ -84,7 +84,7 @@ Question:
 ## 50 
 Skill 4.B
 Question:
-![](https://files.slack.com/files-pri/TUDAF53UJ-F04A1SP6RGS/image.png)
+![](https://media.discordapp.net/attachments/734598463324684389/1040347942512500797/image.png?width=1200&height=369)
 - my answer: initials  ←  prefix(concat(firstName, lastName), 1)
 - correct answer: initials  ←  concat(prefix(firstName, 1), prefix(lastName, 1))
 - corrections: This statement concatenates firstName and lastName and then assigns the first character of the result (which is the first character of firstName) to initials. Don't want to separate words, only want to take the prefix and apply 1 to each word. 
