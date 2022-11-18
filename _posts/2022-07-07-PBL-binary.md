@@ -36,6 +36,7 @@ categories: [markdown]
             </tr>
             </table>
         </div>
+        <div id="color">color</div>
         <div class="col-12">
             {% comment %}Liquid for loop includes last number, thus the Minus{% endcomment %}
             {% assign bits = BITS | minus: 1 %} 
@@ -85,6 +86,7 @@ categories: [markdown]
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        document.getElementById("color").style.backgroundColor = color;
     }
     //
     function decimal_2_base(decimal, base) {
