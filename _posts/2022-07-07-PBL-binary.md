@@ -62,9 +62,9 @@ categories: [markdown]
 <script>
     const BITS = {{ BITS }};
     const MAX = 2 ** BITS - 1;
-    const MSG_ON = "Turn on";
+    const MSG_ON = "turn on";
     const IMAGE_ON = "{{site.baseurl}}/images/bulb_on.gif";
-    const MSG_OFF = "Turn off";
+    const MSG_OFF = "turn off";
     const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
 
     // return string with current value of each bit
@@ -77,6 +77,7 @@ categories: [markdown]
     }
     // setter for DOM values
     function setConversions(binary) {
+        var color = "#" + parseInt(binary, 2).toString(16);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
