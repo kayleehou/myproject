@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      15 min read
     
 </span></p>
 
@@ -198,19 +198,26 @@ window.onload = wrap_img;
 <span class="c1"># print (response.json())  </span>
 <span class="c1"># This code looks for &quot;world data&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;World Totals&quot;</span><span class="p">)</span>
-<span class="n">world</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;world_total&#39;</span><span class="p">)</span>  <span class="c1"># turn response to json() so we can extract &quot;world_total&quot;</span>
-<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">world</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># this finds key, value pairs in country</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="c1">#world = response.json().get(&#39;world_total&#39;)  # turn response to json() so we can extract &quot;world_total&quot;</span>
+<span class="c1">#for key, value in world.items():  # this finds key, value pairs in country</span>
+   <span class="c1"># print(key, value)</span>
 
-<span class="nb">print</span><span class="p">()</span>
+<span class="c1">#print()</span>
 
 <span class="c1"># This code looks for USA in &quot;countries_stats&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Country Totals&quot;</span><span class="p">)</span>
+<span class="c1">#print(&quot;Country Totals&quot;)</span>
 <span class="n">countries</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;countries_stat&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>  <span class="c1"># countries is a list</span>
-    <span class="k">if</span> <span class="n">country</span><span class="p">[</span><span class="s2">&quot;country_name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;USA&quot;</span><span class="p">:</span>  <span class="c1"># this filters for USA</span>
-        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">country</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>  <span class="c1"># this finds key, value pairs in country</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+<span class="c1">#print(type(countries))</span>
+<span class="n">country_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">countries</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">countries</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">country_dict</span><span class="p">))</span>
+
+<span class="c1"># for country in countries:  # countries is a list</span>
+    <span class="c1">#if country[&quot;country_name&quot;] == &quot;USA&quot;:  # this filters for USA</span>
+        <span class="c1">#for key, value in country.items():  # this finds key, value pairs in country</span>
+           <span class="c1"># print(key, value)</span>
 </pre></div>
 
     </div>
@@ -224,32 +231,24 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>World Totals
-total_cases 509,268,964
-new_cases 204,268
-total_deaths 6,242,509
-new_deaths 630
-total_recovered 461,827,849
-active_cases 41,198,606
-serious_critical 42,510
-total_cases_per_1m_population 65,334
-deaths_per_1m_population 800.9
-statistic_taken_at 2022-04-24 11:18:01
-
-Country Totals
-country_name USA
-cases 82,649,779
-deaths 1,018,316
-region 
-total_recovered 80,434,925
-new_deaths 0
-new_cases 0
-serious_critical 1,465
-active_cases 1,196,538
-total_cases_per_1m_population 247,080
-deaths_per_1m_population 3,044
-total_tests 1,000,275,726
-tests_per_1m_population 2,990,303
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">AttributeError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/kaylee/vscode/myproject/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb Cell 4</span> in <span class="ansi-cyan-fg">&lt;cell line: 34&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=30&#39;&gt;31&lt;/a&gt;</span> countries = response.json().get(&#39;countries_stat&#39;)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=32&#39;&gt;33&lt;/a&gt;</span> #print(type(countries))
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=33&#39;&gt;34&lt;/a&gt;</span> country_dict = json.loads(countries)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=35&#39;&gt;36&lt;/a&gt;</span> print(type(countries))
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2022-10-03-PBL-python_rapidapi.ipynb#W3sdnNjb2RlLXJlbW90ZQ%3D%3D?line=36&#39;&gt;37&lt;/a&gt;</span> print(type(country_dict))
+
+<span class="ansi-red-fg">AttributeError</span>: &#39;list&#39; object has no attribute &#39;loads&#39;</pre>
 </div>
 </div>
 
@@ -639,10 +638,20 @@ Rank Url: https://coinranking.com/coin/B42IRxNtoYmwK+thetatoken-theta
 	<span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;mcu-comics-and-characters.p.rapidapi.com&quot;</span>
 <span class="p">}</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">querystring</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="c1">#print(response.text)</span>
 <span class="c1"># End Rapid API Code</span>
-<span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>  <span class="c1"># convert response to python json object</span>
+<span class="c1">#json = response.json()  # convert response to python json object </span>
+
+<span class="n">movies</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+<span class="n">movies</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  
+<span class="k">for</span> <span class="n">movie</span> <span class="ow">in</span> <span class="n">movies</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">movie</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">])</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="n">movie</span><span class="p">[</span><span class="s2">&quot;link&quot;</span><span class="p">])</span>
+    <span class="c1"># print(&quot;\t&quot; + movie[&quot;source&quot;])</span>
+    
 </pre></div>
 
     </div>
@@ -655,7 +664,235 @@ Rank Url: https://coinranking.com/coin/B42IRxNtoYmwK+thetatoken-theta
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[{&#34;title&#34;:&#34;File:85F11A8E-6503-4B71-B65C-B67E3EF50378.jpeg&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/File:85F11A8E-6503-4B71-B65C-B67E3EF50378.jpeg&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Agents of S.H.I.E.L.D.: The Chase&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Agents_of_S.H.I.E.L.D.:_The_Chase&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Ant-Man - Scott Lang: Small Time&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_-_Scott_Lang:_Small_Time&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Ant-Man and the Wasp Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_and_the_Wasp_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Ant-Man Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Ant-Man: Larger Than Life&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man:_Larger_Than_Life&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Avengers: Age of Ultron Prelude - This Scepter&#39;d Isle&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron_Prelude_-_This_Scepter%27d_Isle&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Avengers: Age of Ultron: Episode 0&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron:_Episode_0&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Avengers: Endgame Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Endgame_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Avengers: Infinity War Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Infinity_War_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Avengers: Operation HYDRA&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Operation_HYDRA&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Black Panther Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Black_Panther_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Black Widow Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Black_Widow_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America &amp; Thor: Avengers!&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America_%26_Thor:_Avengers!&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: Civil War Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Civil_War_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: Civil War Prelude Infinite Comic&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Civil_War_Prelude_Infinite_Comic&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: Evil Lurks Everywhere&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Evil_Lurks_Everywhere&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: First Vengeance&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_First_Vengeance&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: Homecoming&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Homecoming&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: Road to War&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Road_to_War&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: The First Avenger Adaptation&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_The_First_Avenger_Adaptation&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain America: The Winter Soldier Infinite Comic&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_The_Winter_Soldier_Infinite_Comic&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Captain Marvel Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Captain_Marvel_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Doctor Strange Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Doctor Strange Prelude - The Zealot&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange_Prelude_-_The_Zealot&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Doctor Strange: Episode 0&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange:_Episode_0&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Doctor Strange: Mystic Apprentice&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange:_Mystic_Apprentice&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Eternals: The 500 Year War&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Eternals:_The_500_Year_War&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Guardians of the Galaxy Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Guardians of the Galaxy Prequel Infinite Comic&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Prequel_Infinite_Comic&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Guardians of the Galaxy Vol. 2 Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Vol._2_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Guardians of the Galaxy: Galaxy&#39;s Most Wanted&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy:_Galaxy%27s_Most_Wanted&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 2 Adaptation&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2_Adaptation&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 2: Black Widow: Agent of S.H.I.E.L.D.&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Black_Widow:_Agent_of_S.H.I.E.L.D.&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 2: Fist of Iron&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Fist_of_Iron&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 2: Nick Fury: Director of S.H.I.E.L.D.&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Nick_Fury:_Director_of_S.H.I.E.L.D.&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 2: Phil Coulson: Agent of S.H.I.E.L.D.&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Phil_Coulson:_Agent_of_S.H.I.E.L.D.&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 2: Public Identity&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Public_Identity&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 2: Security Breach&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Security_Breach&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man 3 Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_3_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man Royal Purple Custom Comic&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_Royal_Purple_Custom_Comic&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man: Fast Friends&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Fast_Friends&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man: I Am Iron Man!&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_I_Am_Iron_Man!&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man: Limited Edition&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Limited_Edition&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man: Security Measures&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Security_Measures&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man: The Coming of the Melter&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_The_Coming_of_the_Melter&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man: The Price of Doing Business&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_The_Price_of_Doing_Business&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Iron Man: Will Online Evils Prevail?&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Will_Online_Evils_Prevail%3F&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Jessica Jones (comic)&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Jessica_Jones_(comic)&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;List of Multiverse Comics&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/List_of_Multiverse_Comics&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Nick Fury: Spies Like Us&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Nick_Fury:_Spies_Like_Us&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Spider-Man: Far From Home - Got To Hand it To Him&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_-_Got_To_Hand_it_To_Him&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Spider-Man: Far From Home - Them&#39;s The Brakes&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_-_Them%27s_The_Brakes&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Spider-Man: Far From Home Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Spider-Man: Homecoming Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Spider-Man: Homecoming: Fight or Flight&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_Fight_or_Flight&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Spider-Man: Homecoming: Morning Rush&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_Morning_Rush&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Spider-Man: Homecoming: School of Shock&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_School_of_Shock&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;The Avengers Adaptation&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Adaptation&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;The Avengers Prelude: Black Widow Strikes&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Prelude:_Black_Widow_Strikes&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;The Avengers Prelude: Fury&#39;s Big Week&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Prelude:_Fury%27s_Big_Week&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;The Avengers: Iron Man Mark VII&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers:_Iron_Man_Mark_VII&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;The Avengers: The Avengers Initiative&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers:_The_Avengers_Initiative&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;The Incredible Hulk: The Big Picture&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/The_Incredible_Hulk:_The_Big_Picture&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;The Incredible Hulk: The Fury Files&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/The_Incredible_Hulk:_The_Fury_Files&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Thor Adaptation&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Thor_Adaptation&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Thor, The Mighty Avenger&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Thor,_The_Mighty_Avenger&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Thor: Crown of Fools&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Crown_of_Fools&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Thor: Ragnarok Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Ragnarok_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Thor: Rescue&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Rescue&#34;,&#34;source&#34;:&#34;fandom&#34;},{&#34;title&#34;:&#34;Thor: The Dark World Prelude&#34;,&#34;link&#34;:&#34;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_The_Dark_World_Prelude&#34;,&#34;source&#34;:&#34;fandom&#34;}]
+<pre>MCU List:
+Agents of S.H.I.E.L.D.: The Chase
+	https://marvelcinematicuniverse.fandom.com/wiki/Agents_of_S.H.I.E.L.D.:_The_Chase
+Ant-Man - Scott Lang: Small Time
+	https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_-_Scott_Lang:_Small_Time
+Ant-Man and the Wasp Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_and_the_Wasp_Prelude
+Ant-Man Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_Prelude
+Ant-Man: Larger Than Life
+	https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man:_Larger_Than_Life
+Avengers: Age of Ultron Prelude - This Scepter&#39;d Isle
+	https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron_Prelude_-_This_Scepter%27d_Isle
+Avengers: Age of Ultron: Episode 0
+	https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron:_Episode_0
+Avengers: Endgame Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Endgame_Prelude
+Avengers: Infinity War Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Infinity_War_Prelude
+Avengers: Operation HYDRA
+	https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Operation_HYDRA
+Black Panther Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Black_Panther_Prelude
+Black Widow Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Black_Widow_Prelude
+Captain America &amp; Thor: Avengers!
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America_%26_Thor:_Avengers!
+Captain America: Civil War Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Civil_War_Prelude
+Captain America: Civil War Prelude Infinite Comic
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Civil_War_Prelude_Infinite_Comic
+Captain America: Evil Lurks Everywhere
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Evil_Lurks_Everywhere
+Captain America: First Vengeance
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_First_Vengeance
+Captain America: Homecoming
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Homecoming
+Captain America: Road to War
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Road_to_War
+Captain America: The First Avenger Adaptation
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_The_First_Avenger_Adaptation
+Captain America: The Winter Soldier Infinite Comic
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_The_Winter_Soldier_Infinite_Comic
+Captain Marvel Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Captain_Marvel_Prelude
+Doctor Strange Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange_Prelude
+Doctor Strange Prelude - The Zealot
+	https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange_Prelude_-_The_Zealot
+Doctor Strange: Episode 0
+	https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange:_Episode_0
+Doctor Strange: Mystic Apprentice
+	https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange:_Mystic_Apprentice
+Eternals: The 500 Year War
+	https://marvelcinematicuniverse.fandom.com/wiki/Eternals:_The_500_Year_War
+Guardians of the Galaxy Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Prelude
+Guardians of the Galaxy Prequel Infinite Comic
+	https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Prequel_Infinite_Comic
+Guardians of the Galaxy Vol. 2 Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Vol._2_Prelude
+Guardians of the Galaxy: Galaxy&#39;s Most Wanted
+	https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy:_Galaxy%27s_Most_Wanted
+Iron Man 2 Adaptation
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2_Adaptation
+Iron Man 2: Black Widow: Agent of S.H.I.E.L.D.
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Black_Widow:_Agent_of_S.H.I.E.L.D.
+Iron Man 2: Fist of Iron
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Fist_of_Iron
+Iron Man 2: Nick Fury: Director of S.H.I.E.L.D.
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Nick_Fury:_Director_of_S.H.I.E.L.D.
+Iron Man 2: Phil Coulson: Agent of S.H.I.E.L.D.
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Phil_Coulson:_Agent_of_S.H.I.E.L.D.
+Iron Man 2: Public Identity
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Public_Identity
+Iron Man 2: Security Breach
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Security_Breach
+Iron Man 3 Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_3_Prelude
+Iron Man Royal Purple Custom Comic
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_Royal_Purple_Custom_Comic
+Iron Man: Fast Friends
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Fast_Friends
+Iron Man: I Am Iron Man!
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_I_Am_Iron_Man!
+Iron Man: Limited Edition
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Limited_Edition
+Iron Man: Security Measures
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Security_Measures
+Iron Man: The Coming of the Melter
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_The_Coming_of_the_Melter
+Iron Man: The Price of Doing Business
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_The_Price_of_Doing_Business
+Iron Man: Will Online Evils Prevail?
+	https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Will_Online_Evils_Prevail%3F
+Jessica Jones (comic)
+	https://marvelcinematicuniverse.fandom.com/wiki/Jessica_Jones_(comic)
+List of Multiverse Comics
+	https://marvelcinematicuniverse.fandom.com/wiki/List_of_Multiverse_Comics
+Nick Fury: Spies Like Us
+	https://marvelcinematicuniverse.fandom.com/wiki/Nick_Fury:_Spies_Like_Us
+Spider-Man: Far From Home - Got To Hand it To Him
+	https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_-_Got_To_Hand_it_To_Him
+Spider-Man: Far From Home - Them&#39;s The Brakes
+	https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_-_Them%27s_The_Brakes
+Spider-Man: Far From Home Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_Prelude
+Spider-Man: Homecoming Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming_Prelude
+Spider-Man: Homecoming: Fight or Flight
+	https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_Fight_or_Flight
+Spider-Man: Homecoming: Morning Rush
+	https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_Morning_Rush
+Spider-Man: Homecoming: School of Shock
+	https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_School_of_Shock
+The Avengers Adaptation
+	https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Adaptation
+The Avengers Prelude: Black Widow Strikes
+	https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Prelude:_Black_Widow_Strikes
+The Avengers Prelude: Fury&#39;s Big Week
+	https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Prelude:_Fury%27s_Big_Week
+The Avengers: Iron Man Mark VII
+	https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers:_Iron_Man_Mark_VII
+The Avengers: The Avengers Initiative
+	https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers:_The_Avengers_Initiative
+The Incredible Hulk: The Big Picture
+	https://marvelcinematicuniverse.fandom.com/wiki/The_Incredible_Hulk:_The_Big_Picture
+The Incredible Hulk: The Fury Files
+	https://marvelcinematicuniverse.fandom.com/wiki/The_Incredible_Hulk:_The_Fury_Files
+Thor Adaptation
+	https://marvelcinematicuniverse.fandom.com/wiki/Thor_Adaptation
+Thor, The Mighty Avenger
+	https://marvelcinematicuniverse.fandom.com/wiki/Thor,_The_Mighty_Avenger
+Thor: Crown of Fools
+	https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Crown_of_Fools
+Thor: Ragnarok Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Ragnarok_Prelude
+Thor: Rescue
+	https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Rescue
+Thor: The Dark World Prelude
+	https://marvelcinematicuniverse.fandom.com/wiki/Thor:_The_Dark_World_Prelude
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Begin Rapid API Code</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://mcu-comics-and-characters.p.rapidapi.com/mcu/comics&quot;</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;40507ace9fmshcdcac9ccdd404c3p1d6853jsn21cc92ac2d5e&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;mcu-comics-and-characters.p.rapidapi.com&quot;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="c1">#print(response.text)</span>
+<span class="c1"># End Rapid API Code</span>
+<span class="n">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>  <span class="c1"># convert response to python json object</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="n">json</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[{&#39;title&#39;: &#39;File:85F11A8E-6503-4B71-B65C-B67E3EF50378.jpeg&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/File:85F11A8E-6503-4B71-B65C-B67E3EF50378.jpeg&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Agents of S.H.I.E.L.D.: The Chase&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Agents_of_S.H.I.E.L.D.:_The_Chase&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Ant-Man - Scott Lang: Small Time&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_-_Scott_Lang:_Small_Time&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Ant-Man and the Wasp Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_and_the_Wasp_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Ant-Man Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Ant-Man: Larger Than Life&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Ant-Man:_Larger_Than_Life&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#34;Avengers: Age of Ultron Prelude - This Scepter&#39;d Isle&#34;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron_Prelude_-_This_Scepter%27d_Isle&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Avengers: Age of Ultron: Episode 0&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Age_of_Ultron:_Episode_0&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Avengers: Endgame Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Endgame_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Avengers: Infinity War Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Infinity_War_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Avengers: Operation HYDRA&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Avengers:_Operation_HYDRA&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Black Panther Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Black_Panther_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Black Widow Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Black_Widow_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America &amp; Thor: Avengers!&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America_%26_Thor:_Avengers!&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: Civil War Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Civil_War_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: Civil War Prelude Infinite Comic&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Civil_War_Prelude_Infinite_Comic&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: Evil Lurks Everywhere&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Evil_Lurks_Everywhere&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: First Vengeance&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_First_Vengeance&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: Homecoming&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Homecoming&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: Road to War&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_Road_to_War&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: The First Avenger Adaptation&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_The_First_Avenger_Adaptation&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain America: The Winter Soldier Infinite Comic&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_America:_The_Winter_Soldier_Infinite_Comic&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Captain Marvel Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Captain_Marvel_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Doctor Strange Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Doctor Strange Prelude - The Zealot&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange_Prelude_-_The_Zealot&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Doctor Strange: Episode 0&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange:_Episode_0&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Doctor Strange: Mystic Apprentice&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Doctor_Strange:_Mystic_Apprentice&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Eternals: The 500 Year War&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Eternals:_The_500_Year_War&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Guardians of the Galaxy Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Guardians of the Galaxy Prequel Infinite Comic&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Prequel_Infinite_Comic&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Guardians of the Galaxy Vol. 2 Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy_Vol._2_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#34;Guardians of the Galaxy: Galaxy&#39;s Most Wanted&#34;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Guardians_of_the_Galaxy:_Galaxy%27s_Most_Wanted&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 2 Adaptation&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2_Adaptation&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 2: Black Widow: Agent of S.H.I.E.L.D.&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Black_Widow:_Agent_of_S.H.I.E.L.D.&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 2: Fist of Iron&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Fist_of_Iron&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 2: Nick Fury: Director of S.H.I.E.L.D.&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Nick_Fury:_Director_of_S.H.I.E.L.D.&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 2: Phil Coulson: Agent of S.H.I.E.L.D.&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Phil_Coulson:_Agent_of_S.H.I.E.L.D.&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 2: Public Identity&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Public_Identity&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 2: Security Breach&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_2:_Security_Breach&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man 3 Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_3_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man Royal Purple Custom Comic&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man_Royal_Purple_Custom_Comic&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man: Fast Friends&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Fast_Friends&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man: I Am Iron Man!&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_I_Am_Iron_Man!&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man: Limited Edition&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Limited_Edition&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man: Security Measures&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Security_Measures&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man: The Coming of the Melter&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_The_Coming_of_the_Melter&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man: The Price of Doing Business&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_The_Price_of_Doing_Business&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Iron Man: Will Online Evils Prevail?&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Iron_Man:_Will_Online_Evils_Prevail%3F&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Jessica Jones (comic)&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Jessica_Jones_(comic)&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;List of Multiverse Comics&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/List_of_Multiverse_Comics&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Nick Fury: Spies Like Us&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Nick_Fury:_Spies_Like_Us&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Spider-Man: Far From Home - Got To Hand it To Him&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_-_Got_To_Hand_it_To_Him&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#34;Spider-Man: Far From Home - Them&#39;s The Brakes&#34;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_-_Them%27s_The_Brakes&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Spider-Man: Far From Home Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Far_From_Home_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Spider-Man: Homecoming Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Spider-Man: Homecoming: Fight or Flight&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_Fight_or_Flight&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Spider-Man: Homecoming: Morning Rush&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_Morning_Rush&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Spider-Man: Homecoming: School of Shock&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Spider-Man:_Homecoming:_School_of_Shock&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;The Avengers Adaptation&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Adaptation&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;The Avengers Prelude: Black Widow Strikes&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Prelude:_Black_Widow_Strikes&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#34;The Avengers Prelude: Fury&#39;s Big Week&#34;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers_Prelude:_Fury%27s_Big_Week&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;The Avengers: Iron Man Mark VII&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers:_Iron_Man_Mark_VII&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;The Avengers: The Avengers Initiative&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/The_Avengers:_The_Avengers_Initiative&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;The Incredible Hulk: The Big Picture&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/The_Incredible_Hulk:_The_Big_Picture&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;The Incredible Hulk: The Fury Files&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/The_Incredible_Hulk:_The_Fury_Files&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Thor Adaptation&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Thor_Adaptation&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Thor, The Mighty Avenger&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Thor,_The_Mighty_Avenger&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Thor: Crown of Fools&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Crown_of_Fools&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Thor: Ragnarok Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Ragnarok_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Thor: Rescue&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_Rescue&#39;, &#39;source&#39;: &#39;fandom&#39;}, {&#39;title&#39;: &#39;Thor: The Dark World Prelude&#39;, &#39;link&#39;: &#39;https://marvelcinematicuniverse.fandom.com/wiki/Thor:_The_Dark_World_Prelude&#39;, &#39;source&#39;: &#39;fandom&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://marvel-quote-api.p.rapidapi.com/&quot;</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="s2">&quot;X-RapidAPI-Key&quot;</span><span class="p">:</span> <span class="s2">&quot;40507ace9fmshcdcac9ccdd404c3p1d6853jsn21cc92ac2d5e&quot;</span><span class="p">,</span>
+	<span class="s2">&quot;X-RapidAPI-Host&quot;</span><span class="p">:</span> <span class="s2">&quot;marvel-quote-api.p.rapidapi.com&quot;</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#34;Quote&#34;:&#34;I’m sorry, Earth is closed today. You better pack it up and get outta here&#34;,&#34;Speaker&#34;:&#34;Tony Stark&#34;,&#34;Title&#34;:&#34;Avengers: Infinity War&#34;}
 </pre>
 </div>
 </div>
@@ -710,7 +947,28 @@ Rank Url: https://coinranking.com/coin/B42IRxNtoYmwK+thetatoken-theta
       </div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/kayleehou" target="_blank" title="kayleehou"><svg class="svg-icon grey"><use xlink:href="/myproject/assets/minima-social-icons.svg#github"></use></svg></a></li></ul>
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/nighthawkcoders" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/myproject/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://twitter.com/NighthawkCoding" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/myproject/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/myproject/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
 </div>
 
   </div>
