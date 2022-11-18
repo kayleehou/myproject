@@ -19,12 +19,12 @@ categories: [markdown]
         <div class="col-8">
             <table class="table">
             <tr id="table">
-                <th>Plus</th>
-                <th>Binary</th>
-                <th>Octal</th>
-                <th>Hexadecimal</th>
-                <th>Decimal</th>
-                <th>Minus</th>
+                <th>plus</th>
+                <th>binary</th>
+                <th>octal</th>
+                <th>hexadecimal</th>
+                <th>decimal</th>
+                <th>minus</th>
             </tr>
             <tr>
                 <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
