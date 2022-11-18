@@ -99,6 +99,7 @@ window.onload = wrap_img;
             </tr>
             </table>
         </div>
+        <div id="color">color</div>
         <div class="col-12">
             
              
@@ -286,6 +287,7 @@ window.onload = wrap_img;
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
+        document.getElementById("color").style.backgroundColor = color;
     }
     //
     function decimal_2_base(decimal, base) {
