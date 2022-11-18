@@ -78,7 +78,9 @@ categories: [markdown]
     }
     // setter for DOM values
     function setConversions(binary) {
-        var color = "#" + parseInt(binary, 2).toString(16); abort(binary);
+        var color = "#" + parseInt(binary, 2).toString(16); 
+        alert(parseInt(binary, 2).toString(16));
+        alert(color);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
