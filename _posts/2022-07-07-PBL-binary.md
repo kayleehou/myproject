@@ -79,6 +79,7 @@ categories: [markdown]
     // setter for DOM values
     function setConversions(binary) {
         var color = "#" + parseInt(binary, 2).toString(16); 
+        alert(binary);
         alert(parseInt(binary, 2).toString(16));
         alert(color);
         document.getElementById('binary').innerHTML = binary;
