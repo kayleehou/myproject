@@ -44,7 +44,7 @@ categories: [markdown]
             <tr>
                 {% comment %}Build many bits{% endcomment %}
                 {% for i in (0..bits) %}
-                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="40" height="Auto">
+                <td><img class="img-responsive py-3" id="bulb{{ i }}" src="{{site.baseurl}}/images/bulb_off.png" alt="" width="20" height="Auto">
                     <button type="button" id="butt{{ i }}" onclick="javascript:toggleBit({{ i }})">Turn on</button>
                 </td>
                 {% endfor %}
@@ -79,9 +79,9 @@ categories: [markdown]
     // setter for DOM values
     function setConversions(binary) {
         var color = "#" + parseInt(binary, 2).toString(16); 
-        alert(binary);
-        alert(parseInt(binary, 2).toString(16));
-        alert(color);
+        // alert(binary);
+        // alert(parseInt(binary, 2).toString(16));
+        // alert(color);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -89,7 +89,7 @@ categories: [markdown]
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
-        document.getElementById("turn on the light bulbs to change the color!").style.backgroundColor = color;
+        document.getElementById("color").style.backgroundColor = color;
     }
     //
     function decimal_2_base(decimal, base) {
