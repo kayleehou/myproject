@@ -78,7 +78,7 @@ categories: [markdown]
     }
     // setter for DOM values
     function setConversions(binary) {
-        var color = "#" + parseInt(binary, 2).toString(16);
+        var color = "#" + parseInt(binary, 2).toString(16); abort(binary);
         document.getElementById('binary').innerHTML = binary;
         // Octal conversion
         document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
@@ -86,7 +86,7 @@ categories: [markdown]
         document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
         // Decimal conversion
         document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString();
-        document.getElementById("color").style.backgroundColor = color;
+        document.getElementById("turn on the light bulbs to change the color!").style.backgroundColor = color;
     }
     //
     function decimal_2_base(decimal, base) {
