@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Unit 3 Sections 8-10 Hacks",
-            "content": "Homework . Multiple Choice Quiz Results . SCORE: 9/10 .",
+            "content": "Homework . Multiple Choice Quiz Results . SCORE: 9/10 . A is wrong because it is not always for a set amount of time, this would be the condition for a for loop. A while loop can repeat forever if the condition is always true. Since you are testing if the condition is true, this would be a comparison to another conditional, so c is the correct answer. I thought this would be the wrong answer at first because I didn’t think it was a comparison, but after doing some extra research using this resource, it made more sense: | . RESOURCE .",
             "url": "https://kayleehou.github.io/myproject/student%20teaching/2022/12/05/Unit8-10-Hacks.html",
             "relUrl": "/student%20teaching/2022/12/05/Unit8-10-Hacks.html",
             "date": " • Dec 5, 2022"
