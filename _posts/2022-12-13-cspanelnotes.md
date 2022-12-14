@@ -37,7 +37,7 @@ Mr. Porter mentioned a couple of terms I had never heard of before so I did some
 - Insights: It seems like the tech industry is always changing, so learning how to learn is super important because it will allow you to shape yourself into what multiple companies need 
 
 ## Overall
-It was very gratifying and fulfilling to see so many people at this event, especially since I a part of putting it together with Girls in CS, WEStem, and Mr. Mortensen. Here are some pictures while I was there! 
+It was very gratifying and fulfilling to see so many people at this event, especially since I was a part of putting it together with Girls in CS, WEStem, and Mr. Mortensen. Here are some pictures while I was there! 
 
 ![](https://github.com/kayleehou/myproject/blob/master/images/panelevent1.PNG?raw=true)
 
