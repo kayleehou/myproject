@@ -23,11 +23,9 @@ Grade:
 
 Grade: 
 
-<a href="n/a" rel="nofollow">Unit 17-18 Hacks</a>
+<a href="https://kayleehou.github.io/myproject/markdown/2022/12/13/cspanelnotes.html" rel="nofollow">Business/Tech CS Panel</a>
 
-- 
-
-
+- takeaways and insights from the event 
 
 
 
