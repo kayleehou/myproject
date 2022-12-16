@@ -67,7 +67,7 @@ tr:nth-child(even) {
   </tr>
   <tr>
     <td>16</td>
-    <td>TBD</td>
+    <td>.95/1</td>
   </tr>
    <tr>
     <td>17-18</td>
@@ -84,7 +84,7 @@ tr:nth-child(even) {
 
 - In this unit, we learned about simulations, why they are useful and in what instance we would use this verses calculation or experiment. They help us save money, resources, time, and can be a lot safer. When making a simulation you should remove details, which could be done using pseudo-random number generators.
 
-Grade: TBD
+Grade: .95/1
 
 <a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/14/unit17-18hacks.html" rel="nofollow">Unit 17-18 Hacks</a>
 
