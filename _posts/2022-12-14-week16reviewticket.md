@@ -97,4 +97,4 @@ Grade: TBD
 - important vocabulary with examples from lessons 
 
 ## <a href="https://kayleehou.github.io/myproject/_pages/tri2table.html" rel="nofollow">Calendar/ Return to Blog</a>
-
+- links to the individual hacks are on the calendar 
