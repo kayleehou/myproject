@@ -1,5 +1,5 @@
 ---
-toc: false
+toc: true
 layout: post
 description: here is a list of what I did Week 16
 categories: [review tickets]
