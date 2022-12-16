@@ -7,6 +7,7 @@ title: Week 16 Review Ticket
 comments: true
 
 ---
+## Grades
 | unit  | grade                               |
 |-------|-------------------------------------|
 | 1-2   | 1/1                                 |
@@ -20,23 +21,21 @@ comments: true
 | 17-18 | TBD                                 |
 ## Click on the titles to access!
 
-# Hacks- Unit 16-18
-
-<a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/13/unit16hacks.html" rel="nofollow">Unit 16 Hacks</a>
+ ## <a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/13/unit16hacks.html" rel="nofollow">Unit 16 Hacks</a>
 
 - In this unit, we learned about simulations, why they are useful and in what instance we would use this verses calculation or experiment. They help us save money, resources, time, and can be a lot safer. When making a simulation you should remove details, which could be done using pseudo-random number generators.
 
 Grade: TBD
 
-<a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/14/unit17-1hacks.html" rel="nofollow">Unit 17-18 Hacks</a>
+## <a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/14/unit17-1hacks.html" rel="nofollow">Unit 17-18 Hacks</a>
 
 - We mainly learned about libraries, specifically the random library and different random functions. We also learned about documentation and APIs. 
  
 Grade: TBD 
 
-<a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/06/fundamentalvocab.html" rel="nofollow">Vocab</a>
+## <a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/06/fundamentalvocab.html" rel="nofollow">Vocab</a>
 
 - important vocabulary with examples from lessons 
 
-<a href="https://kayleehou.github.io/myproject/_pages/tri2table.html" rel="nofollow">Calendar/ Return to Blog</a>
+## <a href="https://kayleehou.github.io/myproject/_pages/tri2table.html" rel="nofollow">Calendar/ Return to Blog</a>
 
