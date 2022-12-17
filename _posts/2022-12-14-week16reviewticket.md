@@ -71,7 +71,7 @@ tr:nth-child(even) {
   </tr>
    <tr>
     <td>17-18</td>
-    <td>TBD</td>
+    <td>1/1</td>
   </tr>
 </table>
 
@@ -90,7 +90,7 @@ Grade: .95/1
 
 - We mainly learned about libraries, specifically the random library and different random functions. We also learned about documentation and APIs. 
  
-Grade: TBD 
+Grade: 1/1
 
 ## <a href="https://kayleehou.github.io/myproject/student%20teaching/2022/12/06/fundamentalvocab.html" rel="nofollow">Vocab</a>
 
