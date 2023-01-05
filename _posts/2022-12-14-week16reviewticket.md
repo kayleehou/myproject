@@ -98,6 +98,3 @@ Grade: 1/1
 
 ## <a href="https://kayleehou.github.io/myproject/_pages/tri2table.html" rel="nofollow">Calendar/ Return to Blog</a>
 - links to the individual hacks are on the calendar 
-
-|Reporting Category|Student Score|College Board Score|Comments|
-|Program Purpose and Function|1|1|The student met the requirement because...|
