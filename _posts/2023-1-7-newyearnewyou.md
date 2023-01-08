@@ -159,7 +159,7 @@ ul li {
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
-  background: #eee;
+  background: #fff;
   font-size: 18px;
   transition: 0.2s;
   
