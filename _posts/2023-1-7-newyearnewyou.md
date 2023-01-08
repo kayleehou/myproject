@@ -129,15 +129,9 @@ h3 {
   </div>
 </div>
 
-</body>
-</html>
-
 <a href="https://hobbyhelp.com/skateboarding/" class="button" style="vertical-align:middle"><span>Skateboarding </span></a>
 <a href="https://leftyfretz.com/is-guitar-a-good-hobby/" class="button" style="vertical-align:middle"><span>Guitar </span></a>
 <a href="https://www.discoverahobby.com/singing" class="button" style="vertical-align:middle"><span>Singing </span></a>
-
-</body>
-</html>
 
 
 
