@@ -113,18 +113,9 @@ h3 {
   </div>
 </div>
 
-</body>
-</html>
-
 <a href="https://yokkao.com/pages/kickboxing" class="button" style="vertical-align:middle"><span>Kickboxing </span></a>
 <a href="https://hobbycents.com/hobby-guides/swimming-hobby-guide/" class="button" style="vertical-align:middle"><span>Swimming </span></a>
 <a href="https://discover.hubpages.com/entertainment/Hobby-of-Dancing" class="button" style="vertical-align:middle"><span>Dance </span></a>
-
-</body>
-</html>
-
-</body>
-</html>
 
 <div class="row">
   <div class="column">
