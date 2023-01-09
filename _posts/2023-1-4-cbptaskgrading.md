@@ -124,9 +124,6 @@ tr:nth-child(even) {
   </tr>
 </table>
 
-</body>
-</html>
-
 ## Important things my program should contain!
 - the explanations/written portion is just as important as the actual code itself, so I need to spend a lot of time on the code explanation as well so that I meet all the criteria
 - I need to explain BOTH function and the purpose, so my project should have a practical use 
