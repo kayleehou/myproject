@@ -171,7 +171,7 @@ ul li {
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-ul li:nth-child(odd) {
+ul li:nth-child(even) {
   background: #474545;
 }
 
