@@ -17,5 +17,6 @@ Click on the titles to access!
 
 ## <a href="https://kayleehou.github.io/myproject/markdown/2023/01/07/newyearnewyou.html" rel="nofollow">HMTL/CSS/Javascript Code CBPT on Personal Fastpages</a>
 
-
 ## <a href="https://github.com/kayleehou/myproject/issues/28" rel="nofollow">Running Server Locally Issues Solved</a>
+
+Running locally... shown in class 
