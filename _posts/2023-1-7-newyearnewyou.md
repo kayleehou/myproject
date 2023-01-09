@@ -159,7 +159,7 @@ ul li {
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
-  background: #fff;
+  background: #eee;
   font-size: 18px;
   font-color: black;
   transition: 0.2s;
@@ -179,7 +179,7 @@ ul li:hover {
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
   background: #888;
-  color: #fff;
+  color: #eee;
   text-decoration: line-through;
 }
 
@@ -206,8 +206,8 @@ ul li.checked::before {
 }
 
 .close:hover {
-  background-color: #f44336;
-  color: white;
+  background-color: #6e6b6b;
+  color: black;
 }
 
 /* Style the header */
