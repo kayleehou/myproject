@@ -18,13 +18,13 @@ Click on the titles to access!
 
 ## <a href="https://github.com/kayleehou/myproject/issues/29#issue-1535587853" rel="nofollow">Week 18 Issues</a>
 - continuing to document issues and explaining how I solved them 
-
-## View and Frontend Coding 
+## <a href="https://haeryny.github.io/teamteam/" rel="nofollow">View and Frontend Coding- Login</a>
 ![](https://github.com/kayleehou/myproject/blob/master/images/cptlogin.PNG?raw=true)
 - Our group split up the view and frontend coding, my job was to make a login page. 
 - login page made with html/css and javascript, enter username and password area allow the user to input information, the checkbox and buttons can also all be clicked. Additionally, when the user clicks anywhere outside of the login space, you will be brought back to the home page. When you first click on login, it zooms in which improves user experience. 
 - I'm currently planning the backend and frontend connection where the the class user storage can connect to our frontend login page, so that the user can actually login. 
 
+## <a href="https://haeryny.github.io/teamteam/extracurriculars/" rel="nofollow">View and Frontend Coding- My feature</a>
 ![](https://github.com/kayleehou/myproject/blob/master/images/cptnav.PNG?raw=true)
 - I continued adding on to my feature such as adding a nav bar to the left which organizes the hobbies based on what the user wants to explore 
 - I also edited the banner at the top and other parts of our website since Theo was able to change the theme. 
