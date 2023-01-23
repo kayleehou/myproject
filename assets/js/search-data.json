@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Frontend for API",
-            "content": ". Click to Return Home . . Marvel Searchbar . Start to type for a specific Marvel comic or character inside the search bar to &quot;filter&quot; the search options. . . . Menu . . Learn More! . Happy Searching! .",
-            "url": "https://kayleehou.github.io/myproject/markdown/2023/01/22/frontendforapi.html",
-            "relUrl": "/markdown/2023/01/22/frontendforapi.html",
+            "title": "Database CRUD Frontend",
+            "content": "Database API . First Name Last Name Extracurricular Hours Per Week Coach Name .",
+            "url": "https://kayleehou.github.io/myproject/2023/01/22/frontendforapi.html",
+            "relUrl": "/2023/01/22/frontendforapi.html",
             "date": " • Jan 22, 2023"
         }
         
