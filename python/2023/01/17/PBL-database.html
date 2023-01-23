@@ -10,17 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The project-based learning objective is to create a purposeful backend, something that can’t be done in frontend via JavaScript. A database and storing persistent data is a primary focus of most backend systems. An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson. As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python." />
 <meta property="og:description" content="The project-based learning objective is to create a purposeful backend, something that can’t be done in frontend via JavaScript. A database and storing persistent data is a primary focus of most backend systems. An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson. As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python." />
-<link rel="canonical" href="https://kayleehou.github.io/myproject/2023/01/17/PBL-database.html" />
-<meta property="og:url" content="https://kayleehou.github.io/myproject/2023/01/17/PBL-database.html" />
+<link rel="canonical" href="https://kayleehou.github.io/myproject/python/2023/01/17/PBL-database.html" />
+<meta property="og:url" content="https://kayleehou.github.io/myproject/python/2023/01/17/PBL-database.html" />
 <meta property="og:site_name" content="Kaylee’s Blog" />
-<meta property="og:image" content="https://kayleehou.github.io/myproject/images/python.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-01-17T00:00:00-06:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://kayleehou.github.io/myproject/images/python.png" />
+<meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Database/Model, Backend, OOP, Python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-17T00:00:00-06:00","datePublished":"2023-01-17T00:00:00-06:00","description":"The project-based learning objective is to create a purposeful backend, something that can’t be done in frontend via JavaScript. A database and storing persistent data is a primary focus of most backend systems. An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson. As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python.","headline":"Database/Model, Backend, OOP, Python","image":"https://kayleehou.github.io/myproject/images/python.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://kayleehou.github.io/myproject/2023/01/17/PBL-database.html"},"url":"https://kayleehou.github.io/myproject/2023/01/17/PBL-database.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-17T00:00:00-06:00","datePublished":"2023-01-17T00:00:00-06:00","description":"The project-based learning objective is to create a purposeful backend, something that can’t be done in frontend via JavaScript. A database and storing persistent data is a primary focus of most backend systems. An SQLite Database using the Python SQLAlchemy framework will be the outcome of this lesson. As students learn databases using SQLAlchemy, they will also learn about Object-oriented programming in Python.","headline":"Database/Model, Backend, OOP, Python","mainEntityOfPage":{"@type":"WebPage","@id":"https://kayleehou.github.io/myproject/python/2023/01/17/PBL-database.html"},"url":"https://kayleehou.github.io/myproject/python/2023/01/17/PBL-database.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/myproject/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kayleehou.github.io/myproject/feed.xml" title="Kaylee's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/myproject/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -86,8 +84,42 @@ window.onload = wrap_img;
 </span></p>
 
     
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/myproject/categories/#python">python</a>
+        
+      
+      </p>
+    
 
     
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/kayleehou/myproject/tree/master/_notebooks/2023-01-17-PBL-database.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/myproject/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/kayleehou/myproject/master?filepath=_notebooks%2F2023-01-17-PBL-database.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/myproject/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/kayleehou/myproject/blob/master/_notebooks/2023-01-17-PBL-database.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/myproject/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fkayleehou%2Fmyproject%2Fblob%2Fmaster%2F_notebooks%2F2023-01-17-PBL-database.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/myproject/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
       </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -739,7 +771,7 @@ flask_portfolio-web-1  <span class="p">|</span> <span class="o">[</span><span cl
 
 
 
-  </div><a class="u-url" href="/myproject/2023/01/17/PBL-database.html" hidden></a>
+  </div><a class="u-url" href="/myproject/python/2023/01/17/PBL-database.html" hidden></a>
 </article>
 
       </div>
