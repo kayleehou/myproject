@@ -26,7 +26,7 @@ description: Create and read endpoints in frontend
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "https://flask.nighthawkcodingsociety.com/api/users/";
+  const url = "https://flask.nighthawkcodingsociety.com/api/users";
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
