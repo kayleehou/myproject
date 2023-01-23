@@ -59,11 +59,11 @@ description: Create and read endpoints in frontend
           for (let row in data) {
             // tr and td element id's to build out for each row
             const tr = document.createElement("tr");
-            const uid = document.createElement("td");
-            const name = document.createElement("td");
-            const posts = document.createElement("td")
-            const dob = document.createElement("td");
-            const age = document.createElement("td");
+            const firstName = document.createElement("td");
+            const lastName = document.createElement("td");
+            const extracurricular = document.createElement("td")
+            const hoursPerWeek = document.createElement("td");
+            const coachName = document.createElement("td");
           
 
             // obtain data that is specific to the API
