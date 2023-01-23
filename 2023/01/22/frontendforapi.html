@@ -92,7 +92,7 @@ window.onload = wrap_img;
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "https://flask.nighthawkcodingsociety.com/api/users";
+  const url = "http://172.22.157.142:8086/api/users/";
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -133,18 +133,18 @@ window.onload = wrap_img;
           
 
             // obtain data that is specific to the API
-            uid.innerHTML = data[row].uid; 
-            name.innerHTML = data[row].name; 
-            posts.innerHTML = data[row].posts.length;
-            dob.innerHTML = data[row].dob; 
-            age.innerHTML = data[row].age; 
+            firstName.innerHTML = data[row].firstName; 
+            lastName.innerHTML = data[row].lastName; 
+            extracurricular.innerHTML = data[row].extracurricular;
+            hoursPerWeek.innerHTML = data[row].hoursPerWeek; 
+            coachName.innerHTML = data[row].coachName; 
 
             // add HTML to container
-            tr.appendChild(uid);
-            tr.appendChild(name);
-            tr.appendChild(posts);
-            tr.appendChild(dob);
-            tr.appendChild(age);
+            tr.appendChild(firstName);
+            tr.appendChild(lastName);
+            tr.appendChild(extracurricular);
+            tr.appendChild(hoursPerWeek);
+            tr.appendChild(coachName);
 
             resultContainer.appendChild(tr);
           }
