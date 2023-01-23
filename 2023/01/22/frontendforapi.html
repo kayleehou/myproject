@@ -75,11 +75,10 @@ window.onload = wrap_img;
 <table>
   <thead>
   <tr>
-    <th>First Name</th>
-    <th> Last Name</th>
-    <th>Extracurricular</th>
-    <th>Hours Per Week</th>
-    <th>Coach Name</th>
+    <th>Name</th>
+    <th>UID</th>
+    <th>DOB</th>
+    <th>Age</th>
   </tr>
   </thead>
   <tbody id="result">
@@ -92,7 +91,7 @@ window.onload = wrap_img;
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "http://172.22.157.142:8086/api/users/";
+  const url = "https://flask.nighthawkcodingsociety.com/api/users/";
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -125,26 +124,23 @@ window.onload = wrap_img;
           for (let row in data) {
             // tr and td element id's to build out for each row
             const tr = document.createElement("tr");
-            const firstName = document.createElement("td");
-            const lastName = document.createElement("td");
-            const extracurricular = document.createElement("td")
-            const hoursPerWeek = document.createElement("td");
-            const coachName = document.createElement("td");
+            const name = document.createElement("td");
+            const uid = document.createElement("td");
+            const dob = document.createElement("td")
+            const age = document.createElement("td");
           
 
             // obtain data that is specific to the API
-            firstName.innerHTML = data[row].firstName; 
-            lastName.innerHTML = data[row].lastName; 
-            extracurricular.innerHTML = data[row].extracurricular;
-            hoursPerWeek.innerHTML = data[row].hoursPerWeek; 
-            coachName.innerHTML = data[row].coachName; 
+            name.innerHTML = data[row].name; 
+            uid.innerHTML = data[row].uid; 
+            dob.innerHTML = data[row].dob;
+            age.innerHTML = data[row].age; 
 
             // add HTML to container
-            tr.appendChild(firstName);
-            tr.appendChild(lastName);
-            tr.appendChild(extracurricular);
-            tr.appendChild(hoursPerWeek);
-            tr.appendChild(coachName);
+            tr.appendChild(name);
+            tr.appendChild(uid);
+            tr.appendChild(dob);
+            tr.appendChild(age);
 
             resultContainer.appendChild(tr);
           }
