@@ -6,4 +6,28 @@ image: images/logo.png
 ![image](https://github.com/kayleehou/myproject/blob/master/images/kayleehomebanner.PNG?raw=true)
 check out my 'about me' page or any of my posts!
 
+<html>
+<body>
+
+<button onclick="typeWriter()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'you can check out my ‘about me’ page or any of my posts!';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>
+
 # My Blogs
