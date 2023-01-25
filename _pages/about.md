@@ -43,7 +43,7 @@ Here are some pics of me and my besties <3
     <img src="https://user-images.githubusercontent.com/90804195/187099658-d549b118-cf5c-414d-8f28-be088eb4d82d.png" alt="pic2" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://user-images.githubusercontent.com/90804195/187099826-adaef12f-1180-4078-b14d-4e37f279ee16.jpg" alt="pic3" style="width:100%">
+    <img src="https://user-images.githubusercontent.com/90804195/187099826-adaef12f-1180-4078-b14d-4e37f279ee16.jpg" alt="pic3" style="width:90%">
   </div>
 </div>
 
