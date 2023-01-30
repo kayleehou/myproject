@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Grading videos based on Collegeboard scoring criteria 
-categories: [markdown]
+categories: [collegeboard]
 title: Performance Task Scoring 3
 ---
 <html>

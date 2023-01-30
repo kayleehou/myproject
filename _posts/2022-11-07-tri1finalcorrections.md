@@ -2,7 +2,7 @@
 toc: true 
 layout: post
 description: test corrections
-categories: [markdown]
+categories: [collegeboard]
 title: Tri 1 Final Corrections
 comments: true
 
