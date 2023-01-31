@@ -33,3 +33,19 @@ comments: true
 - paper is blocking digital empowerment, we've been using paper for so long that it's what we're used to. As a result, some people don't want to use the computer if not necessary because it can be difficult to learn. 
 - But it's important to to learn how to use a computer, especially in this day in age, everything is online, sticking to paper will only cause you to restrict yourself. 
 - Yes, there are such barriers at Del Norte. In English, we still had to write on-demands on paper. We were only give 40 minutes and I didn't understand a situation in real life where we would only have paper and 40 minutes to write an essay. Instead of practicing writing fast, you should practice your typing skills, which would be more efficient and faster in the long run, allowing you to write more. 
+
+# 5.1-5.2 Blog 
+Think of three beneficial effects of your projects based on 5.1 Unit
+- help humane society with donations
+- help abandoned dogs and dogs without homes find good owners 
+- find the dog that matches your life the best so that it is the easiest transition
+
+Think of a potential harmful effect of your project.
+- There could be an error in the code and the people could be matched to a dog that doesn't fit their criteria and the dog may be returned. 
+
+Answer with an opinion and learnings so far this year:  What are pros/cons on internet blockers at router and lack of admin password on lab machines at school?
+- pros- keeps people on track at school, for example if students want to use instagram, pinterest, or other social medias, they have to wait until they go home
+- cons- for computer science class, certain websites are banned, like when we want to deploy a website. Therefore, we have to use vpn or a hot spot which can be inconvenient. 
+
+What concerns do you have personally about the digital divide?  For yourself or for others.
+- One concern I have is that others who live in poverty and don't have access to the technology that we have may fall behind and not be educated on all the changes in the digital world. Additionally, they may be less encouraged to pursue jobs in the tech industry because of a lack of opportunity. As a result, certain demographics may be less represented in the technology we use. 
