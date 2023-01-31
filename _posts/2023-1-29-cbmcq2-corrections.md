@@ -30,6 +30,7 @@ tr:nth-child(even) {
 <table>
   <tr>
     <th>question #</th>
+    <th>question </th>
     <th>my answer</th>
     <th>correct answer</th>
     <th>comments</th>
