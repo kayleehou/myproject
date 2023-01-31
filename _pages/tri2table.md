@@ -12,3 +12,4 @@ title: Trimester 2 Calendar
 |   17   | <a href="https://kayleehou.github.io/myproject/review%20tickets/2023/01/08/week17reviewticket.html" rel="nofollow">Week 17 Hacks</a> | 2.9/3 | I did extra by documenting any issues I encountered and used javascript, html, and css in my group cbpt project |
 |  18    | <a href="https://kayleehou.github.io/myproject/review%20tickets/2023/01/16/week18reviewticket.html" rel="nofollow">Week 18 Hacks</a> | 2.8/3 | I got extra .05 on model and view |
 |   19   | <a href="https://github.com/kayleehou/myproject/issues/31#issue-1552619991" rel="nofollow">Week 19 Hacks</a> |  2.95/3 | 1 on api and database video, .95 on collegeboard scoring  |
+|   20   | <a href="https://github.com/kayleehou/myproject/issues/32#issue-1563497583" rel="nofollow">Week 20 Hacks</a>  | tbd   | n/a   |
