@@ -5,6 +5,8 @@ description: practice test corrections
 categories: [collegeboard]
 title: CB MCQ 2 Corrections 
 ---
+![](https://github.com/kayleehou/myproject/blob/master/images/mcq2score.PNG?raw=true)
+
 <html>
 <head>
 <style>
