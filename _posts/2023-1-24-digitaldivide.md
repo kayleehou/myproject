@@ -34,7 +34,7 @@ comments: true
 - But it's important to to learn how to use a computer, especially in this day in age, everything is online, sticking to paper will only cause you to restrict yourself. 
 - Yes, there are such barriers at Del Norte. In English, we still had to write on-demands on paper. We were only give 40 minutes and I didn't understand a situation in real life where we would only have paper and 40 minutes to write an essay. Instead of practicing writing fast, you should practice your typing skills, which would be more efficient and faster in the long run, allowing you to write more. 
 
-# 5.1-5.2 Blog 
+# 5.1-5.2 Additional Questions 
 Think of three beneficial effects of your projects based on 5.1 Unit
 - help humane society with donations
 - help abandoned dogs and dogs without homes find good owners 
@@ -48,4 +48,20 @@ Answer with an opinion and learnings so far this year:  What are pros/cons on in
 - cons- for computer science class, certain websites are banned, like when we want to deploy a website. Therefore, we have to use vpn or a hot spot which can be inconvenient. 
 
 What concerns do you have personally about the digital divide?  For yourself or for others.
-- One concern I have is that others who live in poverty and don't have access to the technology that we have may fall behind and not be educated on all the changes in the digital world. Additionally, they may be less encouraged to pursue jobs in the tech industry because of a lack of opportunity. As a result, certain demographics may be less represented in the technology we use. 
+- One concern I have is that others who live in poverty and don't have access to the technology that we have may fall behind and not be educated on all the changes in the digital world. Additionally, they may be less encouraged to pursue jobs in the tech industry because of a lack of opportunity. As a result, certain demographics may be less represented in the technology we
+ use. 
+
+
+# 5.3 Computing Bias
+Write summary/thoughts/conclusions from each of the exercises above. Focus on avoiding Bias in algorithms or code you write.
+- From our discussion, we realized that certain apps are used more by a certain age group. As a result, the information spread is likely to be catered toward that age group. What is recommended for users of one age is unlikely to be reccomended for a different age group. Companies like Netflix, Google, and Amazon recommend products or shows based on what you've already seen and enjoyed. For example, if you're a Democrat on Tiktok and interact with one video positively, you are going to receive more and more Democrat videos that align with your opinion. One way to avoid computing bias is to make sure you have a lot of training diversity when you are creating your algorithms. The reason why the HP camera couldn't pick up on the black man testing, is because there probably wasn't a lot of people of color testing the product before launch. In the code I write, I will make sure that other people test it out because everyone can run into different bugs and I can make sure my program is as bug-free as possible. 
+
+# 5.4 Crowdsourcing 
+CompSci has 150 ish principles students. Describe a crowdsource idea and how you might initiate it in our environment?
+- We already use crowdsourcing with our slack. A lot of people ask questions in the general channel, and anyone can answer. A lot of the time, you get different answers and you can go through the options that people give and use the once that you think will help your error the best. I've seen teachers do this with a myConnect discussion board before but I think slack is one of the best ways to crowdsource because you can notifications, and it's very quick and easy to get responses. 
+
+What about Del Norte crowdsourcing? Could your project be better with crowdsourcing?
+- We often use google forms and collect data for classes like Statistics. I also know that different clubs utilize discord and instagram to get more data from members and followers. For example, our Yearbook team will post on their story questions like "how do you feel about the dance getting canceled," or "do you like our new school schedule." A lot of the time, crowdsourcing is helpful to quickly get data from peers, but you are also more prone to unreliable responses. My project could be better with crowdsourcing because you can quickly get feedback on ideas that you might be unsure about. When creating these projects, you have to look at issues and ideas from the lens of the viewer, which can be difficult if you don't get their opinion directly. However, that also doesn't mean you should utilize everything that people suggest, it's up to you to filter through responses and pick the ones that you like the best. 
+
+What kind of data could you capture at N@tM to make the evening interesting? Perhaps use this data to impress Teachers during finals week.
+- I could keep a record of each project and write down points that I liked about it or parts of the project that inspired me and how I could potentially use it for trimester 3. 
