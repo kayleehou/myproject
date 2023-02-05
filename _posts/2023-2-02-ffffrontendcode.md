@@ -31,6 +31,8 @@ h3 {
 </head>
 <body>
 
+<a href="https://haeryny.github.io/teamteam/availabledogs/"><img src="https://cdn-icons-png.flaticon.com/512/70/70021.png" alt="shopping cart" style="width:42px;height:42px;"></a>
+
 <html>
 <head>
 <style>
@@ -67,8 +69,6 @@ h3 {
 </head>
 <body>
 
-<h2 style="text-align:center">Product Card</h2>
-
 <div class="row">
   <div class="card">
     <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59442857/1/?bust=1674344452" alt="Denim Jeans" width="200" height="250">
@@ -91,11 +91,27 @@ h3 {
   <p>Hound-Terrier Blend</p>
   <p><button>Learn More</button></p>
 </div>
+
+<div class="row">
   <div class="card">
   <img src="https://goldenbondrescue.com/wp-content/uploads/2022/11/Cody-3791.jpg" alt="Denim Jeans" width="200" height="250">
   <h1>Honey</h1>
   <p class="price">$200</p>
   <p>Retriever Blend</p>
+  <p><button>Learn More</button></p>
+</div>
+  <div class="card">
+    <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/48740896/1/?bust=1626106588" alt="Denim Jeans" width="200" height="250">
+    <h1>George</h1>
+    <p class="price">$250</p>
+    <p>Retriever Blend</p>
+    <p><button>Learn More</button></p>
+  </div>
+  <div class="card">
+  <img src="https://i.pinimg.com/originals/6c/a6/30/6ca630545577914ec9394e8742b4539a.jpg" alt="Denim Jeans" width="200" height="250">
+  <h1>Julie</h1>
+  <p class="price">$250</p>
+  <p>Black Mouth Cur Blend</p>
   <p><button>Learn More</button></p>
 </div>
 
