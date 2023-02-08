@@ -92,6 +92,42 @@ h3 {
   <p><button>Learn More</button></p>
 </div>
 
+<html>
+<head>
+<style>
+.card {
+  color: #000000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000000;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
 <div class="row">
   <div class="card">
   <img src="https://goldenbondrescue.com/wp-content/uploads/2022/11/Cody-3791.jpg" alt="Denim Jeans" width="200" height="250">

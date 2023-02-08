@@ -2,7 +2,7 @@
 layout: post
 description: code for new year new you extracurriculars tab 
 categories: [markdown]
-title: New Year New You Extracurriculars Code
+title: New Year New You Extracurriculars  Code
 ---
 
 <html>
