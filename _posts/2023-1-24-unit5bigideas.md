@@ -74,7 +74,10 @@ In your blog, summarize the discussions and personal analysis on Software Licens
 - Some types of licenses include open source MIT and GPL licenses. MIT licenses allows using code freely and distributing closed source versions, the author would want informal credit such as mentioning their name. Closed source means a private project. GPL license let's people do anything they want except distributing closed source versions. In computer science, you must cite your sources, even images!
 
 Make a license for your personal (blog) and Team repositories for the CPT project. Be sure to have a license for both Team GitHub repositories (frontend/backend). Document license(s) you picked and why. FYI, frontend, since it is built on GitHub pages may come with a license and restrictions. Document in blog how team made license choice and process of update.
-- 
+- We decided to use a MIT license, the permissions is: Commercial use, Modification, Distribution, Private use
+- limitations are liability and warranty, and you can't stop someone else from profitting off your work 
+- The MIT license gives users express permission to reuse code for any purpose, sometimes even if code is part of proprietary software. As long as users include the original copy of the MIT license in their distribution, they can make any changes or modifications to the code to suit their own needs.
+- Majority of projects use MIT license so it felt the most safe to use. 
 
 # 5.6 Big Idea 5.6 Safe Computing 
 Describe PII you have seen on project in CompSci Principles.
