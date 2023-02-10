@@ -65,3 +65,32 @@ What about Del Norte crowdsourcing? Could your project be better with crowdsourc
 
 What kind of data could you capture at N@tM to make the evening interesting? Perhaps use this data to impress Teachers during finals week.
 - I could keep a record of each project and write down points that I liked about it or parts of the project that inspired me and how I could potentially use it for trimester 3. 
+
+# Big Ideas 5.5 Legal and Ethical Concerns 
+When you create a GitHub repository it requests a license type. Review the license types in relationship to this Tech Talk and make some notes in your personal blog.
+- They ask for a SSH private and public key that you generate, and are used to authenticate and establish an encrypted connection between client and remote machine over the internet. 
+
+In your blog, summarize the discussions and personal analysis on Software Licenses/Options, Digital Rights, and other Legal and Ethical thoughts from this College Board topic.
+- Some types of licenses include open source MIT and GPL licenses. MIT licenses allows using code freely and distributing closed source versions, the author would want informal credit such as mentioning their name. Closed source means a private project. GPL license let's people do anything they want except distributing closed source versions. In computer science, you must cite your sources, even images!
+
+Make a license for your personal (blog) and Team repositories for the CPT project. Be sure to have a license for both Team GitHub repositories (frontend/backend). Document license(s) you picked and why. FYI, frontend, since it is built on GitHub pages may come with a license and restrictions. Document in blog how team made license choice and process of update.
+- 
+
+# 5.6 Big Idea 5.6 Safe Computing 
+Describe PII you have seen on project in CompSci Principles.
+- I've seen login features on people's projects that require personal information such as email or names. 
+
+What are your feelings about PII and your personal exposure?
+- For PII, most of the time, if my personal information isn't required, I don't fill it out, just to be as private as possible. Sometimes, I change random information I can such as birthday, and I don't usually put my last name when signing up for websites, I'll use an initial. If it's for entertainment, like signing up for Spotify, I won't use specific personal information, but if it's for college, I provide the accurate required info. 
+
+Describe good and bad passwords? What is another step that is used to assist in authentication.
+- A good password is one that cannot be easily guessed, it should include numbers, letters (capitals and lowercase) and special characters. You should also have different passwords for different websites. Bad passwords are simple and don't include different types of characters and are the same for everything.  
+
+Try to describe Symmetric and Asymmetric encryption.
+- Symmetric encryption utilizes the same secret key to encrypt and decrypt sensitive information. Asymmetric encryption uses linked public and private key pairs and decrypt sender and recipients private data. Github uses asymmetric encryption. 
+
+Provide an example of encryption we used in AWS deployment.
+- We use ports and keys so that every person's website is deployed on a unique port. 
+
+Describe a phishing scheme you have learned about the hard way. Describe some other phishing techniques.
+- One time, I got an email that said I got into an exclusive community, but they just wanted donations lol. Phishing techniques often include using emails, links on the internet or appealing advertisements. 
