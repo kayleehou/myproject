@@ -4,15 +4,18 @@ layout: default
 description: Create and read endpoints in frontend
 ---
 
-<p>Database API</p>
+<p>Dog Info</p>
 
 <table>
   <thead>
   <tr>
     <th>Name</th>
     <th>UID</th>
+    <th>Breed</th>
+    <th>Sex</th>
     <th>DOB</th>
     <th>Age</th>
+    <th>Price</th>
   </tr>
   </thead>
   <tbody id="result">
@@ -25,7 +28,7 @@ description: Create and read endpoints in frontend
   const resultContainer = document.getElementById("result");
 
   // prepare fetch options
-  const url = "https://flask.nighthawkcodingsociety.com/api/users/";
+  const url = "http://fluffyfriendfinder.nighthawkcodingsociety.com/api/users/";
   const options = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -60,21 +63,30 @@ description: Create and read endpoints in frontend
             const tr = document.createElement("tr");
             const name = document.createElement("td");
             const uid = document.createElement("td");
-            const dob = document.createElement("td")
+            const breed = document.createElement("td");
+            const sex = document.createElement("td");
+            const dob = document.createElement("td");
             const age = document.createElement("td");
+            const price = document.createElement("td");
           
 
             // obtain data that is specific to the API
             name.innerHTML = data[row].name; 
             uid.innerHTML = data[row].uid; 
+            breed.innerHTML = data[row].breed;
+            sex.innerHTML = data[row].sex;
             dob.innerHTML = data[row].dob;
             age.innerHTML = data[row].age; 
+            price.innerHTML = data[row].price;
 
             // add HTML to container
             tr.appendChild(name);
             tr.appendChild(uid);
+            tr.appendChild(breed);
+            tr.appendChild(sex);
             tr.appendChild(dob);
             tr.appendChild(age);
+            tr.appendChild(price);
 
             resultContainer.appendChild(tr);
           }
