@@ -91,7 +91,7 @@
     
         ,"post8": {
             "title": "Database CRUD Frontend",
-            "content": "Database API . Name UID DOB Age .",
+            "content": "Dog Info . Name UID Breed Sex DOB Age Price .",
             "url": "https://kayleehou.github.io/myproject/2023/01/22/frontendforapi.html",
             "relUrl": "/2023/01/22/frontendforapi.html",
             "date": " • Jan 22, 2023"
