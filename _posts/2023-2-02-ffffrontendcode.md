@@ -157,7 +157,7 @@ h3 {
   const resultContainer = document.getElementById("myMenu");
 
   // prepare fetch options
-  const url = "https://escaperoom.nighthawkcodescrums.gq/api/MCU/";
+  const url = "http://fluffyfriendfinder.nighthawkcodingsociety.com/api/users/";
   const headers = {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
