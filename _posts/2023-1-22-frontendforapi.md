@@ -63,30 +63,30 @@ description: Create and read endpoints in frontend
             const tr = document.createElement("tr");
             const name = document.createElement("td");
             const uid = document.createElement("td");
-            const breed = document.createElement("td");
-            const sex = document.createElement("td");
+            // const breed = document.createElement("td");
+            // const sex = document.createElement("td");
             const dob = document.createElement("td");
             const age = document.createElement("td");
-            const price = document.createElement("td");
+            // const price = document.createElement("td");
           
 
             // obtain data that is specific to the API
             name.innerHTML = data[row].name; 
             uid.innerHTML = data[row].uid; 
-            breed.innerHTML = data[row].breed;
-            sex.innerHTML = data[row].sex;
+            // breed.innerHTML = data[row].breed;
+            // sex.innerHTML = data[row].sex;
             dob.innerHTML = data[row].dob;
             age.innerHTML = data[row].age; 
-            price.innerHTML = data[row].price;
+            // price.innerHTML = data[row].price;
 
             // add HTML to container
             tr.appendChild(name);
             tr.appendChild(uid);
-            tr.appendChild(breed);
-            tr.appendChild(sex);
+            // tr.appendChild(breed);
+            // tr.appendChild(sex);
             tr.appendChild(dob);
             tr.appendChild(age);
-            tr.appendChild(price);
+            // tr.appendChild(price);
 
             resultContainer.appendChild(tr);
           }
