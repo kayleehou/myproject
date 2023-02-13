@@ -88,7 +88,7 @@ title: Dogs for Adoption Shopping Cart Code
           "<tr>";
       
     });
-    $('#product-item-container').html(productHTML);
+    ('#product-item-container').html(productHTML);
   }
 
   function addToCart(element) {
@@ -181,8 +181,8 @@ function showCartTable() {
 		});
 	}
 
-	$('#cartTableBody').html(cartRowHTML);
-	$('#itemCount').text(itemCount);
-	$('#totalAmount').text("$" + grandTotal.toFixed(2));
+	('#cartTableBody').html(cartRowHTML);
+	('#itemCount').text(itemCount);
+	('#totalAmount').text("$" + grandTotal.toFixed(2));
 </script>
 
