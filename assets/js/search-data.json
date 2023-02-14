@@ -24,10 +24,10 @@
   
     
         ,"post2": {
-            "title": "Dogs for Adoption Shopping Cart Code",
-            "content": "&lt;/header&gt; Album 1 $12.99 ADD TO CART Album 2 $14.99 &lt;button class=&quot;cart-button&quot;type=&quot;button&quot;&gt;ADD TO CART&lt;/button&gt; Album 3 $9.99 ADD TO CART Album 4 $19.99 ADD TO CART T-Shirt $19.99 ADD TO CART Coffee Cup $6.99 ADD TO CART CART . dog PRICE QUANTITY Total $0 PURCHASE &lt;/body&gt; &lt;/html&gt; &lt;/body&gt; &lt;/html&gt; .",
-            "url": "https://kayleehou.github.io/myproject/markdown/2023/02/09/shoppingcartcode.html",
-            "relUrl": "/markdown/2023/02/09/shoppingcartcode.html",
+            "title": "Shoppingcartcode",
+            "content": "&lt;!DOCTYPE html&gt; . &lt;/header&gt; Album 1 $12.99 ADD TO CART Album 2 $14.99 &lt;button class=&quot;btn btn-primary shop-item-button&quot;type=&quot;button&quot;&gt;ADD TO CART&lt;/button&gt; Album 3 $9.99 ADD TO CART Album 4 $19.99 ADD TO CART T-Shirt $19.99 ADD TO CART Coffee Cup $6.99 ADD TO CART CART . ITEM PRICE QUANTITY Total $0 PURCHASE &lt;/body&gt; &lt;/html&gt; &lt;/body&gt; &lt;/html&gt; .",
+            "url": "https://kayleehou.github.io/myproject/2023/02/09/shoppingcartcode.html",
+            "relUrl": "/2023/02/09/shoppingcartcode.html",
             "date": " • Feb 9, 2023"
         }
         
