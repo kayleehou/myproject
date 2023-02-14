@@ -1,64 +1,59 @@
----
-layout: post
-description: 
-categories: [markdown]
-title: Dogs for Adoption Shopping Cart Code 
----
+<!DOCTYPE html>
 <html>
     <head>
         </header>
         <section class="container content-section">
-            <div class="shop-dogs">
-                <div class="shop-dog">
-                    <span class="dog-name">Album 1</span>
-                    <img class="dog-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUaFH2Bv2Ic7HloYmvMV-gPG2w-7hytvP2EXz3YVww&s">
-                    <div class="shop-dog-details">
-                        <span class="shop-dog-price">$12.99</span>
-                        <button class="cart-button" type="button">ADD TO CART</button>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Album 1</span>
+                    <img class="shop-item-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUaFH2Bv2Ic7HloYmvMV-gPG2w-7hytvP2EXz3YVww&s">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$12.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
-                <div class="shop-dog">
-                    <span class="dog-name">Album 2</span>
-                    <img class="dog-pic" src="Images/Album 2.png">
-                    <div class="shop-dog-details">
-                        <span class="shop-dog-price">$14.99</span>
-                        <button class="cart-button"type="button">ADD TO CART</button>
+                <div class="shop-item">
+                    <span class="shop-item-title">Album 2</span>
+                    <img class="shop-item-image" src="Images/Album 2.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$14.99</span>
+                        <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                 </div>
-                <div class="shop-dog">
-                    <span class="dog-name">Album 3</span>
-                    <img class="dog-pic" src="Images/Album 3.png">
-                    <div class="shop-dog-details">
-                        <span class="shop-dog-price">$9.99</span>
-                        <button class="cart-button" type="button">ADD TO CART</button>
+                <div class="shop-item">
+                    <span class="shop-item-title">Album 3</span>
+                    <img class="shop-item-image" src="Images/Album 3.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$9.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
-                <div class="shop-dog">
-                    <span class="dog-name">Album 4</span>
-                    <img class="dog-pic" src="Images/Album 4.png">
-                    <div class="shop-dog-details">
-                        <span class="shop-dog-price">$19.99</span>
-                        <button class="cart-button" type="button">ADD TO CART</button>
+                <div class="shop-item">
+                    <span class="shop-item-title">Album 4</span>
+                    <img class="shop-item-image" src="Images/Album 4.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
             </div>
         </section>
         <section class="container content-section">
-            <div class="shop-dogs">
-                <div class="shop-dog">
-                    <span class="dog-name">T-Shirt</span>
-                    <img class="dog-pic" src="Images/Shirt.png">
-                    <div class="shop-dog-details">
-                        <span class="shop-dog-price">$19.99</span>
-                        <button class="cart-button" type="button">ADD TO CART</button>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">T-Shirt</span>
+                    <img class="shop-item-image" src="Images/Shirt.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$19.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
-                <div class="shop-dog">
-                    <span class="dog-name">Coffee Cup</span>
-                    <img class="dog-pic" src="Images/Cofee.png">
-                    <div class="shop-dog-details">
-                        <span class="shop-dog-price">$6.99</span>
-                        <button class="cart-button" type="button">ADD TO CART</button>
+                <div class="shop-item">
+                    <span class="shop-item-title">Coffee Cup</span>
+                    <img class="shop-item-image" src="Images/Cofee.png">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$6.99</span>
+                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
                     </div>
                 </div>
             </div>
@@ -66,17 +61,17 @@ title: Dogs for Adoption Shopping Cart Code
         <section class="container content-section">
             <h2 class="section-header">CART</h2>
             <div class="cart-row">
-                <span class="cart-dog cart-header cart-column">dog</span>
+                <span class="cart-item cart-header cart-column">ITEM</span>
                 <span class="cart-price cart-header cart-column">PRICE</span>
                 <span class="cart-quantity cart-header cart-column">QUANTITY</span>
             </div>
-            <div class="cart-dogs">
+            <div class="cart-items">
             </div>
             <div class="cart-total">
                 <strong class="cart-total-title">Total</strong>
                 <span class="cart-total-price">$0</span>
             </div>
-            <button class="purchase-button" type="button">PURCHASE</button>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
     </body>
 </html>
 <script>
@@ -86,17 +81,17 @@ if (document.readyState == 'loading') {
     ready()
 }
 function ready() {
-    var removeCartdogButtons = document.getElementsByClassName('btn-danger')
-    for (var i = 0; i < removeCartdogButtons.length; i++) {
-        var button = removeCartdogButtons[i]
-        button.addEventListener('click', removeCartdog)
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click', removeCartItem)
     }
-	var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
     for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
     }
-    var addToCartButtons = document.getElementsByClassName('shop-dog-button')
+    var addToCartButtons = document.getElementsByClassName('shop-item-button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
@@ -105,13 +100,13 @@ function ready() {
 }
 function purchaseClicked() {
     alert('Thank you for your purchase')
-    var cartdogs = document.getElementsByClassName('cart-dogs')[0]
-    while (cartdogs.hasChildNodes()) {
-        cartdogs.removeChild(cartdogs.firstChild)
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
 }
-function removeCartdog(event) {
+function removeCartItem(event) {
     var buttonClicked = event.target
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
@@ -125,28 +120,28 @@ function quantityChanged(event) {
 }
 function addToCartClicked(event) {
     var button = event.target
-    var shopdog = button.parentElement.parentElement
-    var title = shopdog.getElementsByClassName('dog-name')[0].innerText
-    var price = shopdog.getElementsByClassName('shop-dog-price')[0].innerText
-    var imageSrc = shopdog.getElementsByClassName('dog-pic')[0].src
-    adddogToCart(title, price, imageSrc)
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
-function adddogToCart(title, price, imageSrc) {
+function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
-    var cartdogs = document.getElementsByClassName('cart-dogs')[0]
-    var cartdogNames = cartdogs.getElementsByClassName('cart-dog-title')
-    for (var i = 0; i < cartdogNames.length; i++) {
-        if (cartdogNames[i].innerText == title) {
-            alert('This dog is already added to the cart')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title) {
+            alert('This item is already added to the cart')
             return
         }
     }
     var cartRowContents = `
-        <div class="cart-dog cart-column">
-            <img class="cart-dog-image" src="${imageSrc}" width="100" height="100">
-            <span class="cart-dog-title">${title}</span>
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
@@ -154,13 +149,13 @@ function adddogToCart(title, price, imageSrc) {
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
     cartRow.innerHTML = cartRowContents
-    cartdogs.append(cartRow)
-    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartdog)
+    cartItems.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
 function updateCartTotal() {
-    var cartdogContainer = document.getElementsByClassName('cart-dogs')[0]
-    var cartRows = cartdogContainer.getElementsByClassName('cart-row')
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
