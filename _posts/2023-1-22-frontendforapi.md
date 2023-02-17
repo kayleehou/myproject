@@ -23,38 +23,6 @@ description: Create and read endpoints in frontend
   </tbody>
 </table>
 
-<p>Dog Info</p>
-
-<form action="javascript:create_user()">
-    <p><label>
-        Name:
-        <input type="text" name="name" id="name" required>
-    </label></p>
-    <p><label>
-        User ID:
-        <input type="text" name="uid" id="uid" required>
-    </label></p>
-    <p><label>
-        Breed:
-        <input type="text" name="breed" id="breed" required>
-    </label></p>
-    <p><label>
-        Sex:
-        <input type="text" name="sex" id="sex" required>
-    </label></p>
-    <p><label>
-        Price:
-        <input type="text" name="price" id="price" required>
-    </label></p>
-    <p><label>
-        Date of Birth:
-        <input type="date" name="dob" id="dob">
-    </label></p>
-    <p>
-        <button>Create</button>
-    </p>
-</form>
-
 <script>
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
