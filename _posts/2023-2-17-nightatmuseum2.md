@@ -13,7 +13,10 @@ comments: true
 - Another project that was cool was a news website one where you could input your own stories and it would show up in a news format. 
 - I also went to see the other projects at night at the museum, I went to the both art rooms and also the ceramics room. The AP Art room was the most impressive, all the projects in there were really great. I really like Haeryn's pieces and my friend Naomi's 
 
-![](https://files.slack.com/files-pri/TUDAF53UJ-F04PN3AJDJB/img_2281.jpg)
-![](https://files.slack.com/files-pri/TUDAF53UJ-F04Q742EZ51/img_2282.jpg)
-![](https://files.slack.com/files-pri/TUDAF53UJ-F04Q9M6NR9S/img_2280.jpg)
-![](https://files.slack.com/files-pri/TUDAF53UJ-F04QWTU62HE/69829540741__f5c9db42-9d34-4689-ae25-4bdaab882fa8.fullsizerender.jpg)
+<img src="https://github.com/kayleehou/myproject/blob/master/images/natm2.jpg?raw=true" width="200" height="400" />
+
+<img src="https://github.com/kayleehou/myproject/blob/master/images/natm3.jpg?raw=true" width="200" height="400" />
+
+<img src="https://github.com/kayleehou/myproject/blob/master/images/natm4.jpg?raw=true" width="200" height="400" />
+
+<img src="https://github.com/kayleehou/myproject/blob/master/images/natmart.jpg?raw=true" width="200" height="400" />
