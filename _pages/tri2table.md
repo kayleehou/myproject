@@ -13,3 +13,7 @@ title: Trimester 2 Calendar
 |  18    | <a href="https://kayleehou.github.io/myproject/review%20tickets/2023/01/16/week18reviewticket.html" rel="nofollow">Week 18 Hacks</a> | 2.8/3 | I got extra .05 on model and view |
 |   19   | <a href="https://github.com/kayleehou/myproject/issues/31#issue-1552619991" rel="nofollow">Week 19 Hacks</a> |  2.95/3 | 1 on api and database video, .95 on collegeboard scoring  |
 |   20   | <a href="https://github.com/kayleehou/myproject/issues/32#issue-1563497583" rel="nofollow">Week 20 Hacks</a>  | 4.6/5   | extra on presentation   |
+|   21   | <a href="https://github.com/haeryny/teamteam/issues/11#issue-1571898022" rel="nofollow">Week 21 Hacks</a> |  --  | --| 
+|   22    | <a href="https://github.com/haeryny/teamteam/issues/14#issue-1581793111" rel="nofollow">Week 22 Hacks</a> |  --   |  --  |
+|    23   |  in person  |  4.9/5  | --|
+|    24   | <a href="https://github.com/kayleehou/myproject/issues/34#issue-1602234322" rel="nofollow">Week 24 Hacks</a>  | tbd  | tbd |
