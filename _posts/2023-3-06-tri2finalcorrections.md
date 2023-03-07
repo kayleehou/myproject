@@ -7,20 +7,17 @@ title: Tri 2 Final MCQ Corrections
 comments: true
 
 ---
-<!DOCTYPE html>
 <html>
 <head>
 <style>
 * {
   box-sizing: border-box;
 }
-
 .column {
   float: left;
   width: 33.33%;
   padding: 5px;
 }
-
 /* Clearfix (clear floats) */
 .row::after {
   content: "";
@@ -34,10 +31,10 @@ comments: true
 # 22
 <div class="row">
   <div class="column">
-    <img src="https://assets.learnosity.com/organisations/537/media.academicmerit.com/ac9883d1a0627c9576641df6168937cc/original.png" alt="Snow" style="width:100%">
+    <img src="https://assets.learnosity.com/organisations/537/media.academicmerit.com/de3453c52e4929e254628b668fac74af/original.png" alt="Snow" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://assets.learnosity.com/organisations/537/media.academicmerit.com/de3453c52e4929e254628b668fac74af/original.png" alt="Forest" style="width:100%">
+    <img src="https://assets.learnosity.com/organisations/537/media.academicmerit.com/ac9883d1a0627c9576641df6168937cc/original.png" alt="Forest" style="width:100%">
   </div>
 </div>
 
@@ -49,7 +46,7 @@ Question: For which of the grids does the program correctly move the robot to th
 - corrections: both Grid I and II will get the robot correctly to the top of the grid, however, Grid II robot will not know whether to turn left or right because it can move both right and left, whereas in Grid I, the robot can only move left. 
 
 # 29 
-<img src="https://assets.learnosity.com/organisations/537/VR165478.g02.png" width="200" height="300" />
+<img src="https://assets.learnosity.com/organisations/537/VR165478.g02.png" width="200" height="280" />
 Question: What is displayed as a result of executing the code segment?
 - My answer: A- true true true 
 - Correct answer: B- false false false 
