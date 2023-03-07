@@ -156,8 +156,10 @@ window.onload = wrap_img;
 <span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;images/&quot;</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
     <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># default image</span>
         <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Peter Carolin&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Clouds Impression&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;clouds-impression.png&quot;</span><span class="p">},</span>
-            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Peter Carolin&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Lassen Volcano&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;lassen-volcano.jpg&quot;</span><span class="p">}</span>
+            <span class="c1"># {&#39;source&#39;: &quot;Peter Carolin&quot;, &#39;label&#39;: &quot;Clouds Impression&quot;, &#39;file&#39;: &quot;clouds-impression.png&quot;},</span>
+            <span class="c1"># {&#39;source&#39;: &quot;Peter Carolin&quot;, &#39;label&#39;: &quot;Lassen Volcano&quot;, &#39;file&#39;: &quot;lassen-volcano.jpg&quot;},</span>
+            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;StampChamp&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Smiley Face&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;smileyface.jpg&quot;</span><span class="p">}</span>
+            
         <span class="p">]</span>
     <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
         <span class="c1"># File to open</span>
@@ -170,14 +172,14 @@ window.onload = wrap_img;
 
 
 <span class="c1"># Run this as standalone tester to see sample data printed in Jupyter terminal</span>
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="c1"># print parameter supplied image</span>
-    <span class="n">green_square</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">(</span><span class="n">images</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;Internet&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Green Square&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;green-square-16.png&quot;</span><span class="p">}])</span>
-    <span class="n">image_display</span><span class="p">(</span><span class="n">green_square</span><span class="p">)</span>
+<span class="c1"># if __name__ == &quot;__main__&quot;:</span>
+<span class="c1">#     # print parameter supplied image</span>
+<span class="c1">#     green_square = image_data(images=[{&#39;source&#39;: &quot;Internet&quot;, &#39;label&#39;: &quot;Green Square&quot;, &#39;file&#39;: &quot;green-square-16.png&quot;}])</span>
+<span class="c1">#     image_display(green_square)</span>
     
-    <span class="c1"># display default images from image_data()</span>
-    <span class="n">default_images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
-    <span class="n">image_display</span><span class="p">(</span><span class="n">default_images</span><span class="p">)</span>
+<span class="c1">#     # display default images from image_data()</span>
+<span class="c1">#     default_images = image_data()</span>
+<span class="c1">#     image_display(default_images)</span>
     
 </pre></div>
 
