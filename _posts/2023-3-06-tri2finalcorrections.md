@@ -27,9 +27,13 @@ comments: true
 </style>
 </head>
 <body>
+</body>
+</html>
 
 # 22
 
+</body>
+</html>
 <div class="row">
   <div class="column">
     <img src="https://assets.learnosity.com/organisations/537/media.academicmerit.com/de3453c52e4929e254628b668fac74af/original.png" alt="Snow" style="width:100%">
@@ -38,7 +42,6 @@ comments: true
     <img src="https://assets.learnosity.com/organisations/537/media.academicmerit.com/ac9883d1a0627c9576641df6168937cc/original.png" alt="Forest" style="width:100%">
   </div>
 </div>
-
 </body>
 </html>
 Question: For which of the grids does the program correctly move the robot to the gray square?
