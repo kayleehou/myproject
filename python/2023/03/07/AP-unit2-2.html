@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels. College Board requires you to learn about Lossy and Lossless compression." />
 <meta property="og:description" content="Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels. College Board requires you to learn about Lossy and Lossless compression." />
-<link rel="canonical" href="https://kayleehou.github.io/myproject/data/2023/03/07/AP-unit2-2.html" />
-<meta property="og:url" content="https://kayleehou.github.io/myproject/data/2023/03/07/AP-unit2-2.html" />
+<link rel="canonical" href="https://kayleehou.github.io/myproject/python/2023/03/07/AP-unit2-2.html" />
+<meta property="og:url" content="https://kayleehou.github.io/myproject/python/2023/03/07/AP-unit2-2.html" />
 <meta property="og:site_name" content="Kaylee’s Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-03-07T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Unit 2.2 Data Compression, Images" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-07T00:00:00-06:00","datePublished":"2023-03-07T00:00:00-06:00","description":"Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels. College Board requires you to learn about Lossy and Lossless compression.","headline":"Unit 2.2 Data Compression, Images","mainEntityOfPage":{"@type":"WebPage","@id":"https://kayleehou.github.io/myproject/data/2023/03/07/AP-unit2-2.html"},"url":"https://kayleehou.github.io/myproject/data/2023/03/07/AP-unit2-2.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-07T00:00:00-06:00","datePublished":"2023-03-07T00:00:00-06:00","description":"Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels. College Board requires you to learn about Lossy and Lossless compression.","headline":"Unit 2.2 Data Compression, Images","mainEntityOfPage":{"@type":"WebPage","@id":"https://kayleehou.github.io/myproject/python/2023/03/07/AP-unit2-2.html"},"url":"https://kayleehou.github.io/myproject/python/2023/03/07/AP-unit2-2.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/myproject/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://kayleehou.github.io/myproject/feed.xml" title="Kaylee's Blog" /><link rel="shortcut icon" type="image/x-icon" href="/myproject/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -81,13 +81,6 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://www.rubberstampchamp.com/images/products/00-SmallImages/teacherround-40_small.png" alt="" /></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Enumerate-&quot;Data&quot;-Big-Idea-from-College-Board">Enumerate "Data" Big Idea from College Board<a class="anchor-link" href="#Enumerate-&quot;Data&quot;-Big-Idea-from-College-Board"> </a></h2><blockquote><p>Some of the big ideas and vocab that you observe, talk about it with a partner ...</p>
 <ul>
 <li>"Data compression is the reduction of the number of bits needed to represent data"</li>
@@ -128,16 +121,27 @@ window.onload = wrap_img;
 <h3 id="pathlib">pathlib<a class="anchor-link" href="#pathlib"> </a></h3><blockquote><p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS's), pathlib is a solution to this problem.</p>
 <ul>
 <li>What are commands you use in terminal to access files?</li>
-<li>What are the command you use in Windows terminal to access files?</li>
-<li>What are some of the major differences?</li>
 </ul>
 </blockquote>
+<p>ls</p>
+<ul>
+<li>What are the command you use in Windows terminal to access files?</li>
+</ul>
+<p>cd, ls, dir, wsl</p>
+<ul>
+<li>What are some of the major differences?</li>
+</ul>
+<p>in windows command prompt, I have to type wsl in order to get to (base), whereas in Mac terminal, you can directly start typing commands.</p>
 <p>Provide what you observed, struggled with, or leaned while playing with this code.</p>
 <ul>
 <li>Why is path a big deal when working with images?</li>
-<li>How does the meta data source and label relate to Unit 5 topics?</li>
-<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
 </ul>
+<p>Originally, my photos weren't loading and they would say file not found. I realized this is because the images needed to be in the notebooks folder rather than the regular images folder in the directory. The route needs to be correct.</p>
+<ul>
+<li>How does the meta data source and label relate to Unit 5 topics?</li>
+</ul>
+<p>Metadata is data about data:i.e., its properties, history, origin, versions, and other information about a data asset. Metadata is data that describes other data, providing a structured reference that helps to sort and identify attributes of the information it describes, so it helps with the unit 5 topic of safe computing. - Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</p>
+<p>IPython is basically the "recommended" Python shell, which provides extra features. There is no language called IPython. You can use the Image class from IPython's display module to show all images, such as adding an image from a local file.</p>
 
 </div>
 </div>
@@ -158,7 +162,7 @@ window.onload = wrap_img;
         <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
             <span class="c1"># {&#39;source&#39;: &quot;Peter Carolin&quot;, &#39;label&#39;: &quot;Clouds Impression&quot;, &#39;file&#39;: &quot;clouds-impression.png&quot;},</span>
             <span class="c1"># {&#39;source&#39;: &quot;Peter Carolin&quot;, &#39;label&#39;: &quot;Lassen Volcano&quot;, &#39;file&#39;: &quot;lassen-volcano.jpg&quot;},</span>
-            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;StampChamp&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Smiley Face&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;smileyface.jpg&quot;</span><span class="p">}</span>
+            <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;StampChamp&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Smiley Face&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;smileyface.png&quot;</span><span class="p">}</span>
             
         <span class="p">]</span>
     <span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">images</span><span class="p">:</span>
@@ -172,18 +176,34 @@ window.onload = wrap_img;
 
 
 <span class="c1"># Run this as standalone tester to see sample data printed in Jupyter terminal</span>
-<span class="c1"># if __name__ == &quot;__main__&quot;:</span>
-<span class="c1">#     # print parameter supplied image</span>
-<span class="c1">#     green_square = image_data(images=[{&#39;source&#39;: &quot;Internet&quot;, &#39;label&#39;: &quot;Green Square&quot;, &#39;file&#39;: &quot;green-square-16.png&quot;}])</span>
-<span class="c1">#     image_display(green_square)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># print parameter supplied image</span>
+    <span class="c1"># smiley_face = image_data(images=[{&#39;source&#39;: &quot;Internet&quot;, &#39;label&#39;: &quot;Smiley Face&quot;, &#39;file&#39;: &quot;smileyface.png&quot;}])</span>
+    <span class="c1"># image_display(smiley_face)</span>
     
-<span class="c1">#     # display default images from image_data()</span>
-<span class="c1">#     default_images = image_data()</span>
-<span class="c1">#     image_display(default_images)</span>
+    <span class="c1"># display default images from image_data()</span>
+    <span class="n">default_images</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">()</span>
+    <span class="n">image_display</span><span class="p">(</span><span class="n">default_images</span><span class="p">)</span>
     
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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UmVhZHlxyWU8AAADhGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDUgNzkuMTYzNDk5LCAyMDE4LzA4LzEzLTE2OjQwOjIyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmUwZjY1MjdjLTYwYmMtMTk0Yi05YzI5LThmOTZhMGUwMmFjNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNjNDNjUzNTcxOUIxMUU5QTIxOUUyOEMzQjYzN0QyOCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNjNDNjUzNDcxOUIxMUU5QTIxOUUyOEMzQjYzN0QyOCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NzAyYWRiYS00ZGJlLTRlNDAtYWVjZC04Y2U4YTZiY2VlZDIiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo0MTU5NTE4My01M2Y5LTI4NDItOTBjZi1iMGJhMDU5NGQ0MjkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/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" />
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -194,20 +214,29 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Reading-and-Encoding-Images-(2-implementations-follow)">Reading and Encoding Images (2 implementations follow)<a class="anchor-link" href="#Reading-and-Encoding-Images-(2-implementations-follow)"> </a></h2><h3 id="PIL-(Python-Image-Library)">PIL (Python Image Library)<a class="anchor-link" href="#PIL-(Python-Image-Library)"> </a></h3><blockquote><p><a href="https://pillow.readthedocs.io/en/stable/">Pillow or PIL</a> provides the ability to work with images in Python.  <a href="https://www.geeksforgeeks.org/working-images-python/?ref=lbp">Geeks for Geeks</a> shows some ideas on working with images.</p>
 </blockquote>
-<h3 id="base64">base64<a class="anchor-link" href="#base64"> </a></h3><blockquote><p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?</p>
+<h3 id="base64">base64<a class="anchor-link" href="#base64"> </a></h3><blockquote><p>Image formats (JPG, PNG) are often called <strong>*Binary File formats</strong>, it is difficult to pass these over HTTP.   Thus, <a href="https://en.wikipedia.org/wiki/Base64">base64</a> converts binary encoded data (8-bit, ASCII/Unicode) into a text encoded scheme (24 bits, 6-bit Base64 digits).  Thus base64 is used to transport and embed binary images into textual assets such as HTML and CSS.- How is Base64 similar or different to Binary and Hexadecimal?
+Binary is base2, base16 is hexadecimal. Base64 takes 4 characters for every three bytes so it's more efficient than base16</p>
 <ul>
 <li>Translate first 3 letters of your name to Base64.</li>
 </ul>
 </blockquote>
+<p>001010011010110010- kay</p>
 <h3 id="numpy">numpy<a class="anchor-link" href="#numpy"> </a></h3><blockquote><p><a href="https://numpy.org/">Numpy</a> is described as "The fundamental package for scientific computing with Python".  In the Image Lab, a Numpy array is created from the image data in order to simplify access and change to the RGB values of the pixels, converting pixels to grey scale.</p>
 </blockquote>
 <h3 id="io,-BytesIO">io, BytesIO<a class="anchor-link" href="#io,-BytesIO"> </a></h3><blockquote><p>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.  In large quantities of data, how many frames of input the server currently has queued is the buffer.  In this example, there is a very large picture that lags.</p>
 <ul>
-<li>Where have you been a consumer of buffering?  </li>
-<li>From your consumer experience, what effects have you experienced from buffering?  </li>
-<li>How do these effects apply to images?</li>
+<li>Where have you been a consumer of buffering? </li>
 </ul>
 </blockquote>
+<p>When your watching a Youtube video, sometimes the video will buffer.</p>
+<ul>
+<li>From your consumer experience, what effects have you experienced from buffering?  </li>
+</ul>
+<p>I feel annoyed and don't want to finish watching the video sometimes if it takes too long to load.</p>
+<ul>
+<li>How do these effects apply to images?</li>
+</ul>
+<p>Sometimes, if images are too large, they will take a long time to load</p>
 
 </div>
 </div>
@@ -217,11 +246,23 @@ window.onload = wrap_img;
 <h2 id="Data-Structures,-Imperative-Programming-Style,-and-working-with-Images">Data Structures, Imperative Programming Style, and working with Images<a class="anchor-link" href="#Data-Structures,-Imperative-Programming-Style,-and-working-with-Images"> </a></h2><blockquote><p>Introduction to creating meta data and manipulating images.  Look at each procedure and explain the the purpose and results of this program.  Add any insights or challenges as you explored this program.</p>
 <ul>
 <li>Does this code seem like a series of steps are being performed?</li>
-<li>Describe Grey Scale algorithm in English or Pseudo code?</li>
-<li>Describe scale image?  What is before and after on pixels in three images?</li>
-<li>Is scale image a type of compression?  If so, line it up with College Board terms described?</li>
 </ul>
 </blockquote>
+<p>yes, you are defining functions and using if statements based on the defined functions from previous steps.</p>
+<ul>
+<li>Describe Grey Scale algorithm in English or Pseudo code?</li>
+</ul>
+<p>Get the red, green, and blue values of a pixel.
+Use fancy math to turn those numbers into a single gray value.
+Replace the original red, green, and blue values with the new gray value.</p>
+<ul>
+<li>Describe scale image?  What is before and after on pixels in three images?</li>
+</ul>
+<p>the images are getting scaled down to a smaller size. Scale image is the resizing of a digital image. The green square became bigger, the clouds image stayed the same, and the mountains picture became smaller.</p>
+<ul>
+<li>Is scale image a type of compression?  If so, line it up with College Board terms described?</li>
+</ul>
+<p>Yes, it is lossless compression, becaus the quality of the image remains the same but the image becomes smaller. There are trade-offs involved in choosing a compression technique for storing and transmitting data. While lossy compression reduces file size but lossless compression removes unecessary data.</p>
 
 </div>
 </div>
