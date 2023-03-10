@@ -1,0 +1,202 @@
+[
+    {
+      "age": 1, 
+      "breed": "Labrador Retriever Blend", 
+      "dob": "02-11-2022", 
+      "id": 1, 
+      "name": "Joe", 
+      "price": "200", 
+      "sex": "male", 
+      "uid": "81729"
+    }, 
+    {
+      "age": 4, 
+      "breed": "Shepherd-Rottweiler Blend", 
+      "dob": "01-31-2019", 
+      "id": 2, 
+      "name": "Bean", 
+      "price": "180", 
+      "sex": "male", 
+      "uid": "83792"
+    }, 
+    {
+      "age": 2, 
+      "breed": "Hound-Terrier Blend", 
+      "dob": "04-29-2020", 
+      "id": 3, 
+      "name": "Harry", 
+      "price": "160", 
+      "sex": "male", 
+      "uid": "80032"
+    }, 
+    {
+      "age": 1, 
+      "breed": "Retriever Blend", 
+      "dob": "11-01-2021", 
+      "id": 4, 
+      "name": "Honey", 
+      "price": "200", 
+      "sex": "female", 
+      "uid": "90276"
+    }, 
+    {
+      "age": 1, 
+      "breed": "Retriever Blend", 
+      "dob": "11-01-2021", 
+      "id": 5, 
+      "name": "George", 
+      "price": "200", 
+      "sex": "male", 
+      "uid": "90277"
+    }, 
+    {
+      "age": 0, 
+      "breed": "Black Mouth Cur Blend", 
+      "dob": "04-09-2022", 
+      "id": 6, 
+      "name": "Julie", 
+      "price": "250", 
+      "sex": "female", 
+      "uid": "91236"
+    }, 
+    {
+      "age": 1, 
+      "breed": "Retriever Blend", 
+      "dob": "06-05-2021", 
+      "id": 7, 
+      "name": "Violet", 
+      "price": "198", 
+      "sex": "female", 
+      "uid": "86327"
+    }, 
+    {
+      "age": 4, 
+      "breed": "Shepherd Blend", 
+      "dob": "11-01-2018", 
+      "id": 8, 
+      "name": "Doug", 
+      "price": "120", 
+      "sex": "male", 
+      "uid": "87729"
+    }, 
+    {
+      "age": 2, 
+      "breed": "Retriever Blend", 
+      "dob": "08-17-2020", 
+      "id": 9, 
+      "name": "Thor", 
+      "price": "200", 
+      "sex": "male", 
+      "uid": "90028"
+    }, 
+    {
+      "age": 2, 
+      "breed": "Doberman Pinscher Blend", 
+      "dob": "09-12-2020", 
+      "id": 10, 
+      "name": "Stark", 
+      "price": "220", 
+      "sex": "male", 
+      "uid": "92888"
+    }, 
+    {
+      "age": 2, 
+      "breed": "Border Collie-Shepherd Blend", 
+      "dob": "09-24-2020", 
+      "id": 11,  
+      "name": "Bucky", 
+      "price": "140", 
+      "sex": "male", 
+      "uid": "94465"
+    }, 
+    {
+      "age": 4, 
+      "breed": "Shepherd-Husky Blend", 
+      "dob": "02-01-2019", 
+      "id": 12, 
+      "name": "Wanda", 
+      "price": "260", 
+      "sex": "female", 
+      "uid": "90992"
+    }, 
+    {
+      "age": 3, 
+      "breed": "Jack Russel Terrier", 
+      "dob": "10-20-2019", 
+      "id": 13, 
+      "name": "Tasha", 
+      "price": "130", 
+      "sex": "female", 
+      "uid": "94327"
+    }, 
+    {
+      "age": 3, 
+      "breed": "Chihuahua Short Coat", 
+      "dob": "08-25-2019", 
+      "id": 14, 
+      "name": "Shang", 
+      "price": "140", 
+      "sex": "male", 
+      "uid": "80786"
+    }, 
+    {
+      "age": 2, 
+      "breed": "Dachshund", 
+      "dob": "03-09-2020", 
+      "id": 15, 
+      "name": "Parker", 
+      "price": "155", 
+      "sex": "male", 
+      "uid": "86009"
+    }, 
+    {
+      "age": 1, 
+      "breed": "Beagle", 
+      "dob": "01-11-2022", 
+      "id": 16,  
+      "name": "Cap", 
+      "price": "200", 
+      "sex": "male", 
+      "uid": "89322"
+    }, 
+    {
+      "age": 1, 
+      "breed": "American Staffordshire Terrier", 
+      "dob": "01-23-2022", 
+      "id": 17, 
+      "name": "Shuri", 
+      "price": "190", 
+      "sex": "female", 
+      "uid": "85359"
+    }, 
+    {
+      "age": 0, 
+      "breed": "American Bulldog", 
+      "dob": "02-22-2022", 
+      "id": 18, 
+      "name": "Musa", 
+      "price": "160", 
+      "sex": "female", 
+      "uid": "96971"
+    }, 
+    {
+      "age": 5, 
+      "breed": "Maltese", 
+      "dob": "12-11-2017", 
+      "id": 19, 
+      "name": "Bloom", 
+      "price": "110", 
+      "sex": "female", 
+      "uid": "91298"
+    }, 
+    {
+      "age": 5, 
+      "breed": "Cattle Dog", 
+      "dob": "12-27-2017", 
+      "id": 20, 
+      "name": "Stella", 
+      "price": "220", 
+      "sex": "female", 
+      "uid": "98030"
+    }
+  ]
