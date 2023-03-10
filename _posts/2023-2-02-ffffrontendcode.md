@@ -31,7 +31,6 @@ h3 {
 </head>
 <body>
 
-<a href="https://haeryny.github.io/teamteam/availabledogs/"><img src="https://cdn-icons-png.flaticon.com/512/70/70021.png" alt="shopping cart" style="width:42px;height:42px;"></a>
 
 <html>
 <head>
@@ -71,55 +70,50 @@ h3 {
 
 <div class="row">
   <div class="card">
-    <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59442857/1/?bust=1674344452" alt="Denim Jeans" width="200" height="250">
+    <img id="img1" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59442857/1/?bust=1674344452" alt="joe" width="200" height="250">
     <h1>Joe</h1>
     <p class="price">$200</p>
     <p> Labrador Retriever Blend </p>
     <p><button>Learn More</button></p>
   </div>
   <div class="card">
-    <img src="https://www.dogbreedinfo.com/images31/ShepweilerGermanShepherdRottweilerMixedBreedDogMarshall2HalfYearsOld1.jpg" alt="Denim Jeans" width="200" height="250">
+    <img id="img2" src="https://www.dogbreedinfo.com/images31/ShepweilerGermanShepherdRottweilerMixedBreedDogMarshall2HalfYearsOld1.jpg" alt="bean" width="200" height="250">
     <h1>Bean</h1>
     <p class="price">$180</p>
     <p>Shepherd-Rottweiler Blend</p>
     <p><button>Learn More</button></p>
   </div>
   <div class="card">
-  <img src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55604262/2/?bust=1652662246&width=720" alt="Denim Jeans" width="200" height="250">
+  <img id="img3" src="https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55604262/2/?bust=1652662246&width=720" alt="harry" width="200" height="250">
   <h1>Harry</h1>
   <p class="price">$160</p>
   <p>Hound-Terrier Blend</p>
   <p><button>Learn More</button></p>
 </div>
 
+<canvas id="canvas" style="display:none"></canvas>
 
 <script>
-  const img = document.querySelector('.card img');
+  const img1 = document.querySelector('#img1');
+  const img2 = document.querySelector('#img2');
+  const img3 = document.querySelector('#img3');
   const canvas = document.querySelector('#canvas');
   const ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  const pixels = imageData.data;
-
-  for (let i = 0; i < pixels.length; i += 4) {
-    const r = pixels[i];
-    const g = pixels[i + 1];
-    const b = pixels[i + 2];
-    const gray = (r + g + b) / 3;
-    pixels[i] = gray;
-    pixels[i + 1] = gray;
-    pixels[i + 2] = gray;
+  function grayscale(img) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const pixels = imageData.data;
+    
+    for (let i = 0; i < pixels.length; i += 4) {
+    const grayscaleValue = 0.2126 * pixels[i] + 0.7152 * pixels[i + 1] + 0.0722 * pixels[i + 2];
+    pixels[i] = grayscaleValue;
+    pixels[i + 1] = grayscaleValue;
+    pixels[i + 2] = grayscaleValue;
+    }
+    ctx.putImageData(imageData, 0, 0);
+    img.src = canvas.toDataURL();
   }
-
-  ctx.putImageData(imageData, 0, 0);
-</script>
-
-
-
-
-
-
-
-
-
