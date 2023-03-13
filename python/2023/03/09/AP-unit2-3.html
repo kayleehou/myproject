@@ -192,6 +192,13 @@ window.onload = wrap_img;
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>the 9th grade and Junior and 20 in the grade level need to be cleaned</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Extracting-Info">Extracting Info<a class="anchor-link" href="#Extracting-Info"> </a></h1><p>Take a look at some features that the Pandas library has that extracts info from the dataset</p>
 
 </div>
@@ -1340,16 +1347,12 @@ Please also refer to the documentation for alternative solver options:
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The most expensive dog in our database:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The most expensive dog in our database:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The cheapest dog in our database&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average dog price in our database is:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">mean</span><span class="p">()])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The median dog price is: &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">median</span><span class="p">()])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mode of our dog prices is: &quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">price</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">price</span><span class="o">.</span><span class="n">mode</span><span class="p">()])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
 </pre></div>
 
     </div>
@@ -1368,48 +1371,49 @@ Please also refer to the documentation for alternative solver options:
 The cheapest dog in our database
     age    breed         dob  id   name  price     sex    uid
 18    5  Maltese  12-11-2017  19  Bloom    110  female  91298
-The average dog price in our database is:
-Empty DataFrame
-Columns: [age, breed, dob, id, name, price, sex, uid]
-Index: []
-The median dog price is: 
-Empty DataFrame
-Columns: [age, breed, dob, id, name, price, sex, uid]
-Index: []
-The mode of our dog prices is: 
 </pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The average dog price in our database is:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The median dog price is: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The mode of our dog prices is: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/kaylee/vscode/myproject/_notebooks/2023-03-09-AP-unit2-3.ipynb Cell 43</span> in <span class="ansi-cyan-fg">&lt;cell line: 10&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-09-AP-unit2-3.ipynb#X61sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> print(df[df.price == df.price.median()])
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-09-AP-unit2-3.ipynb#X61sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> print(&#34;The mode of our dog prices is: &#34;)
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-09-AP-unit2-3.ipynb#X61sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> print(df[df.price == df.price.mode()])
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/core/ops/common.py:70</span>, in <span class="ansi-cyan-fg">_unpack_zerodim_and_defer.&lt;locals&gt;.new_method</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">     66</span>             return NotImplemented
-<span class="ansi-green-intense-fg ansi-bold">     68</span> other = item_from_zerodim(other)
-<span class="ansi-green-fg">---&gt; 70</span> return method(self, other)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/core/arraylike.py:40</span>, in <span class="ansi-cyan-fg">OpsMixin.__eq__</span><span class="ansi-blue-fg">(self, other)</span>
-<span class="ansi-green-intense-fg ansi-bold">     38</span> @unpack_zerodim_and_defer(&#34;__eq__&#34;)
-<span class="ansi-green-intense-fg ansi-bold">     39</span> def __eq__(self, other):
-<span class="ansi-green-fg">---&gt; 40</span>     return self._cmp_method(other, operator.eq)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/pandas/core/series.py:5617</span>, in <span class="ansi-cyan-fg">Series._cmp_method</span><span class="ansi-blue-fg">(self, other, op)</span>
-<span class="ansi-green-intense-fg ansi-bold">   5614</span> res_name = ops.get_op_result_name(self, other)
-<span class="ansi-green-intense-fg ansi-bold">   5616</span> if isinstance(other, Series) and not self._indexed_same(other):
-<span class="ansi-green-fg">-&gt; 5617</span>     raise ValueError(&#34;Can only compare identically-labeled Series objects&#34;)
-<span class="ansi-green-intense-fg ansi-bold">   5619</span> lvalues = self._values
-<span class="ansi-green-intense-fg ansi-bold">   5620</span> rvalues = extract_array(other, extract_numpy=True, extract_range=True)
-
-<span class="ansi-red-fg">ValueError</span>: Can only compare identically-labeled Series objects</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The average dog price in our database is:
+181.65
+The median dog price is: 
+194.0
+The mode of our dog prices is: 
+0    200
+Name: price, dtype: int64
+</pre>
 </div>
 </div>
 

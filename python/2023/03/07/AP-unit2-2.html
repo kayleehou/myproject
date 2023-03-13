@@ -81,6 +81,17 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Unit-2.2-Data-Compression,-Images">Unit 2.2 Data Compression, Images<a class="anchor-link" href="#Unit-2.2-Data-Compression,-Images"> </a></h1><blockquote><p>Lab will perform alterations on images, manipulate RGB values, and reduce the number of pixels.  College Board requires you to learn about Lossy and Lossless compression.</p>
+<ul>
+<li>toc:true- categories: [python]</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Enumerate-&quot;Data&quot;-Big-Idea-from-College-Board">Enumerate "Data" Big Idea from College Board<a class="anchor-link" href="#Enumerate-&quot;Data&quot;-Big-Idea-from-College-Board"> </a></h2><blockquote><p>Some of the big ideas and vocab that you observe, talk about it with a partner ...</p>
 <ul>
 <li>"Data compression is the reduction of the number of bits needed to represent data"</li>
@@ -123,7 +134,7 @@ window.onload = wrap_img;
 <li>What are commands you use in terminal to access files?</li>
 </ul>
 </blockquote>
-<p>ls</p>
+<p>ls, sudo nano</p>
 <ul>
 <li>What are the command you use in Windows terminal to access files?</li>
 </ul>
@@ -140,8 +151,8 @@ window.onload = wrap_img;
 <ul>
 <li>How does the meta data source and label relate to Unit 5 topics?</li>
 </ul>
-<p>Metadata is data about data:i.e., its properties, history, origin, versions, and other information about a data asset. Metadata is data that describes other data, providing a structured reference that helps to sort and identify attributes of the information it describes, so it helps with the unit 5 topic of safe computing. - Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</p>
-<p>IPython is basically the "recommended" Python shell, which provides extra features. There is no language called IPython. You can use the Image class from IPython's display module to show all images, such as adding an image from a local file.</p>
+<p>Metadata is data about data:i.e., its properties, history, origin, versions, and other information about a data asset. Metadata is data that describes other data, providing a structured reference that helps to sort and identify attributes of the information it describes, so it helps with the unit 5 topic of databases and data stuctures. - Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</p>
+<p>IPython is basically the "recommended" Python shell, which provides extra features. IPython can manipulate image data, changing its display (size, color, scale...). You can use Pandas to perform tasks like filtering your data according to certain conditions, or segmenting and segregating the data according to preference, etc.</p>
 
 </div>
 </div>
@@ -232,11 +243,11 @@ Binary is base2, base16 is hexadecimal. Base64 takes 4 characters for every thre
 <ul>
 <li>From your consumer experience, what effects have you experienced from buffering?  </li>
 </ul>
-<p>I feel annoyed and don't want to finish watching the video sometimes if it takes too long to load.</p>
+<p>I feel annoyed and don't want to finish watching the video sometimes if it takes too long to load. Sometimes the data can get lost.</p>
 <ul>
 <li>How do these effects apply to images?</li>
 </ul>
-<p>Sometimes, if images are too large, they will take a long time to load</p>
+<p>Sometimes, if images are too large, they will take a long time to load, or the quality will go down.</p>
 
 </div>
 </div>
@@ -258,11 +269,11 @@ Replace the original red, green, and blue values with the new gray value.</p>
 <ul>
 <li>Describe scale image?  What is before and after on pixels in three images?</li>
 </ul>
-<p>the images are getting scaled down to a smaller size. Scale image is the resizing of a digital image. The green square became bigger, the clouds image stayed the same, and the mountains picture became smaller.</p>
+<p>the images are getting scaled down to a smaller size. Scale image is the resizing of a digital image. The green square became bigger, the clouds image stayed the same, and the mountains picture became smaller. Each of the 3 photos are scaled to (320, 320)</p>
 <ul>
 <li>Is scale image a type of compression?  If so, line it up with College Board terms described?</li>
 </ul>
-<p>Yes, it is lossless compression, becaus the quality of the image remains the same but the image becomes smaller. There are trade-offs involved in choosing a compression technique for storing and transmitting data. While lossy compression reduces file size but lossless compression removes unecessary data.</p>
+<p>Yes, it is lossless compression, becaus the quality of the image remains the same but the image becomes smaller. There are trade-offs involved in choosing a compression technique for storing and transmitting data. While lossy compression reduces file size but lossless compression removes unecessary data. it resizes the image based on the pixel values/measurements you choose.</p>
 
 </div>
 </div>
@@ -1137,7 +1148,7 @@ Scaled size:  (320, 205)
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># prepares a series of images</span>
-<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;images/&quot;</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># path of static images is defaulted</span>
+<span class="k">def</span> <span class="nf">image_data</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;images/&quot;</span><span class="p">),</span> <span class="n">images</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># specifies path to images folder # path of static images is defaulted</span>
     <span class="k">if</span> <span class="n">images</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># default image</span>
         <span class="n">images</span> <span class="o">=</span> <span class="p">[</span>
             <span class="p">{</span><span class="s1">&#39;source&#39;</span><span class="p">:</span> <span class="s2">&quot;San Diego Humane Society&quot;</span><span class="p">,</span> <span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s2">&quot;Joe&quot;</span><span class="p">,</span> <span class="s1">&#39;file&#39;</span><span class="p">:</span> <span class="s2">&quot;dogJoe.PNG&quot;</span><span class="p">},</span>
@@ -1180,14 +1191,14 @@ Scaled size:  (320, 205)
     <span class="n">image</span><span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;pil&#39;</span><span class="p">],</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
     
 <span class="c1"># Create Grey Scale Base64 representation of Image</span>
-<span class="k">def</span> <span class="nf">image_management_add_html_blur</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">image_management_add_html_blur</span><span class="p">(</span><span class="n">image</span><span class="p">):</span> <span class="c1">#takes an image dictionary and adds a blurred version of the image to the dictionary.</span>
     <span class="c1"># Image open return PIL image object</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;pil&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">BLUR</span><span class="p">)</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;pil&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="o">.</span><span class="n">BLUR</span><span class="p">)</span> <span class="c1">#applying the blur filter using the PIL ImageFilter module</span>
 
 <span class="c1"># Update image dictionary with blurred image</span>
     <span class="n">image</span><span class="p">[</span><span class="s1">&#39;pil_blur&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">img</span>
     <span class="n">image</span><span class="p">[</span><span class="s1">&#39;html_blur&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&lt;img src=&quot;data:image/png;base64,</span><span class="si">%s</span><span class="s1">&quot;&gt;&#39;</span> <span class="o">%</span> <span class="n">image_to_base64</span><span class="p">(</span><span class="n">image</span><span class="p">[</span><span class="s1">&#39;pil_blur&#39;</span><span class="p">],</span> <span class="n">image</span><span class="p">[</span><span class="s1">&#39;format&#39;</span><span class="p">])</span>
-
+<span class="c1">#html_blur&#39; which stores a base64-encoded string representation of the blurred image in HTML format. </span>
 
 <span class="c1"># Jupyter Notebook Visualization of Images</span>
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
