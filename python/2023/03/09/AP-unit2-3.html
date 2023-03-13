@@ -1353,6 +1353,9 @@ Please also refer to the documentation for alternative solver options:
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The cheapest dog in our database&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
+<span class="c1">#print(df.loc[df[&#39;price&#39;] == df[&#39;price&#39;].mean()])</span>
+<span class="c1"># above commented out code returns empty data frame because the mean value of price column</span>
+<span class="c1"># does not match any of the actual values in the price column </span>
 </pre></div>
 
     </div>
@@ -1371,6 +1374,51 @@ Please also refer to the documentation for alternative solver options:
 The cheapest dog in our database
     age    breed         dob  id   name  price     sex    uid
 18    5  Maltese  12-11-2017  19  Bloom    110  female  91298
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a range of 10% of the mean value, thereby capturing a wider range of </span>
+<span class="c1"># values around the mean.</span>
+<span class="n">mean_price</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">range_min</span> <span class="o">=</span> <span class="n">mean_price</span> <span class="o">-</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">mean_price</span>
+<span class="n">range_max</span> <span class="o">=</span> <span class="n">mean_price</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">mean_price</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">range_min</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">range_max</span><span class="p">)])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>    age                           breed         dob  id    name  price  \
+1     4       Shepherd-Rottweiler Blend  01-31-2019   2    Bean    180   
+6     1                 Retriever Blend  06-05-2021   7  Violet    198   
+16    1  American Staffordshire Terrier  01-23-2022  17   Shuri    190   
+
+       sex    uid  
+1     male  83792  
+6   female  86327  
+16  female  85359  
 </pre>
 </div>
 </div>
