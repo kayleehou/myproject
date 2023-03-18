@@ -115,8 +115,8 @@ window.onload = wrap_img;
 <li>Comment on where you have observed these working?</li>
 </ul>
 <ol>
-<li>Flask app object</li>
-<li>SQLAlchemy object</li>
+<li>Flask app object- we've used this in our CPT flask, for example we have used the @app.route decorator to map a URL to a Python function that will be executed when that URL is requested. We also use the init_app() method and can use the request and response objects. </li>
+<li>SQLAlchemy object- these are the objects:from flask import Flaskfrom flask_sqlalchemy import SQLAlchemy</li>
 </ol>
 
 </div>
@@ -173,6 +173,7 @@ window.onload = wrap_img;
 <li>@property, @<column>.setter&lt;/li&gt;
 <li>additional methods</li>
 &lt;/ul&gt;
+<p>all commented in the code</p>
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -371,6 +372,7 @@ window.onload = wrap_img;
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">price</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">dog</span><span class="o">.</span><span class="n">price</span> <span class="o">=</span> <span class="n">price</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span> <span class="c1"># performs update when id exists\n&quot;</span>
         <span class="k">return</span> <span class="n">dog</span>
 
     <span class="c1"># CRUD delete: remove dog</span>
@@ -397,9 +399,8 @@ window.onload = wrap_img;
 <li>Comment on how these work?</li>
 </ul>
 <ol>
-<li>Create All Tables from db Object</li>
-<li>User Object Constructors</li>
-<li>Try / Except </li>
+<li>Create All Tables from db Object:generates database tables based on a defined schema within a database object. Automates the creation of database tables based on a predefined schema, making it easier to set up and manage a database system.2. User Object Constructors: turns input into an object </li>
+<li>Try / Except:  allows your program to take alternative actions in case an error occurs. Python will first attempt to execute the code in the try statement (code block 1). If no exception occurs, the except statement is skipped and the execution of the try statement is finished.</li>
 </ol>
 
 </div>
@@ -453,10 +454,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Added new dog Joe, with uid 81729
-Added new dog Bean, with uid 83792
-Added new dog Harry, with uid 80032
-Added new dog Honey, with uid 90276
+<pre>Records exist uid 81729, or error.
+Records exist uid 83792, or error.
+Records exist uid 80032, or error.
+Records exist uid 90276, or error.
 Added new dog George, with uid 90277
 </pre>
 </div>
@@ -476,8 +477,7 @@ Added new dog George, with uid 90277
 <li>Comment on purpose of following</li>
 </ul>
 <ol>
-<li>User.query.filter_by</li>
-<li>user.password</li>
+<li>Dog.query.filter_by:query is a method of the SQLAlchemy session object that allows you to query the database for specific data. filter_by(_uid=uid) is a filter that limits the results of the query to only those rows that have a _uid attribute value that matches the uid variable.2. user.password, I changed mine to uid, checking credentials by making sure uid and name matches </li>
 </ol>
 <p>ORM- object relational model</p>
 
@@ -496,7 +496,7 @@ Added new dog George, with uid 90277
         <span class="n">dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_uid</span><span class="o">=</span><span class="n">uid</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span> 
     <span class="k">return</span> <span class="n">dog</span> <span class="c1"># returns dog object</span>
 
-<span class="c1"># Check credentials by finding dog and verify password</span>
+<span class="c1"># Check credentials by finding dog and verify uid </span>
 <span class="k">def</span> <span class="nf">check_credentials</span><span class="p">(</span><span class="n">uid</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
     <span class="c1"># query email and return dog record</span>
     <span class="n">dog</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>
@@ -529,6 +529,7 @@ Added new dog George, with uid 90277
 <li>user.dob and try/except</li>
 <li>user.create() and try/except</li>
 </ol>
+<p>my variables are different, i commentedon these lines though</p>
 
 </div>
 </div>
@@ -574,7 +575,7 @@ Added new dog George, with uid 90277
     <span class="k">try</span><span class="p">:</span>
         <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">dob</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span>
     <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+        <span class="n">user</span><span class="o">.</span><span class="n">dob</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="c1"># setting object equal to dateimte.today()</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid date </span><span class="si">{</span><span class="n">dob</span><span class="si">}</span><span class="s2"> require YYYY-mm-dd, date defaulted to </span><span class="si">{</span><span class="n">user</span><span class="o">.</span><span class="n">dob</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
            
     <span class="c1"># write object to database</span>
@@ -634,10 +635,12 @@ Added new dog George, with uid 90277
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># SQLAlchemy extracts all dogs from database, turns each dog into JSON</span>
 <span class="k">def</span> <span class="nf">read</span><span class="p">():</span>
-    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-        <span class="n">table</span> <span class="o">=</span> <span class="n">Dog</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span> <span class="c1">#create a context within which Flask application objects like &quot;Dog&quot; can be accessed.</span>
+        <span class="n">table</span> <span class="o">=</span> <span class="n">Dog</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> <span class="c1">#queries the database to retrieve all rows from the &quot;Dog&quot; table.</span>
     <span class="n">json_ready</span> <span class="o">=</span> <span class="p">[</span><span class="n">dog</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="k">for</span> <span class="n">dog</span> <span class="ow">in</span> <span class="n">table</span><span class="p">]</span> <span class="c1"># each dog adds dog.read() to list</span>
+    <span class="c1">#creates a list of JSON-ready data by calling the &quot;read&quot; method on each &quot;dog&quot; object in the &quot;table&quot; list.</span>
     <span class="k">return</span> <span class="n">json_ready</span>
+<span class="c1"># returns the list of JSON-ready data as the output of the function.</span>
 
 <span class="n">read</span><span class="p">()</span>
 </pre></div>
@@ -663,7 +666,7 @@ Added new dog George, with uid 90277
   &#39;sex&#39;: &#39;male&#39;,
   &#39;dob&#39;: &#39;02-11-2022&#39;,
   &#39;age&#39;: 1,
-  &#39;price&#39;: &#39;$200&#39;},
+  &#39;price&#39;: &#39;200&#39;},
  {&#39;id&#39;: 2,
   &#39;image&#39;: &#39;https://do31x39459kz9.cloudfront.net/storage/image/672cb9b41e7548f68316d4a328c772d2-1673989499-1673989524-jpg/1024-0-&#39;,
   &#39;link&#39;: &#39;https://haeryny.github.io/teamteam/doginfo/&#39;,
@@ -703,7 +706,7 @@ Added new dog George, with uid 90277
   &#39;sex&#39;: &#39;male&#39;,
   &#39;dob&#39;: &#39;11-01-2021&#39;,
   &#39;age&#39;: 1,
-  &#39;price&#39;: &#39;$200&#39;}]</pre>
+  &#39;price&#39;: &#39;200&#39;}]</pre>
 </div>
 
 </div>
@@ -740,31 +743,37 @@ Added new dog George, with uid 90277
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
 
-<span class="k">def</span> <span class="nf">delete_row_by_id</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
-    <span class="c1"># Validate the input</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="nb">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input: ID must be an integer.&quot;</span><span class="p">)</span>
-        <span class="k">return</span>
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">db_path</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db_path</span> <span class="o">=</span> <span class="n">db_path</span>
 
-    <span class="c1"># Connect to the database</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;instance/sqlite.db&#39;</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">delete_by_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">):</span>
+        <span class="c1"># Validate the input</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input: ID must be an integer.&quot;</span><span class="p">)</span>
+            <span class="k">return</span>
 
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Use a parameterized query to prevent SQL injection</span>
-        <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DELETE FROM dogs WHERE id=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">id</span><span class="p">,))</span>
-        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Row with ID </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2"> has been deleted.&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error deleting row with ID </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="c1"># Close the connection</span>
-        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="c1"># Connect to the database</span>
+        <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">db_path</span><span class="p">)</span>
 
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Use a parameterized query to prevent SQL injection</span>
+            <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+            <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;DELETE FROM dogs WHERE id=?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nb">id</span><span class="p">,))</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Row with ID </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2"> has been deleted.&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error deleting row with ID </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">finally</span><span class="p">:</span>
+            <span class="c1"># Close the connection</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">db_path</span> <span class="o">=</span> <span class="s1">&#39;instance/sqlite.db&#39;</span>
+<span class="n">dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="n">db_path</span><span class="p">)</span>
 <span class="nb">id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Select the ID of the dog you want to remove from our database: &quot;</span><span class="p">)</span>
-<span class="n">delete_row_by_id</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
+<span class="n">dog</span><span class="o">.</span><span class="n">delete_by_id</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -777,7 +786,7 @@ Added new dog George, with uid 90277
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Row with ID 6 has been deleted.
+<pre>Invalid input: ID must be an integer.
 </pre>
 </div>
 </div>
@@ -801,34 +810,39 @@ Added new dog George, with uid 90277
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">update_dog_info</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">breed</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">price</span><span class="p">):</span>
-    <span class="c1"># Connect to the database</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s1">&#39;instance/sqlite.db&#39;</span><span class="p">)</span>
-    <span class="n">c</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;successfully updated&quot;</span>
+<span class="n">databse</span> <span class="o">=</span> <span class="s1">&#39;instance/sqlite.db&#39;</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter user id to update&quot;</span><span class="p">)</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter updated price&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL commands</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
     <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Update the dog&#39;s information based on its ID</span>
-        <span class="n">c</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE dogs SET image=?, link=?, name=?, uid=?, breed=?, sex=?, dob=?, price=? WHERE id=?&quot;</span><span class="p">,</span> 
-                  <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">breed</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
-        <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dog with ID </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2"> has been updated.&quot;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error updating dog with ID </span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">finally</span><span class="p">:</span>
-        <span class="c1"># Close the connection</span>
-        <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nb">id</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the ID of the dog to update: &quot;</span><span class="p">)</span>
-<span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new name of the dog: &quot;</span><span class="p">)</span>
-<span class="n">image</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new image URL of the dog: &quot;</span><span class="p">)</span>
-<span class="n">link</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new link URL of the dog: &quot;</span><span class="p">)</span>
-<span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new user ID of the dog: &quot;</span><span class="p">)</span>
-<span class="n">breed</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new breed of the dog: &quot;</span><span class="p">)</span>
-<span class="n">sex</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new sex of the dog (male/female): &quot;</span><span class="p">)</span>
-<span class="n">dob</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new date of birth of the dog (YYYY-MM-DD): &quot;</span><span class="p">)</span>
-<span class="n">price</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the new price of the dog: &quot;</span><span class="p">)</span>
-
-<span class="n">update_dog_info</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">link</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">breed</span><span class="p">,</span> <span class="n">sex</span><span class="p">,</span> <span class="n">dob</span><span class="p">,</span> <span class="n">price</span><span class="p">)</span>
+        <span class="c1"># Execute an SQL command to update data in a table</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;UPDATE dogs SET _price = ? WHERE _uid = ?&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="n">uid</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># The uid was not found in the table</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No uid </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> was found in the table&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The row with user id </span><span class="si">{</span><span class="n">uid</span><span class="si">}</span><span class="s2"> the price has been </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error while executing the UPDATE:&quot;</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+        
+    
+    <span class="c1"># Close the cursor and connection objects</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">update</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -841,7 +855,7 @@ Added new dog George, with uid 90277
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Error updating dog with ID 2: no such column: image
+<pre>The row with user id 81729 the price has been successfully updated
 </pre>
 </div>
 </div>
