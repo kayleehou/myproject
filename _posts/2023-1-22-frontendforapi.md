@@ -1,6 +1,6 @@
 ---
 title: Database CRUD Frontend
-layout: default
+layout: base
 description: Create and read endpoints in frontend
 ---
 
