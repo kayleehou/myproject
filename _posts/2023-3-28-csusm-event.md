@@ -8,6 +8,7 @@ comments: true
 
 ---
 
+# CSUSM Programs Event 
 # Notes/Insights
 - Don’t let failures define you, an ambassador spoke on how she failed a lot of classes in college but it didn't deter her path at all. I thought it was really interesting that she failed AP Physics but didn't care about the grade and only focused on how much she enjoyed learning the subject. It was inspiring because after Junior Year, because I had a hard time in a math class I thought I wasn't suited for a career in STEM even though I liked math. At the end of the day, if you're good at a subject but hate it, it's a lot harder to grow into loving something rather than starting off weaker but building your skill. 
 - Computer science is relevant in every field, ambassador used python even as an applied major. 
