@@ -1,11 +1,11 @@
 ---
 toc: true
 comments: true
-layout: base
+layout: post
 title: Computers and Networks (Unit 4)
 description: Add Definitions from Unit 4 Computer Systems and Networks
 ---
-
+# Computers and Networks (Unit 4)
 ## Requirements
 > Work through College Board Unit 4... blog, add definitions, and pictures.  Be creative, for instance make a story of Computing and Networks that is related to your PBL experiences this year.
 
@@ -14,10 +14,10 @@ description: Add Definitions from Unit 4 Computer Systems and Networks
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz:
-- Memory in GB:
-- Storage in GB:
-- OS:
+- Processor GHz: Processor	Intel(R) Core(TM) i7-3517U CPU @ 1.90GHz, 2401 Mhz, 2 Core(s), 4 Logical Processor(s)
+- Memory in GB: 8.00 GB
+- Storage in GB: 237 GB
+- OS: OS Name	Microsoft Windows 10 Pro
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
 - Input devices
@@ -30,6 +30,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 - Inspect Running Code
 - Inspect Variables
 
+![](https://github.com/kayleehou/myproject/blob/master/images/cpu_usage_mindmap.PNG?raw=true)
 
 ![Computer Hardware]({{site.baseurl}}/images/cpu.jpeg)
 
@@ -48,14 +49,24 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - Bandwidth is usually measured in bits per second
 
 - Complete Vocabulary Matching Activity.  Incorporate this into your learnings from year.  To analyze measure path and latency use `traceroute` and `ping` commands from Linux Terminal.  
-    - Path 
-    - Route
-    - Computer System
-    - Computer Device
-    - Bandwidth
-    - Computer Network
+    - Path - a
+    - Route - e
+    - Computer System - b
+    - Computer Device - c
+    - Bandwidth - d
+    - Computer Network - f
 
 > Watch/review College Board Daily Video 4.1.2
+
+- Complete True of False Questions
+
+1. T
+2. F
+3. F
+4. T
+5. F
+6. T  correct answer: F
+7. T
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
@@ -73,9 +84,39 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
     - HTTP is a protocol used by the world wide web
     - The world wide web uses the internet
 
-- Draw a diagram showing the internet and its many levels. A preferred diagram would use your knowledge of frontend, backend, deployment (GitHub Page, AWS, EC2, Docker, Nginx, Certbot, DNS, APIs).
+- Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas
 
-- Complete True of False Questions
+![Full Stack]({{site.baseurl}}/images/fullstack.png)
+
+![network topology](https://github.com/kayleehou/myproject/blob/master/images/network_topology.PNG?raw=true)
+
+![internet layers](https://github.com/kayleehou/myproject/blob/master/images/internet_layers.PNG?raw=true)
+
+- Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
+
+```
+     User Machine  <---> Frontend Server <---> Backend Server
+    +-----------+         +-----------+         +-----------+
+    |  Browser  |         |  GH Page  |         |   Flask   |
+    +-----------+    ^    +-----------+    ^    +-----------+
+    |    HTTP   |    |    |    HTTP   |    |    |    HTTP   |
+    +-----------+    |    +-----------+    |    +-----------+
+    |    TCP    |    |    |    TCP    |    |    |    TCP    |   
+    +-----------+    |    +-----------+    |    +-----------+
+    |     IP    |    V    |     IP    |    V    |     IP    |
+    +-----------+         +-----------+         +-----------+
+    |  Network  |  <--->  |  Network  |  <--->  |  Network  |
+    +-----------+         +-----------+         +-----------+
+```
+
+The "http" layer is an application layer protocol in the TCP/IP stack, used for ***communication between web browsers and web servers***. It is the protocol used for transmitting data over the World Wide Web.
+
+The "transport" layer (TCP) is responsible for providing reliable data transfer between applications running on different hosts.  The TCP protocol segments the data into smaller ***chunks called "segments"***. Each segment contains a sequence number that identifies its position in the original stream of data, as well as other control information such as source and destination port numbers, and checksums for error detection.
+
+The "ip" layer is responsible for packetizing data received from the TCP layer of the protocol stack, and then ***encapsulating the data into IP packets***. The IP packets are then sent to the lower layers of the protocol stack for transmission over the network.
+
+The "network" layer is responsible for ***routing data packets between networks*** using the Internet Protocol (IP). This layer handles tasks such as packet addressing and routing, fragmentation and reassembly, and ***network congestion*** control.
+
 
 ### Fault Tolerance
 > Watch both Daily videos for 4.2
@@ -90,7 +131,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
-
+- CHALLENGE: seek how many workers I have set up on gunicorn and set up more
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
 - Review this [article](https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray)...  Can you get parallel code on images to work more effectively?  I have not tried Ray.
 
