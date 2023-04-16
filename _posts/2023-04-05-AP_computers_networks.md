@@ -121,18 +121,37 @@ The "network" layer is responsible for ***routing data packets between networks*
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
+1. yes, it is fault tolerant, even if one path goes down, you can communicate with the other ones 
+2. no, only one path to F, so if one wire goes down, F is also cut off 
+3. no, only one wire connecting A and G 
 
+4.2 video 2 practice: 
+1. C
+2. A 
+
+- the internet is fault tolerant 
+Network where devices can communicate with one another even if one path goes down. It's important to have redundancy in your network, so that if one wire goes down, the other devices can still function because there is more than one path between connected devices. 
 
 ### Parallel and Distributed Computing
-> Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
+> Review previous lecture on Parallel Computing and watch Daily video 4.3. Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
+- load balancing with an API 
 
-- What is naturally Distributed in Frontend/Backend archeticture?  
+- What is naturally Distributed in Frontend/Backend architecture?  
+The backend is naturally distributed as it typically consists of multiple servers, each responsible for handling different tasks or services. By distributing the backend, the application can handle a large number of requests, improve performance and reliability, and provide fault tolerance and high availability. The frontend, on the other hand, is typically executed on a single client device, such as a web browser or mobile app, and is responsible for displaying the user interface and interacting with the user.
 
 - Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
 
+In the context of a Docker image that runs a Python/Gunicorn web application, this command is used to configure the Gunicorn web server. The --workers option specifies the number of worker processes that Gunicorn should spawn to handle incoming requests. In this case, the value is set to 1, which means that Gunicorn will use a single worker process to handle all requests. The --bind option specifies the IP address and port number that Gunicorn should bind to, in this case, 0.0.0.0:8086, which means that Gunicorn will listen on all network interfaces on port 8086.
+
+To enable parallel computing in Python/Gunicorn web application, you can adjust the --workers option to a higher value, which will spawn multiple worker processes to handle incoming requests concurrently. However, increasing the number of worker processes may also increase the memory usage and CPU load of the server.
+
 - CHALLENGE: seek how many workers I have set up on gunicorn and set up more
+I think there are currently 4 workers on gunicorn, I can run gunicorn myapp:app -w 8
+to set up more. 
+
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
 - Review this [article](https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray)...  Can you get parallel code on images to work more effectively?  I have not tried Ray.
+Ray is a distributed computing system that makes it easy to write parallel and distributed Python applications. It is designed to be efficient and scalable, and can help you parallelize your code across multiple CPU cores, GPUs, or even multiple machines.
 
 - Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.
 

@@ -581,9 +581,32 @@ Writer in The Dark
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Genre: [&#39;Pop&#39;, &#39;Alternative/Indie&#39;]
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/kaylee/anaconda3/lib/python3.9/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn(&#39;Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning&#39;)
 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 18</span> in <span class="ansi-cyan-fg">&lt;cell line: 33&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=29&#39;&gt;30&lt;/a&gt;</span>             print(&#34;You have exceeded the maximum number of attempts.&#34;)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=30&#39;&gt;31&lt;/a&gt;</span>             break
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=32&#39;&gt;33&lt;/a&gt;</span> album_search()
+
+<span class="ansi-green-intense-fg ansi-bold">/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb Cell 18</span> in <span class="ansi-cyan-fg">album_search</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> search_key = search_key.lower()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> # Check for exact match
+<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span> if search_key in melodramaAlbum:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11&#39;&gt;12&lt;/a&gt;</span>     print(f&#34;{search_key.capitalize()}: {melodramaAlbum[search_key]}&#34;)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-03-29-DS-hashmaps.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span>     break
+
+<span class="ansi-red-fg">NameError</span>: name &#39;melodramaAlbum&#39; is not defined</pre>
 </div>
 </div>
 
