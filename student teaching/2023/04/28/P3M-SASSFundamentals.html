@@ -100,7 +100,7 @@ window.onload = wrap_img;
 </ul>
 <h3 id="CSS-Example">CSS Example<a class="anchor-link" href="#CSS-Example"> </a></h3><ul>
 <li>This is an example of CSS that can be used to change body text of an HTML document</li>
-<li>Hack Question:Can you guess what its changing style of the text to? </li>
+<li>Hack Question:Can you guess what its changing style of the text to? changing to blue, ariel, and size 16 px</li>
 </ul>
 
 </div>
@@ -133,12 +133,7 @@ window.onload = wrap_img;
 <li>SCSS is short for Sassy Cascading Style Sheets. </li>
 <li>SCSS very similar to CSS but the difference comes with the fact that SCSS extends the functionality of CSS while also making it simpler. What this allows us to do is it enables us to things like nested styling, functions, mixins, variables, inheritance (more on these later) and so on. </li>
 </ul>
-<h3 id="Sass-Code-Example">Sass Code Example<a class="anchor-link" href="#Sass-Code-Example"> </a></h3><ul>
-<li>This is an example of CSS that can be used to change body text of an HTML document</li>
-<li>Hack Question: Can you guess what its changing style of the text to?
-changing to color blue, font in ariel and 16 px</li>
-</ul>
-
+<h3 id="Sass-Code-Example">Sass Code Example<a class="anchor-link" href="#Sass-Code-Example"> </a></h3>
 </div>
 </div>
 </div>
@@ -962,6 +957,288 @@ Fun Fact: Variables in SASS came before CSS and often SASS has features long bef
 <li>Using at least 3 or more sass features create a UI demo that may be used for future or current projects and reflect on how this was more effective than doing the same task using only regular features of CSS. Extra points will be awarded based on creativity and extra addition of features from SASS. </li>
 </ul>
 <p>Credits: Team Mortalicously Sassy 💖</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Part-1-Hacks">Part 1 Hacks<a class="anchor-link" href="#Part-1-Hacks"> </a></h1><p>Sass is a more efficient way of creating web pages. This is because it makes uses styling features easier to implement and work with. Sass can include functions, variables, and mixins, which were covered in the lesson today. They are very useful when we want to add features like variable manipulation and calculations. CSS however is simpler, and includes less deployment/ prerequisite steps, since Sass must be converted before it is displayed in a browser.</p>
+<p>Nesting- organizes your code and prevents yourself from repeating code. Sass nesting makes CSS better by increasing overall readability. You can nest selectors within other selectors, you can establish a hierarchy and make your code more organized.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span><span class="n">Sass</span>
+<span class="o">.</span><span class="n">container</span> <span class="p">{</span>
+  <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+  <span class="n">padding</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#fff;</span>
+  
+  <span class="o">.</span><span class="n">heading</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">24</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">margin</span><span class="o">-</span><span class="n">bottom</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="o">.</span><span class="n">content</span> <span class="p">{</span>
+    <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">16</span><span class="n">px</span><span class="p">;</span>
+    <span class="n">line</span><span class="o">-</span><span class="n">height</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">;</span>
+    <span class="n">color</span><span class="p">:</span> <span class="c1">#333;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">CSS</span>
+<span class="o">.</span><span class="n">container</span> <span class="p">{</span>
+  <span class="n">width</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span><span class="p">;</span>
+  <span class="n">padding</span><span class="p">:</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#fff;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">container</span> <span class="o">.</span><span class="n">heading</span> <span class="p">{</span>
+  <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">24</span><span class="n">px</span><span class="p">;</span>
+  <span class="n">margin</span><span class="o">-</span><span class="n">bottom</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">container</span> <span class="o">.</span><span class="n">content</span> <span class="p">{</span>
+  <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">16</span><span class="n">px</span><span class="p">;</span>
+  <span class="n">line</span><span class="o">-</span><span class="n">height</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="c1">#333;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Variables- stores information so when you refer to a value you can just refer to the name. Variables help you improve efficiency as you are able to reuse it whereas in CSS you would have to manually enter the value each time.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span><span class="n">Sass</span>
+<span class="err">$</span><span class="n">primary</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#4286f4;</span>
+<span class="o">.</span><span class="n">btn</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="err">$</span><span class="n">primary</span><span class="o">-</span><span class="n">color</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">CSS</span>
+<span class="o">.</span><span class="n">btn</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#4286f4;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Operators- you can perform mathematical operations on values like addition, multiplication, subtraction, etc, which makes it easier to change values whereas in CSS you would have to change them manually.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span><span class="n">Sass</span>
+<span class="err">$</span><span class="n">base</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mi">16</span><span class="n">px</span><span class="p">;</span>
+<span class="o">.</span><span class="n">btn</span> <span class="p">{</span>
+  <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="err">$</span><span class="n">base</span><span class="o">-</span><span class="n">font</span><span class="o">-</span><span class="n">size</span> <span class="o">*</span> <span class="mf">1.2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">CSS</span>
+<span class="o">.</span><span class="n">btn</span> <span class="p">{</span>
+  <span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="mf">19.2</span><span class="n">px</span><span class="p">;</span> <span class="o">/*</span> <span class="mi">16</span><span class="n">px</span> <span class="o">*</span> <span class="mf">1.2</span> <span class="o">*/</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Conditional Statements- you can use if/else statements for more flexible stylesheets. In CSS, you would need to create separate stylesheets or use script tags and Javascript.</p>
+<p>Loops- you can repeat styles on a set of values so your stylesheets will be more maintainable and efficient especially for more complex layouts. In CSS you would just have to manually write out each style.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span><span class="n">Sass</span>
+<span class="err">$</span><span class="n">colors</span><span class="p">:</span> <span class="p">(</span><span class="n">primary</span><span class="p">:</span> <span class="c1">#4286f4, secondary: #42f4c4, accent: #f4c442);</span>
+<span class="nd">@each</span> <span class="err">$</span><span class="n">name</span><span class="p">,</span> <span class="err">$</span><span class="n">color</span> <span class="ow">in</span> <span class="err">$</span><span class="n">colors</span> <span class="p">{</span>
+  <span class="o">.</span><span class="c1">#{name} {</span>
+    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="err">$</span><span class="n">color</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">CSS</span>
+<span class="o">.</span><span class="n">primary</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#4286f4;</span>
+<span class="p">}</span>
+<span class="o">.</span><span class="n">secondary</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#42f4c4;</span>
+<span class="p">}</span>
+<span class="o">.</span><span class="n">accent</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#f4c442;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Functions- SASS has built in functions for working with strings, color, math, etc. that make it easier to produce calculations and transformations on your styles. These are not available in CSS, so you would have to import external libraries or write your own Javascript code.</p>
+<ul>
+<li>Strings
+Ex: str-index</li>
+<li>Color : Various ways to manipulate color that provide more flexibility and range than abilities given by css</li>
+</ul>
+<p>Ex: lighten()</p>
+<ul>
+<li>Math : various functions that allows you to complete functions similar to those you can do with javascript.</li>
+<li>customs: custom functions you can create </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>          <span class="o">//</span> <span class="n">returns</span> <span class="mi">1</span>
+<span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>           <span class="o">//</span> <span class="n">returns</span> <span class="mi">2</span>
+<span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="mf">1.2</span><span class="p">);</span>          <span class="o">//</span> <span class="n">returns</span> <span class="mi">1</span>
+<span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">1.2</span><span class="p">);</span>           <span class="o">//</span> <span class="n">returns</span> <span class="mf">1.2</span>
+<span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>        <span class="o">//</span> <span class="n">returns</span> <span class="mi">1</span>
+<span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>        <span class="o">//</span> <span class="n">returns</span> <span class="mi">3</span>
+<span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>      <span class="o">//</span> <span class="n">returns</span> <span class="n">a</span> <span class="n">random</span> <span class="n">number</span> <span class="n">between</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">100</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mixins- you can define a set group of CSS properties and reuse it for your stylesheet. This allows for reusable and more readable code, making it easier to update your stylesheet. In CSS, you would have to copy the code over and over again which would make it more repetitive and more prone to errors.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="o">//</span><span class="n">Sass</span>
+<span class="nd">@mixin</span> <span class="n">btn</span><span class="o">-</span><span class="n">style</span><span class="p">(</span><span class="err">$</span><span class="n">bg</span><span class="o">-</span><span class="n">color</span><span class="p">,</span> <span class="err">$</span><span class="n">text</span><span class="o">-</span><span class="n">color</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="err">$</span><span class="n">bg</span><span class="o">-</span><span class="n">color</span><span class="p">;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="err">$</span><span class="n">text</span><span class="o">-</span><span class="n">color</span><span class="p">;</span>
+  <span class="n">padding</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+  <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+  
+  <span class="o">&amp;</span><span class="p">:</span><span class="n">hover</span> <span class="p">{</span>
+    <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">darken</span><span class="p">(</span><span class="err">$</span><span class="n">bg</span><span class="o">-</span><span class="n">color</span><span class="p">,</span> <span class="mi">10</span><span class="o">%</span><span class="p">);</span>
+    <span class="n">color</span><span class="p">:</span> <span class="n">lighten</span><span class="p">(</span><span class="err">$</span><span class="n">text</span><span class="o">-</span><span class="n">color</span><span class="p">,</span> <span class="mi">10</span><span class="o">%</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">btn</span><span class="o">-</span><span class="n">primary</span> <span class="p">{</span>
+  <span class="nd">@include</span> <span class="n">btn</span><span class="o">-</span><span class="n">style</span><span class="p">(</span><span class="c1">#0074D9, #fff);</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">btn</span><span class="o">-</span><span class="n">secondary</span> <span class="p">{</span>
+  <span class="nd">@include</span> <span class="n">btn</span><span class="o">-</span><span class="n">style</span><span class="p">(</span><span class="c1">#6c757d, #fff);</span>
+<span class="p">}</span>
+
+<span class="o">//</span><span class="n">CSS</span>
+<span class="o">.</span><span class="n">btn</span><span class="o">-</span><span class="n">primary</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#0074D9;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="c1">#fff;</span>
+  <span class="n">padding</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+  <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">btn</span><span class="o">-</span><span class="n">primary</span><span class="p">:</span><span class="n">hover</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#0063b7;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="c1">#e5e5e5;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">btn</span><span class="o">-</span><span class="n">secondary</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#6c757d;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="c1">#fff;</span>
+  <span class="n">padding</span><span class="p">:</span> <span class="mi">10</span><span class="n">px</span> <span class="mi">20</span><span class="n">px</span><span class="p">;</span>
+  <span class="n">border</span><span class="o">-</span><span class="n">radius</span><span class="p">:</span> <span class="mi">5</span><span class="n">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">.</span><span class="n">btn</span><span class="o">-</span><span class="n">secondary</span><span class="p">:</span><span class="n">hover</span> <span class="p">{</span>
+  <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#5a6268;</span>
+  <span class="n">color</span><span class="p">:</span> <span class="c1">#e5e5e5;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Inheritance- allows you to share properties between selectors so you can create variations of a base style easier so you can reduce duplicate code and create more maintainable code.</p>
 
 </div>
 </div>
