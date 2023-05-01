@@ -131,12 +131,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Creating-Database-Template">Creating Database Template<a class="anchor-link" href="#Creating-Database-Template"> </a></h3>
-</div>
-</div>
-</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -155,13 +149,13 @@ window.onload = wrap_img;
 <span class="c1">#</span>
 <span class="k">class</span> <span class="nc">Leaderboard</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s2">&quot;leaderboard&quot;</span>
-
+    <span class="n">__table_args__</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extend_existing&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">}</span>
     <span class="c1"># </span>
     <span class="c1"># Leaderboard DB columns for easy, medium and hard points with user info</span>
     <span class="c1">#    </span>
     <span class="nb">id</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">_username</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">_sex</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">_sex</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">_password</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">255</span><span class="p">),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">_pointsEasy</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">_pointsMedium</span> <span class="o">=</span> <span class="n">Column</span><span class="p">(</span><span class="n">Integer</span><span class="p">,</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -331,7 +325,7 @@ window.onload = wrap_img;
         <span class="sd">&quot;&quot;&quot;only updates values with length&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sex</span> <span class="o">=</span> <span class="n">sex</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pointsEasy</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pointsEasy</span> <span class="o">=</span> <span class="n">pointsEasy</span>
@@ -358,153 +352,15 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/kaylee/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/model.py:120: SAWarning: This declarative base already contains a class with the same class name and module name as __main__.Leaderboard, and will be replaced in the string-lookup table.
-  super().__init__(name, bases, d, **kwargs)
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">InvalidRequestError</span>                       Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb Cell 6</span> in <span class="ansi-cyan-fg">&lt;cell line: 10&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3&#39;&gt;4&lt;/a&gt;</span> from werkzeug.security import generate_password_hash, check_password_hash
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> # 
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> # Leaderboard DB class that maps leaderboard SQL table 
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> #
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> class Leaderboard(db.Model):
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span>     __tablename__ = &#34;leaderboard&#34;
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12&#39;&gt;13&lt;/a&gt;</span>     # 
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13&#39;&gt;14&lt;/a&gt;</span>     # Leaderboard DB columns for easy, medium and hard points with user info
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#W5sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14&#39;&gt;15&lt;/a&gt;</span>     #    
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/model.py:100</span>, in <span class="ansi-cyan-fg">BindMetaMixin.__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>     if metadata is not parent_metadata:
-<span class="ansi-green-intense-fg ansi-bold">     98</span>         cls.metadata = metadata
-<span class="ansi-green-fg">--&gt; 100</span> super().__init__(name, bases, d, **kwargs)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/model.py:120</span>, in <span class="ansi-cyan-fg">NameMetaMixin.__init__</span><span class="ansi-blue-fg">(cls, name, bases, d, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    117</span> if should_set_tablename(cls):
-<span class="ansi-green-intense-fg ansi-bold">    118</span>     cls.__tablename__ = camel_to_snake_case(cls.__name__)
-<span class="ansi-green-fg">--&gt; 120</span> super().__init__(name, bases, d, **kwargs)
-<span class="ansi-green-intense-fg ansi-bold">    122</span> # __table_cls__ has run. If no table was created, use the parent table.
-<span class="ansi-green-intense-fg ansi-bold">    123</span> if (
-<span class="ansi-green-intense-fg ansi-bold">    124</span>     &#34;__tablename__&#34; not in cls.__dict__
-<span class="ansi-green-intense-fg ansi-bold">    125</span>     and &#34;__table__&#34; in cls.__dict__
-<span class="ansi-green-intense-fg ansi-bold">    126</span>     and cls.__dict__[&#34;__table__&#34;] is None
-<span class="ansi-green-intense-fg ansi-bold">    127</span> ):
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_api.py:199</span>, in <span class="ansi-cyan-fg">DeclarativeMeta.__init__</span><span class="ansi-blue-fg">(cls, classname, bases, dict_, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    196</span>         cls._sa_registry = reg
-<span class="ansi-green-intense-fg ansi-bold">    198</span> if not cls.__dict__.get(&#34;__abstract__&#34;, False):
-<span class="ansi-green-fg">--&gt; 199</span>     _as_declarative(reg, cls, dict_)
-<span class="ansi-green-intense-fg ansi-bold">    200</span> type.__init__(cls, classname, bases, dict_)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py:248</span>, in <span class="ansi-cyan-fg">_as_declarative</span><span class="ansi-blue-fg">(registry, cls, dict_)</span>
-<span class="ansi-green-intense-fg ansi-bold">    242</span> def _as_declarative(
-<span class="ansi-green-intense-fg ansi-bold">    243</span>     registry: _RegistryType, cls: Type[Any], dict_: _ClassDict
-<span class="ansi-green-intense-fg ansi-bold">    244</span> ) -&gt; Optional[_MapperConfig]:
-<span class="ansi-green-intense-fg ansi-bold">    245</span> 
-<span class="ansi-green-intense-fg ansi-bold">    246</span>     # declarative scans the class for attributes.  no table or mapper
-<span class="ansi-green-intense-fg ansi-bold">    247</span>     # args passed separately.
-<span class="ansi-green-fg">--&gt; 248</span>     return _MapperConfig.setup_mapping(registry, cls, dict_, None, {})
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py:329</span>, in <span class="ansi-cyan-fg">_MapperConfig.setup_mapping</span><span class="ansi-blue-fg">(cls, registry, cls_, dict_, table, mapper_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    325</span>     return _DeferredMapperConfig(
-<span class="ansi-green-intense-fg ansi-bold">    326</span>         registry, cls_, dict_, table, mapper_kw
-<span class="ansi-green-intense-fg ansi-bold">    327</span>     )
-<span class="ansi-green-intense-fg ansi-bold">    328</span> else:
-<span class="ansi-green-fg">--&gt; 329</span>     return _ClassScanMapperConfig(
-<span class="ansi-green-intense-fg ansi-bold">    330</span>         registry, cls_, dict_, table, mapper_kw
-<span class="ansi-green-intense-fg ansi-bold">    331</span>     )
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py:578</span>, in <span class="ansi-cyan-fg">_ClassScanMapperConfig.__init__</span><span class="ansi-blue-fg">(self, registry, cls_, dict_, table, mapper_kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    574</span> self._extract_mappable_attributes()
-<span class="ansi-green-intense-fg ansi-bold">    576</span> self._extract_declared_columns()
-<span class="ansi-green-fg">--&gt; 578</span> self._setup_table(table)
-<span class="ansi-green-intense-fg ansi-bold">    580</span> self._setup_inheriting_columns(mapper_kw)
-<span class="ansi-green-intense-fg ansi-bold">    582</span> self._early_mapping(mapper_kw)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/decl_base.py:1663</span>, in <span class="ansi-cyan-fg">_ClassScanMapperConfig._setup_table</span><span class="ansi-blue-fg">(self, table)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1655</span>             table_kw[&#34;autoload&#34;] = True
-<span class="ansi-green-intense-fg ansi-bold">   1657</span>         sorted_columns = sorted(
-<span class="ansi-green-intense-fg ansi-bold">   1658</span>             declared_columns,
-<span class="ansi-green-intense-fg ansi-bold">   1659</span>             key=lambda c: column_ordering.get(c, 0),
-<span class="ansi-green-intense-fg ansi-bold">   1660</span>         )
-<span class="ansi-green-intense-fg ansi-bold">   1661</span>         table = self.set_cls_attribute(
-<span class="ansi-green-intense-fg ansi-bold">   1662</span>             &#34;__table__&#34;,
-<span class="ansi-green-fg">-&gt; 1663</span>             table_cls(
-<span class="ansi-green-intense-fg ansi-bold">   1664</span>                 tablename,
-<span class="ansi-green-intense-fg ansi-bold">   1665</span>                 self._metadata_for_cls(manager),
-<span class="ansi-green-intense-fg ansi-bold">   1666</span>                 *sorted_columns,
-<span class="ansi-green-intense-fg ansi-bold">   1667</span>                 *args,
-<span class="ansi-green-intense-fg ansi-bold">   1668</span>                 **table_kw,
-<span class="ansi-green-intense-fg ansi-bold">   1669</span>             ),
-<span class="ansi-green-intense-fg ansi-bold">   1670</span>         )
-<span class="ansi-green-intense-fg ansi-bold">   1671</span> else:
-<span class="ansi-green-intense-fg ansi-bold">   1672</span>     if table is None:
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/flask_sqlalchemy/model.py:147</span>, in <span class="ansi-cyan-fg">NameMetaMixin.__table_cls__</span><span class="ansi-blue-fg">(cls, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    144</span> # Check if a table with this name already exists. Allows reflected tables to be
-<span class="ansi-green-intense-fg ansi-bold">    145</span> # applied to models by name.
-<span class="ansi-green-intense-fg ansi-bold">    146</span> if key in cls.metadata.tables:
-<span class="ansi-green-fg">--&gt; 147</span>     return sa.Table(*args, **kwargs)
-<span class="ansi-green-intense-fg ansi-bold">    149</span> # If a primary key is found, create a table for joined-table inheritance.
-<span class="ansi-green-intense-fg ansi-bold">    150</span> for arg in args:
-
-File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/deprecations.py:277</span>, in <span class="ansi-cyan-fg">deprecated_params.&lt;locals&gt;.decorate.&lt;locals&gt;.warned</span><span class="ansi-blue-fg">(fn, *args, **kwargs)</span>
-<span class="ansi-green-intense-fg ansi-bold">    270</span>     if m in kwargs:
-<span class="ansi-green-intense-fg ansi-bold">    271</span>         _warn_with_version(
-<span class="ansi-green-intense-fg ansi-bold">    272</span>             messages[m],
-<span class="ansi-green-intense-fg ansi-bold">    273</span>             versions[m],
-<span class="ansi-green-intense-fg ansi-bold">    274</span>             version_warnings[m],
-<span class="ansi-green-intense-fg ansi-bold">    275</span>             stacklevel=3,
-<span class="ansi-green-intense-fg ansi-bold">    276</span>         )
-<span class="ansi-green-fg">--&gt; 277</span> return fn(*args, **kwargs)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py:428</span>, in <span class="ansi-cyan-fg">Table.__new__</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    421</span> @util.deprecated_params(
-<span class="ansi-green-intense-fg ansi-bold">    422</span>     mustexist=(
-<span class="ansi-green-intense-fg ansi-bold">    423</span>         &#34;1.4&#34;,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    426</span> )
-<span class="ansi-green-intense-fg ansi-bold">    427</span> def __new__(cls, *args: Any, **kw: Any) -&gt; Any:
-<span class="ansi-green-fg">--&gt; 428</span>     return cls._new(*args, **kw)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/schema.py:460</span>, in <span class="ansi-cyan-fg">Table._new</span><span class="ansi-blue-fg">(cls, *args, **kw)</span>
-<span class="ansi-green-intense-fg ansi-bold">    458</span> if key in metadata.tables:
-<span class="ansi-green-intense-fg ansi-bold">    459</span>     if not keep_existing and not extend_existing and bool(args):
-<span class="ansi-green-fg">--&gt; 460</span>         raise exc.InvalidRequestError(
-<span class="ansi-green-intense-fg ansi-bold">    461</span>             &#34;Table &#39;%s&#39; is already defined for this MetaData &#34;
-<span class="ansi-green-intense-fg ansi-bold">    462</span>             &#34;instance.  Specify &#39;extend_existing=True&#39; &#34;
-<span class="ansi-green-intense-fg ansi-bold">    463</span>             &#34;to redefine &#34;
-<span class="ansi-green-intense-fg ansi-bold">    464</span>             &#34;options and columns on an &#34;
-<span class="ansi-green-intense-fg ansi-bold">    465</span>             &#34;existing Table object.&#34; % key
-<span class="ansi-green-intense-fg ansi-bold">    466</span>         )
-<span class="ansi-green-intense-fg ansi-bold">    467</span>     table = metadata.tables[key]
-<span class="ansi-green-intense-fg ansi-bold">    468</span>     if extend_existing:
-
-<span class="ansi-red-fg">InvalidRequestError</span>: Table &#39;leaderboard&#39; is already defined for this MetaData instance.  Specify &#39;extend_existing=True&#39; to redefine options and columns on an existing Table object.</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-Database-Template">Creating Database Template<a class="anchor-link" href="#Creating-Database-Template"> </a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Initialization-of-Data">Initialization of Data<a class="anchor-link" href="#Initialization-of-Data"> </a></h3>
@@ -556,23 +412,72 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb Cell 8</span> in <span class="ansi-cyan-fg">&lt;cell line: 28&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=24&#39;&gt;25&lt;/a&gt;</span>                 &#39;&#39;&#39;fails with bad or duplicate data&#39;&#39;&#39;
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=25&#39;&gt;26&lt;/a&gt;</span>                 print(f&#34;Records exist uid {l.username}, or error.&#34;)
-<span class="ansi-green-fg">---&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=27&#39;&gt;28&lt;/a&gt;</span> init_leaderboards()
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Created new uid bob
+Created new uid bobby
+Created new uid bobbert
+Created new uid bobruth
+Created new uid kaylee
+</pre>
+</div>
+</div>
 
-<span class="ansi-green-intense-fg ansi-bold">/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb Cell 8</span> in <span class="ansi-cyan-fg">init_leaderboards</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6&#39;&gt;7&lt;/a&gt;</span> db.create_all()
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7&#39;&gt;8&lt;/a&gt;</span> &#34;&#34;&#34;Tester data for table&#34;&#34;&#34;
-<span class="ansi-green-fg">----&gt; &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=8&#39;&gt;9&lt;/a&gt;</span> l1 = Leaderboard(username=&#34;bob&#34;, sex= &#34;male&#34;, password=&#34;apple&#34;, pointsEasy=2, pointsMedium=5, pointsHard=3)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=9&#39;&gt;10&lt;/a&gt;</span> l2 = Leaderboard(username=&#34;bobby&#34;, sex= &#34;male&#34;, password=&#34;appley&#34;, pointsEasy=20, pointsMedium=50, pointsHard=30)
-<span class="ansi-green-intense-fg ansi-bold">     &lt;a href=&#39;vscode-notebook-cell://wsl%2Bubuntu/home/kaylee/vscode/myproject/_notebooks/2023-04-27-P3M-BigIdea3-DataStructures.ipynb#X10sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10&#39;&gt;11&lt;/a&gt;</span> l3 = Leaderboard(username=&#34;bobbert&#34;, sex= &#34;male&#34;, password=&#34;appled&#34;, pointsEasy=200, pointsMedium=500, pointsHard=300)
+</div>
+</div>
 
-<span class="ansi-red-fg">TypeError</span>: __init__() got an unexpected keyword argument &#39;sex&#39;</pre>
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;instance/sqlite.db&#39;</span> <span class="c1"># this is location of database</span>
+
+<span class="k">def</span> <span class="nf">schema</span><span class="p">():</span>
+    
+    <span class="c1"># Connect to the database file</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
+
+    <span class="c1"># Create a cursor object to execute SQL queries</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    
+    <span class="c1"># Fetch results of Schema</span>
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;PRAGMA table_info(&#39;leaderboard&#39;)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="c1"># Print the results</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="c1"># Close the database connection</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    
+<span class="n">schema</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(0, &#39;id&#39;, &#39;INTEGER&#39;, 1, None, 1)
+(1, &#39;_username&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(2, &#39;_sex&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(3, &#39;_password&#39;, &#39;VARCHAR(255)&#39;, 1, None, 0)
+(4, &#39;_pointsEasy&#39;, &#39;INTEGER&#39;, 1, None, 0)
+(5, &#39;_pointsMedium&#39;, &#39;INTEGER&#39;, 1, None, 0)
+(6, &#39;_pointsHard&#39;, &#39;INTEGER&#39;, 1, None, 0)
+</pre>
 </div>
 </div>
 
@@ -586,8 +491,12 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="DO-THESE-FOR-THIS-SECTION">DO THESE FOR THIS SECTION<a class="anchor-link" href="#DO-THESE-FOR-THIS-SECTION"> </a></h3><ul>
 <li>fill in the blanks</li>
-<li>add a new leaderboard, and edit the bobbert leaderboard; add proof with a screenshot of the sqlite.db</li>
-<li>add a new set of keys and values to the leaderboard; add proof with a screenshot of the sqlite.db</li>
+<li><p>add a new leaderboard, and edit the bobbert leaderboard; add proof with a screenshot of the sqlite.db
+<img src="https://github.com/kayleehou/myproject/blob/master/images/leaderboard1.PNG?raw=true" alt="" /></p>
+</li>
+<li><p>add a new set of keys and values to the leaderboard; add proof with a screenshot of the sqlite.db
+<img src="https://github.com/kayleehou/myproject/blob/master/images/leaderboard2.PNG?raw=true" alt="" /></p>
+</li>
 </ul>
 
 </div>
@@ -764,10 +673,10 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Popcorn-Hacks">Popcorn Hacks<a class="anchor-link" href="#Popcorn-Hacks"> </a></h4><ul>
-<li>The init method initializes a new Images object with the following parameters: imagePath, xCoord, yCoord, and <em>__</em>.</li>
-<li>In the Images class, the tablename attribute specifies the name of the <em>__</em>.</li>
-<li>The update method updates the values of the object's attributes imagePath, xCoord, yCoord, and difficulty based on the input parameters, and then uses the db.session.commit method to <em>__</em> the changes to the database.</li>
-<li>The db module used in this code is part of a larger library called <em>__</em>, which provides a set of tools for working with databases in Python.</li>
+<li>The init method initializes a new Images object with the following parameters: imagePath, xCoord, yCoord, and <strong>difficulty</strong>.</li>
+<li>In the Images class, the tablename attribute specifies the name of the <strong>table</strong>.</li>
+<li>The update method updates the values of the object's attributes imagePath, xCoord, yCoord, and difficulty based on the input parameters, and then uses the db.session.commit method to <strong>commit</strong> the changes to the database.</li>
+<li>The db module used in this code is part of a larger library called <strong>SQLAlchemy</strong>, which provides a set of tools for working with databases in Python.</li>
 </ul>
 
 </div>
@@ -809,7 +718,9 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 <img src="https://user-images.githubusercontent.com/111480448/234923845-98d21dea-ad65-48db-bae5-30819fb1f98b.png" alt="&quot;API endpoint&quot;" /></p>
 <h3 id="Popcorn-Hack:">Popcorn Hack:<a class="anchor-link" href="#Popcorn-Hack:"> </a></h3><blockquote><p>Please write a few sentences answering the essential question, "What are some methods that we could store and access images in the backend, and how can we send them to a frontend application?"</p>
 </blockquote>
-<p>-</p>
+<ul>
+<li>HTTP methods such as GET and POST can be used to store and access images in the backend. GET requests can be used to retrieve images stored in the server, while POST requests can be used to upload images to the server. Additionally, PUT requests can be used to update existing images in the server. To send images to a frontend application, the server can return the image file as a response to the HTTP request, along with appropriate headers such as content type and content length. The frontend application can then display the image using HTML or other appropriate tools. Alternatively, the server can send a URL to the frontend application, which can then make a request for the image using the appropriate HTTP method.</li>
+</ul>
 
 </div>
 </div>
@@ -1150,9 +1061,16 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 <h4 id="Popcorn-Hacks">Popcorn Hacks<a class="anchor-link" href="#Popcorn-Hacks"> </a></h4><p>Please answer these questions to earn points for the popcorn hacks.</p>
 <ol>
 <li>What are the four HTTP request methods that are used with Flask?</li>
+</ol>
+<p>GET, POST, PUT, DELETE</p>
+<ol>
 <li>What is a parser and how would it be aid with data validation?</li>
+</ol>
+<p>A parser is a tool used to read and interpret data in a specific format. In Flask, parsers can be used to validate incoming data to ensure it conforms to a specified format or schema. This can help prevent errors and improve data quality.</p>
+<ol>
 <li>What is the role endpoints in Flask?</li>
 </ol>
+<p>Endpoints in Flask are URLs that define the routes to different parts of the application. These routes are associated with specific functions, which define what should happen when a client makes a request to that endpoint. Endpoints are the primary way that clients interact with a Flask application, and they play a critical role in how requests are handled and responses are generated.</p>
 
 </div>
 </div>
@@ -1213,54 +1131,6 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 </div>
 </div>
 </div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">fetches</span> <span class="n">entire</span> <span class="n">database</span>
-<span class="n">const</span> <span class="n">getList</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="o">//</span> <span class="n">stores</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">variable</span> <span class="nb">list</span>
-  <span class="n">const</span> <span class="nb">list</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fetch</span><span class="p">(</span><span class="n">api</span> <span class="o">+</span> <span class="s2">&quot;/leaderboardList&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">then</span><span class="p">((</span><span class="n">r</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">());</span>
-  <span class="k">return</span> <span class="nb">list</span>
-<span class="p">};</span>
-
-<span class="o">//</span> <span class="n">goes</span> <span class="n">through</span> <span class="n">entire</span> <span class="n">database</span> <span class="ow">and</span> <span class="n">pulls</span> <span class="n">each</span> <span class="n">individual</span> <span class="k">class</span>
-<span class="nc">getList</span><span class="p">()</span><span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="nb">list</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="o">//</span> <span class="k">for</span> <span class="n">each</span> <span class="k">class</span> <span class="err">(</span><span class="nc">row</span><span class="p">),</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">pulled</span> <span class="ow">and</span> <span class="n">added</span> <span class="n">into</span> <span class="n">addTask</span><span class="p">()</span> <span class="n">function</span> <span class="n">to</span> <span class="n">be</span> <span class="n">put</span> <span class="ow">in</span> <span class="n">visual</span> <span class="n">table</span>
-  <span class="nb">list</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="bp">cls</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="n">addTask</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">pointsEasy</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">pointsMedium</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">pointsHard</span><span class="p">)</span>
-  <span class="p">})</span>
-<span class="p">})</span>
-
-<span class="o">//</span> <span class="n">adds</span> <span class="n">visual</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">table</span>
-<span class="n">function</span> <span class="n">addTask</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">pointsEasy</span><span class="p">,</span> <span class="n">pointsMedium</span><span class="p">,</span> <span class="n">pointsHard</span><span class="p">)</span> <span class="p">{</span>
-
-  <span class="o">//</span> <span class="n">array</span> <span class="n">of</span> <span class="n">variables</span> <span class="n">defining</span> <span class="n">data</span> <span class="n">points</span>
-  <span class="n">var</span> <span class="n">tableCells</span> <span class="o">=</span> <span class="p">[</span><span class="n">username</span><span class="p">,</span> <span class="n">pointsEasy</span><span class="p">,</span> <span class="n">pointsMedium</span><span class="p">,</span> <span class="n">pointsHard</span><span class="p">]</span>
-  <span class="o">//</span> <span class="n">creates</span> <span class="n">new</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">variable</span>
-  <span class="n">var</span> <span class="n">row</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
-  <span class="o">//</span> <span class="n">goes</span> <span class="n">through</span> <span class="n">entire</span> <span class="n">data</span> <span class="nb">set</span> <span class="ow">and</span> <span class="n">places</span> <span class="n">data</span> <span class="n">into</span> <span class="n">cells</span>
-  <span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tableCells</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">var</span> <span class="n">tableCell</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
-    <span class="n">tableCell</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">tableCells</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">tableCell</span><span class="o">.</span><span class="n">className</span> <span class="o">=</span> <span class="s1">&#39;cell&#39;</span>
-    <span class="n">row</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">tableCell</span><span class="p">)</span>
-  <span class="p">}</span>
-  <span class="o">//</span> <span class="n">creates</span> <span class="n">new</span> <span class="n">row</span> <span class="k">as</span> <span class="n">child</span> <span class="n">of</span> <span class="n">schedule</span> <span class="n">element</span>
-  <span class="n">schedule</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="POST-Method">POST Method<a class="anchor-link" href="#POST-Method"> </a></h4><ul>
@@ -1279,6 +1149,54 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">//</span> <span class="n">fetches</span> <span class="n">entire</span> <span class="n">database</span>
+<span class="n">const</span> <span class="n">getList</span> <span class="o">=</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="n">stores</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">variable</span> <span class="nb">list</span>
+    <span class="n">const</span> <span class="nb">list</span> <span class="o">=</span> <span class="k">await</span> <span class="n">fetch</span><span class="p">(</span><span class="n">api</span> <span class="o">+</span> <span class="s2">&quot;/leaderboardList&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">then</span><span class="p">((</span><span class="n">r</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">());</span>
+    <span class="k">return</span> <span class="nb">list</span>
+  <span class="p">};</span>
+  
+  <span class="o">//</span> <span class="n">goes</span> <span class="n">through</span> <span class="n">entire</span> <span class="n">database</span> <span class="ow">and</span> <span class="n">pulls</span> <span class="n">each</span> <span class="n">individual</span> <span class="k">class</span>
+  <span class="nc">getList</span><span class="p">()</span><span class="o">.</span><span class="n">then</span><span class="p">(</span><span class="nb">list</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="k">for</span> <span class="n">each</span> <span class="k">class</span> <span class="err">(</span><span class="nc">row</span><span class="p">),</span> <span class="n">data</span> <span class="ow">is</span> <span class="n">pulled</span> <span class="ow">and</span> <span class="n">added</span> <span class="n">into</span> <span class="n">addTask</span><span class="p">()</span> <span class="n">function</span> <span class="n">to</span> <span class="n">be</span> <span class="n">put</span> <span class="ow">in</span> <span class="n">visual</span> <span class="n">table</span>
+    <span class="nb">list</span><span class="o">.</span><span class="n">forEach</span><span class="p">(</span><span class="bp">cls</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="n">addTask</span><span class="p">(</span><span class="bp">cls</span><span class="o">.</span><span class="n">username</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">pointsEasy</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">pointsMedium</span><span class="p">,</span> <span class="bp">cls</span><span class="o">.</span><span class="n">pointsHard</span><span class="p">)</span>
+    <span class="p">})</span>
+  <span class="p">})</span>
+  
+  <span class="o">//</span> <span class="n">adds</span> <span class="n">visual</span> <span class="n">representation</span> <span class="n">of</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">table</span>
+  <span class="n">function</span> <span class="n">addTask</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">pointsEasy</span><span class="p">,</span> <span class="n">pointsMedium</span><span class="p">,</span> <span class="n">pointsHard</span><span class="p">)</span> <span class="p">{</span>
+  
+    <span class="o">//</span> <span class="n">array</span> <span class="n">of</span> <span class="n">variables</span> <span class="n">defining</span> <span class="n">data</span> <span class="n">points</span>
+    <span class="n">var</span> <span class="n">tableCells</span> <span class="o">=</span> <span class="p">[</span><span class="n">username</span><span class="p">,</span> <span class="n">pointsEasy</span><span class="p">,</span> <span class="n">pointsMedium</span><span class="p">,</span> <span class="n">pointsHard</span><span class="p">]</span>
+    <span class="o">//</span> <span class="n">creates</span> <span class="n">new</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">variable</span>
+    <span class="n">var</span> <span class="n">row</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
+    <span class="o">//</span> <span class="n">goes</span> <span class="n">through</span> <span class="n">entire</span> <span class="n">data</span> <span class="nb">set</span> <span class="ow">and</span> <span class="n">places</span> <span class="n">data</span> <span class="n">into</span> <span class="n">cells</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">tableCells</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">var</span> <span class="n">tableCell</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;th&#39;</span><span class="p">)</span>
+      <span class="n">tableCell</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">tableCells</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+      <span class="n">tableCell</span><span class="o">.</span><span class="n">className</span> <span class="o">=</span> <span class="s1">&#39;cell&#39;</span>
+      <span class="n">row</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">tableCell</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="o">//</span> <span class="n">creates</span> <span class="n">new</span> <span class="n">row</span> <span class="k">as</span> <span class="n">child</span> <span class="n">of</span> <span class="n">schedule</span> <span class="n">element</span>
+    <span class="n">schedule</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1458,9 +1376,16 @@ File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalch
 <h4 id="Popcorn-Hacks">Popcorn Hacks<a class="anchor-link" href="#Popcorn-Hacks"> </a></h4><p>Please answer these questions to earn points for the popcorn hacks.</p>
 <ol>
 <li>How is data for images stored in a Flask API and how is it displayed on the frontend when requested?</li>
+</ol>
+<p>In Flask, images can be stored either as binary data or as a file on the server. When a request is made to display the image on the frontend, the server sends the image data to the client in the HTTP response along with the appropriate headers indicating the image type. On the frontend, the image can be displayed using the <img /> HTML tag, with the image source set to the URL of the image endpoint on the Flask server.</p>
+<ol>
 <li>What is the <code>fetch()</code> function and how is it used in frontend logic?</li>
+</ol>
+<p>fetch() is a web API in JavaScript that is used to make network requests to a server. It is commonly used in frontend logic to send HTTP requests to the backend and receive responses. The fetch() function returns a Promise that resolves to the response from the server, which can then be processed in various ways.</p>
+<ol>
 <li>How is data formatted and sent to the backend? (mention JSON in your answer)</li>
 </ol>
+<p>Data can be formatted and sent to the backend in JSON format, which is a lightweight data interchange format. In JavaScript, JSON data can be created using a plain JavaScript object, and then sent to the server using the fetch() function with the appropriate headers set to indicate the content type of the request. On the server side, the Flask request object can be used to retrieve the JSON data and process it accordingly.</p>
 
 </div>
 </div>
@@ -1548,7 +1473,9 @@ Our quickSort algorithm consists of 2 procedures, a <code>partition()</code> pro
 <p>Finally, we could multiply our two complexities together to get a representation of our overall complexity. Thus, the asymptotic notation for a time complexity could be represented as <strong>_O(nlogn)<em>__</em></strong>, where n is the length of the input array. Keep in mind, Big-Oh notation is not a function that returns the accurate runtime for any given input, but rather only gives us a model to see how runtime scales with increasing input sizes.</p>
 <p>Space complexity for this program is much easier to analyze. Because the array is sorted in-place (meaning we don't create other placeholders or copies), we require no additional space to sort this array. However, recursive function calls may require extra storage on the call stack. Since we found the number of recursive calls to be asymptotic to <strong>_O(logn)<em>__</em></strong>, we can conclude that quickSort has an <strong>O(1)</strong> space complexity for an iterative method, and an <strong>O(logn)</strong> space complexity for a recursive method.</p>
 <h3 id="Popcorn-Hack">Popcorn Hack<a class="anchor-link" href="#Popcorn-Hack"> </a></h3><p>Please answer our EQ for this section: <strong>What is the quicksort algorithm, and how does it work? How does it's time and space complexities scale with input sizes?</strong></p>
-<p>-</p>
+<ul>
+<li>Quicksort is an algorithm used for sorting arrays or lists. It works by partitioning an array into two parts, and then recursively sorting each of those parts. The basic idea is to select a "pivot" element from the array and partition the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The pivot is then put in its final position in the sorted array. The process is repeated for each of the sub-arrays until the entire array is sorted. The time complexity of quicksort is O(n log n) on average, but can be O(n^2) in the worst case. The space complexity of quicksort is O(log n) on average, but can be O(n) in the worst case. These complexities make quicksort a popular and efficient sorting algorithm for large datasets.</li>
+</ul>
 
 </div>
 </div>
@@ -1586,6 +1513,83 @@ Our quickSort algorithm consists of 2 procedures, a <code>partition()</code> pro
 </li>
 </ul>
 <h1 id="HACKS-ARE-DUE-SATURDAY-(4/29)-11:59-PM">HACKS ARE DUE SATURDAY (4/29) 11:59 PM<a class="anchor-link" href="#HACKS-ARE-DUE-SATURDAY-(4/29)-11:59-PM"> </a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quicksort-Algorithm-with-Abstraction">Quicksort Algorithm with Abstraction<a class="anchor-link" href="#Quicksort-Algorithm-with-Abstraction"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+    <span class="n">pivot</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">high</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">low</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="c1"># list comprehension to partition the array</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="p">[</span><span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span> <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">pivot</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="p">[</span><span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span> <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">pivot</span><span class="p">]</span>
+    <span class="c1"># copy elements from left and right partitions to original array</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)):</span>
+        <span class="n">array</span><span class="p">[</span><span class="n">low</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">left</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">array</span><span class="p">[</span><span class="n">low</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pivot</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">)):</span>
+        <span class="n">array</span><span class="p">[</span><span class="n">low</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="c1"># return the position of the pivot</span>
+    <span class="k">return</span> <span class="n">low</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">quickSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">:</span>
+        <span class="n">pi</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+        <span class="n">quickSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">pi</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">quickSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">pi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unsorted Array&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">quickSort</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sorted Array in Ascending Order:&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Unsorted Array
+[1, 7, 4, 1, 10, 9, -2]
+Sorted Array in Ascending Order:
+[-2, 1, 1, 4, 7, 9, 10]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://github.com/kayleehou/myproject/blob/master/images/quicksortalgorithm.PNG?raw=true" alt="" /></p>
+
 </div>
 </div>
 </div>
