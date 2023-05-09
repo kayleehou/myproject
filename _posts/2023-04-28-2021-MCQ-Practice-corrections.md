@@ -11,14 +11,7 @@ comments: true
 
 ![score](https://github.com/kayleehou/myproject/blob/master/images/2021practicecsp.PNG?raw=true)
 
-## 12: 
-Question: The code segment below uses the procedure goalReached, which evaluates to true if the robot is in the gray square and evaluates to false otherwise.
-
-REPEAT UNTIL(goalReached())
-{
-<MISSING CODE>
-}
-
+## 12
 Which of the following replacements for <MISSING CODE> can be used to move the robot to the gray square?
 - My answer: D
 - Correct answer: C
