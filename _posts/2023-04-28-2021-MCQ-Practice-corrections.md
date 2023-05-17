@@ -9,6 +9,7 @@ comments: true
 ---
 # 2021 Practice Exam MCQ
 
+Score: 
 ![score](https://github.com/kayleehou/myproject/blob/master/images/2021practicecsp.PNG?raw=true)
 
 ## 12
