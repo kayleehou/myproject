@@ -119,7 +119,6 @@ window.onload = wrap_img;
 <span class="sd">* Creator: Nighthawk Coding Society</span>
 <span class="sd">2D arrays</span>
 <span class="sd">&quot;&quot;&quot;</span>
-
 <span class="c1"># Classic nested loops using ij indexes, this shows 2 dimensions</span>
 <span class="k">def</span> <span class="nf">print_matrix1</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Classic nested loops using ij indexes&quot;</span><span class="p">)</span>
@@ -127,8 +126,6 @@ window.onload = wrap_img;
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">])):</span>  <span class="c1"># inner loop (j), built on length of items (columns)</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="c1"># [i][j] is 2D representation, end changes newline to space</span>
         <span class="nb">print</span><span class="p">()</span>
-
-
 <span class="c1"># Enhanced nested for loops, row and col variables</span>
 <span class="k">def</span> <span class="nf">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Enhanced nested for loops&quot;</span><span class="p">)</span>
@@ -136,55 +133,56 @@ window.onload = wrap_img;
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">row</span><span class="p">:</span>  <span class="c1"># short hand column iterator</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">()</span>
-
-
 <span class="c1"># For loop with shortcut (*) row expansion</span>
 <span class="k">def</span> <span class="nf">print_matrix3</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For loop with shortcut (*) row expansion&quot;</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">row</span><span class="p">)</span>  <span class="c1"># pythons has (*) that is one line expansion of row into columns</span>
-
-
+<span class="c1"># For loop with shortcut (*) row expansion</span>
+<span class="k">def</span> <span class="nf">print_matrix4</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For loop with shortcut (*) row expansion&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">matrix</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">row</span><span class="p">)</span>  <span class="c1"># pythons has (*) that is one line expansion of row into columns</span>
 <span class="k">def</span> <span class="nf">test_matrices</span><span class="p">():</span>
     <span class="c1"># setup some text matrices</span>
     <span class="n">keypad</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
               <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
               <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
               <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">]]</span>
-
     <span class="n">keyboard</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;`&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">],</span>
                 <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;[&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;]&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\\</span><span class="s2">&quot;</span><span class="p">],</span>
                 <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&#39;&quot;</span><span class="p">],</span>
                 <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;/&quot;</span><span class="p">]]</span>
-
     <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="c1"># binary</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="c1"># decimal</span>
             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">]</span> <span class="c1"># hexadecimal</span>
             <span class="p">]</span>
-    
-
+    <span class="n">tree</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;|&quot;</span><span class="p">]</span>
+    <span class="p">]</span>
     <span class="c1"># pack into a list of matrices with titles</span>
     <span class="n">matrices</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="p">[</span><span class="s2">&quot;Keypad&quot;</span><span class="p">,</span> <span class="n">keypad</span><span class="p">],</span> 
-        <span class="p">[</span><span class="s2">&quot;Keyboard&quot;</span><span class="p">,</span> <span class="n">keyboard</span><span class="p">],</span> 
-        <span class="p">[</span><span class="s2">&quot;Number Systems&quot;</span><span class="p">,</span> <span class="n">numbers</span><span class="p">]</span>
+        <span class="p">[</span><span class="s2">&quot;Keypad&quot;</span><span class="p">,</span> <span class="n">keypad</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;Keyboard&quot;</span><span class="p">,</span> <span class="n">keyboard</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;Number Systems&quot;</span><span class="p">,</span> <span class="n">numbers</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;Christmas Tree&quot;</span><span class="p">,</span> <span class="n">tree</span><span class="p">]</span>
     <span class="p">]</span>
-
     <span class="c1"># loop 2D matrix with returning list in [key, value] arrangement</span>
     <span class="k">for</span> <span class="n">title</span><span class="p">,</span> <span class="n">matrix</span> <span class="ow">in</span> <span class="n">matrices</span><span class="p">:</span>  <span class="c1"># unpack title and matrix as variables</span>
-        
         <span class="c1"># formatted message with concatenation</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">),</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>  
-        
+        <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">),</span> <span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;~&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
         <span class="c1"># use three different methods</span>
         <span class="n">print_matrix1</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
         <span class="n">print_matrix2</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
         <span class="n">print_matrix3</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+        <span class="n">print_matrix4</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
         <span class="c1"># blank link in between</span>
         <span class="nb">print</span><span class="p">()</span>
-
-
 <span class="c1"># tester section</span>
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">test_matrices</span><span class="p">()</span>
@@ -216,6 +214,11 @@ For loop with shortcut (*) row expansion
 4 5 6
 7 8 9
   0  
+For loop with shortcut (*) row expansion
+1 2 3
+4 5 6
+7 8 9
+  0  
 
 Keyboard 4 x ~24
 Classic nested loops using ij indexes
@@ -228,6 +231,11 @@ Enhanced nested for loops
     Q   W   E   R   T   Y   U   I     O   P   [   ]   \ 
       A   S   D   F   G   H   J   K   L   ;   &#39; 
         Z   X   C   V   B   N   M   ,   .   / 
+For loop with shortcut (*) row expansion
+` 1   2   3   4   5   6   7   8   9   0   -   =
+    Q   W   E   R   T   Y   U   I     O   P   [   ]   \
+      A   S   D   F   G   H   J   K   L   ;   &#39;
+        Z   X   C   V   B   N   M   ,   .   /
 For loop with shortcut (*) row expansion
 ` 1   2   3   4   5   6   7   8   9   0   -   =
     Q   W   E   R   T   Y   U   I     O   P   [   ]   \
@@ -247,6 +255,36 @@ For loop with shortcut (*) row expansion
 0 1
 0 1 2 3 4 5 6 7 8 9
 0 1 2 3 4 5 6 7 8 9 A B C D E F
+For loop with shortcut (*) row expansion
+0 1
+0 1 2 3 4 5 6 7 8 9
+0 1 2 3 4 5 6 7 8 9 A B C D E F
+
+Christmas Tree 5 x ~4
+Classic nested loops using ij indexes
+      1 
+    1 1 1 
+  1 1 1 1 1 
+1 1 1 1 1 1 1 
+    |   | 
+Enhanced nested for loops
+      1 
+    1 1 1 
+  1 1 1 1 1 
+1 1 1 1 1 1 1 
+    |   | 
+For loop with shortcut (*) row expansion
+      1
+    1 1 1
+  1 1 1 1 1
+1 1 1 1 1 1 1
+    |   |
+For loop with shortcut (*) row expansion
+      1
+    1 1 1
+  1 1 1 1 1
+1 1 1 1 1 1 1
+    |   |
 
 </pre>
 </div>
@@ -310,10 +348,10 @@ For loop with shortcut (*) row expansion
 
 
 
-<div id="18081b06-ae7a-4edb-9922-c4619a704f16"></div>
+<div id="4326e251-e61a-4f16-8259-681da3048a29"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#18081b06-ae7a-4edb-9922-c4619a704f16');
+var element = $('#4326e251-e61a-4f16-8259-681da3048a29');
 
 /*
 * Creator: Nighthawk Coding Society
@@ -829,6 +867,63 @@ element.append(arr2D);
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">time</span> <span class="c1"># used for delay</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">clear_output</span>  <span class="c1"># jupyter specific clear</span>
+
+
+<span class="c1"># ANSI Color Codes</span>
+<span class="n">OCEAN_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u001B</span><span class="s2">[34m</span><span class="se">\u001B</span><span class="s2">[2D&quot;</span>
+<span class="n">SHIP_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u001B</span><span class="s2">[35m</span><span class="se">\u001B</span><span class="s2">[2D&quot;</span>
+<span class="n">RESET_COLOR</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&quot;</span><span class="se">\u001B</span><span class="s2">[0m</span><span class="se">\u001B</span><span class="s2">[2D&quot;</span>
+
+<span class="k">def</span> <span class="nf">ship_print</span><span class="p">(</span><span class="n">position</span><span class="p">):</span>  <span class="c1"># print ship with colors and leading spaces according to position</span>
+    <span class="n">clear_output</span><span class="p">(</span><span class="n">wait</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">RESET_COLOR</span><span class="p">)</span>
+    
+    <span class="o">.</span><span class="n">__</span>    <span class="o">.</span><span class="n">__</span>    <span class="n">__</span>  <span class="o">.</span><span class="n">__</span>                        <span class="o">.</span><span class="n">_</span><span class="o">.</span>
+<span class="o">|</span>  <span class="o">|</span><span class="n">__</span> <span class="o">|</span><span class="n">__</span><span class="o">|</span> <span class="n">_</span><span class="o">/</span>  <span class="o">|</span><span class="n">_</span><span class="o">|</span>  <span class="o">|</span><span class="n">__</span>   <span class="n">___________</span>   <span class="n">____</span><span class="o">|</span> <span class="o">|</span>
+<span class="o">|</span>  <span class="o">|</span>  \<span class="o">|</span>  <span class="o">|</span> \   <span class="n">__</span>\  <span class="o">|</span>  \<span class="n">_</span><span class="o">/</span> <span class="n">__</span> \<span class="n">_</span>  <span class="n">__</span> \<span class="n">_</span><span class="o">/</span> <span class="n">__</span> \ <span class="o">|</span>
+<span class="o">|</span>   <span class="n">Y</span>  \  <span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span> <span class="o">|</span>   <span class="n">Y</span>  \  <span class="n">___</span><span class="o">/|</span>  <span class="o">|</span> \<span class="o">/</span>\  <span class="n">___</span><span class="o">/</span>\<span class="o">|</span>
+<span class="o">|</span><span class="n">___</span><span class="o">|</span>  <span class="o">/</span><span class="n">__</span><span class="o">|</span>  <span class="o">|</span><span class="n">__</span><span class="o">|</span> <span class="o">|</span><span class="n">___</span><span class="o">|</span>  <span class="o">/</span>\<span class="n">___</span>  <span class="o">&gt;</span><span class="n">__</span><span class="o">|</span>    \<span class="n">___</span>  <span class="o">&gt;</span><span class="n">_</span>
+     \<span class="o">/</span>                \<span class="o">/</span>     \<span class="o">/</span>            \<span class="o">/</span>\<span class="o">/</span>
+    <span class="n">sp</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="n">position</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot;    |\   &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot;    |/   &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">SHIP_COLOR</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot;\__ |__/ &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sp</span> <span class="o">+</span> <span class="s2">&quot; \____/  &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">OCEAN_COLOR</span> <span class="o">+</span> <span class="s2">&quot;--&quot;</span><span class="o">*</span><span class="mi">32</span> <span class="o">+</span> <span class="n">RESET_COLOR</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ship</span><span class="p">():</span>  <span class="c1"># ship function, loop/controller for animation speed and times</span>
+    <span class="c1"># loop control variables</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># start at zero</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="mi">60</span>  <span class="c1"># how many times to repeat</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># count by 2</span>
+
+    <span class="c1"># loop purpose is to animate ship sailing</span>
+    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+        <span class="n">ship_print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>  <span class="c1"># call to function with parameter</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+
+        
+<span class="n">ship</span><span class="p">()</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

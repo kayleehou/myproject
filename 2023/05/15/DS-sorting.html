@@ -298,6 +298,12 @@ Select the algorithm you believe is best for each, explain.</li>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="My-list-with-Bubble-Sort">My list with Bubble Sort<a class="anchor-link" href="#My-list-with-Bubble-Sort"> </a></h2>
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -334,24 +340,24 @@ Select the algorithm you believe is best for each, explain.</li>
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="c1"># list/dictionary sample</span>
-    <span class="n">list_of_people</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Risa&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;New York&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Eugene&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Shekar&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;San Francisco&quot;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ryan&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Los Angeles&quot;</span><span class="p">}</span>
+    <span class="n">list_of_artists</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Lizzy McAlpine&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;Five Seconds Flat&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Lorde&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;Solar Power&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;grandson&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;I Love You, I&#39;m Trying&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Bazzi&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;Infinite Dream&quot;</span><span class="p">}</span>
     <span class="p">]</span>
     
     <span class="c1"># assuming uniform keys, pick 1st row as source of keys</span>
-    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_artists</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
     <span class="c1"># print list as defined</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">)</span>
     
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># finds each key in the row</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-        <span class="n">bubbleSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of people</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+        <span class="n">bubbleSort</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort list of artists</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -364,7 +370,108 @@ Select the algorithm you believe is best for each, explain.</li>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Original
+<pre>original
+[{&#39;artist&#39;: &#39;Lizzy McAlpine&#39;, &#39;age&#39;: 23, &#39;album&#39;: &#39;Five Seconds Flat&#39;}, {&#39;artist&#39;: &#39;Lorde&#39;, &#39;age&#39;: 26, &#39;album&#39;: &#39;Solar Power&#39;}, {&#39;artist&#39;: &#39;grandson&#39;, &#39;age&#39;: 29, &#39;album&#39;: &#34;I Love You, I&#39;m Trying&#34;}, {&#39;artist&#39;: &#39;Bazzi&#39;, &#39;age&#39;: 25, &#39;album&#39;: &#39;Infinite Dream&#39;}]
+artist
+[{&#39;artist&#39;: &#39;Bazzi&#39;, &#39;age&#39;: 25, &#39;album&#39;: &#39;Infinite Dream&#39;}, {&#39;artist&#39;: &#39;Lizzy McAlpine&#39;, &#39;age&#39;: 23, &#39;album&#39;: &#39;Five Seconds Flat&#39;}, {&#39;artist&#39;: &#39;Lorde&#39;, &#39;age&#39;: 26, &#39;album&#39;: &#39;Solar Power&#39;}, {&#39;artist&#39;: &#39;grandson&#39;, &#39;age&#39;: 29, &#39;album&#39;: &#34;I Love You, I&#39;m Trying&#34;}]
+age
+[{&#39;artist&#39;: &#39;Lizzy McAlpine&#39;, &#39;age&#39;: 23, &#39;album&#39;: &#39;Five Seconds Flat&#39;}, {&#39;artist&#39;: &#39;Bazzi&#39;, &#39;age&#39;: 25, &#39;album&#39;: &#39;Infinite Dream&#39;}, {&#39;artist&#39;: &#39;Lorde&#39;, &#39;age&#39;: 26, &#39;album&#39;: &#39;Solar Power&#39;}, {&#39;artist&#39;: &#39;grandson&#39;, &#39;age&#39;: 29, &#39;album&#39;: &#34;I Love You, I&#39;m Trying&#34;}]
+album
+[{&#39;artist&#39;: &#39;Lizzy McAlpine&#39;, &#39;age&#39;: 23, &#39;album&#39;: &#39;Five Seconds Flat&#39;}, {&#39;artist&#39;: &#39;grandson&#39;, &#39;age&#39;: 29, &#39;album&#39;: &#34;I Love You, I&#39;m Trying&#34;}, {&#39;artist&#39;: &#39;Bazzi&#39;, &#39;age&#39;: 25, &#39;album&#39;: &#39;Infinite Dream&#39;}, {&#39;artist&#39;: &#39;Lorde&#39;, &#39;age&#39;: 26, &#39;album&#39;: &#39;Solar Power&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Merge-Sort">Merge Sort<a class="anchor-link" href="#Merge-Sort"> </a></h1><blockquote><p>Merge sort is generally more efficient than bubble sort, especially for large lists, because it avoids unnecessary comparisons and swaps.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span> <span class="c1"># arr: array represents list of peoplelist_of_people we want to sort</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># if only 0 or 1 element, list already sorted </span>
+        <span class="k">return</span> <span class="n">arr</span>
+    <span class="c1"># divide into two halfs: left and right </span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="n">mid</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+    <span class="c1"># sort left and right halves </span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="c1"># merge sorted halves </span>
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># index for left sublist</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># index for right sub list </span>
+    <span class="c1"># Compare and merge elements from the left and right sub-lists</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="c1"># Add the element from the left sub-list to the result</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="c1"># Add the element from the right sub-list to the result</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># Add any remaining elements from the left sub-list</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="c1"># Add any remaining elements from the right sub-list</span>
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">result</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># list/dictionary sample</span>
+    <span class="n">list_of_people</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Risa&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;New York&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">63</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Eugene&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Shekar&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;San Francisco&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Ryan&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Los Angeles&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+    
+    <span class="c1"># assuming uniform keys, pick the first row as the source of keys</span>
+    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># print the list as defined</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># find each key in the row</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">sorted_list</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort the list of peoplelist_of_people</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>original
 [{&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}]
 name
 [{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}]
@@ -372,6 +479,170 @@ age
 [{&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}]
 city
 [{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Analysis-on-Sorting">Analysis on Sorting<a class="anchor-link" href="#Analysis-on-Sorting"> </a></h2><p>Comparisons:</p>
+<blockquote><p>number of times the algorithm compares two elements in the list to determine their order. In merge sort, comparisons occur when merging the sub-lists. On each comparison, the algorithm decides which element should come first in the sorted order.</p>
+</blockquote>
+<p>Swaps:&gt; number of times the algorithm exchanges the positions of two elements in the list. In merge sort, swaps do not occur because the algorithm creates a new sorted list by merging the sub-lists. It avoids swapping elements within the original list.
+Time:</p>
+<blockquote><p>estimate of how the algorithm's performance scales with the input size. Merge sort has a time complexity of O(n log n), where n is the number of elements in the list. This means that as the list size doubles, the time taken to sort it will increase by a factor of approximately two times the logarithm of the list size.</p>
+</blockquote>
+<h2 id="More-Readable-Format">More Readable Format<a class="anchor-link" href="#More-Readable-Format"> </a></h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="n">comparisons</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Track the number of comparisons</span>
+    <span class="n">swaps</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Track the number of swaps</span>
+
+<span class="c1"># If the array has 0 or 1 element, it is already sorted</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span><span class="p">,</span> <span class="n">comparisons</span><span class="p">,</span> <span class="n">swaps</span>
+    
+    <span class="c1"># split into sublists</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="n">mid</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+    
+    <span class="c1"># Recursively call mergeSort on left and right halves</span>
+    <span class="n">left</span><span class="p">,</span> <span class="n">left_comparisons</span><span class="p">,</span> <span class="n">left_swaps</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="n">right</span><span class="p">,</span> <span class="n">right_comparisons</span><span class="p">,</span> <span class="n">right_swaps</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    
+    <span class="c1"># Update the total comparisons and swaps</span>
+    <span class="n">comparisons</span> <span class="o">+=</span> <span class="n">left_comparisons</span> <span class="o">+</span> <span class="n">right_comparisons</span>
+    <span class="n">swaps</span> <span class="o">+=</span> <span class="n">left_swaps</span> <span class="o">+</span> <span class="n">right_swaps</span>
+    
+    <span class="c1"># Merge the sorted left and right halves</span>
+    <span class="n">merged</span><span class="p">,</span> <span class="n">merge_comparisons</span><span class="p">,</span> <span class="n">merge_swaps</span> <span class="o">=</span> <span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    
+     <span class="c1"># Update the total comparisons and swaps</span>
+    <span class="n">comparisons</span> <span class="o">+=</span> <span class="n">merge_comparisons</span>
+    <span class="n">swaps</span> <span class="o">+=</span> <span class="n">merge_swaps</span>
+    
+    <span class="k">return</span> <span class="n">merged</span><span class="p">,</span> <span class="n">comparisons</span><span class="p">,</span> <span class="n">swaps</span>
+
+<span class="c1"># Rest of the code remains the same...</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">list_of_artists</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Lizzy McAlpine&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;Five Seconds Flat&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Lorde&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;Solar Power&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;grandson&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">29</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;I Love You, I&#39;m Trying&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;artist&quot;</span><span class="p">:</span> <span class="s2">&quot;Bazzi&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s2">&quot;album&quot;</span><span class="p">:</span> <span class="s2">&quot;Infinite Dream&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+    
+    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_artists</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original List:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">artist</span> <span class="ow">in</span> <span class="n">list_of_artists</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">artist</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">&quot;artist&quot;</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Sorting and printing with merge sort</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>
+        <span class="n">sorted_list</span><span class="p">,</span> <span class="n">comparisons</span><span class="p">,</span> <span class="n">swaps</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_artists</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sorted List by &#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&#39;:&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">artist</span> <span class="ow">in</span> <span class="n">sorted_list</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">artist</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">&quot;artist&quot;</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Comparisons:&quot;</span><span class="p">,</span> <span class="n">comparisons</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Swaps:&quot;</span><span class="p">,</span> <span class="n">swaps</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original List:
+age: 23
+album: Five Seconds Flat
+------
+age: 26
+album: Solar Power
+------
+age: 29
+album: I Love You, I&#39;m Trying
+------
+age: 25
+album: Infinite Dream
+------
+
+Sorted List by &#39;artist&#39;:
+age: 25
+album: Infinite Dream
+------
+age: 23
+album: Five Seconds Flat
+------
+age: 26
+album: Solar Power
+------
+age: 29
+album: I Love You, I&#39;m Trying
+------
+Comparisons: 5
+Swaps: 2
+
+Sorted List by &#39;age&#39;:
+age: 23
+album: Five Seconds Flat
+------
+age: 25
+album: Infinite Dream
+------
+age: 26
+album: Solar Power
+------
+age: 29
+album: I Love You, I&#39;m Trying
+------
+Comparisons: 5
+Swaps: 2
+
+Sorted List by &#39;album&#39;:
+age: 23
+album: Five Seconds Flat
+------
+age: 29
+album: I Love You, I&#39;m Trying
+------
+age: 25
+album: Infinite Dream
+------
+age: 26
+album: Solar Power
+------
+Comparisons: 5
+Swaps: 2
 </pre>
 </div>
 </div>
