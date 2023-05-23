@@ -81,155 +81,6 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">jupyter</span> <span class="n">themes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Requirement already satisfied: jupyter in /home/kaylee/anaconda3/lib/python3.9/site-packages (1.0.0)
-Collecting themes
-  Downloading themes-0.0.4-py3-none-any.whl (279 kB)
-     |████████████████████████████████| 279 kB 6.9 MB/s eta 0:00:01
-Requirement already satisfied: nbconvert in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter) (6.4.4)
-Requirement already satisfied: notebook in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter) (6.4.8)
-Requirement already satisfied: qtconsole in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter) (5.3.0)
-Requirement already satisfied: jupyter-console in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter) (6.4.0)
-Requirement already satisfied: ipykernel in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter) (6.9.1)
-Requirement already satisfied: ipywidgets in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter) (7.6.5)
-Requirement already satisfied: pyyaml in /home/kaylee/anaconda3/lib/python3.9/site-packages (from themes) (6.0)
-Requirement already satisfied: numpy in /home/kaylee/anaconda3/lib/python3.9/site-packages (from themes) (1.21.5)
-Requirement already satisfied: pandas in /home/kaylee/anaconda3/lib/python3.9/site-packages (from themes) (1.4.2)
-Requirement already satisfied: matplotlib-inline&lt;0.2.0,&gt;=0.1.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipykernel-&gt;jupyter) (0.1.2)
-Requirement already satisfied: tornado&lt;7.0,&gt;=4.2 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipykernel-&gt;jupyter) (6.1)
-Requirement already satisfied: ipython&gt;=7.23.1 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipykernel-&gt;jupyter) (8.2.0)
-Requirement already satisfied: jupyter-client&lt;8.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipykernel-&gt;jupyter) (6.1.12)
-Requirement already satisfied: debugpy&lt;2.0,&gt;=1.0.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipykernel-&gt;jupyter) (1.5.1)
-Requirement already satisfied: traitlets&lt;6.0,&gt;=5.1.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipykernel-&gt;jupyter) (5.1.1)
-Requirement already satisfied: nest-asyncio in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipykernel-&gt;jupyter) (1.5.5)
-Requirement already satisfied: decorator in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (5.1.1)
-Requirement already satisfied: pygments&gt;=2.4.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (2.11.2)
-Requirement already satisfied: pexpect&gt;4.3 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (4.8.0)
-Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (3.0.20)
-Requirement already satisfied: stack-data in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.2.0)
-Requirement already satisfied: setuptools&gt;=18.5 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (61.2.0)
-Requirement already satisfied: jedi&gt;=0.16 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.18.1)
-Requirement already satisfied: pickleshare in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.7.5)
-Requirement already satisfied: backcall in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.2.0)
-Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jedi&gt;=0.16-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.8.3)
-Requirement already satisfied: pyzmq&gt;=13 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter-client&lt;8.0-&gt;ipykernel-&gt;jupyter) (22.3.0)
-Requirement already satisfied: jupyter-core&gt;=4.6.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter-client&lt;8.0-&gt;ipykernel-&gt;jupyter) (4.9.2)
-Requirement already satisfied: python-dateutil&gt;=2.1 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jupyter-client&lt;8.0-&gt;ipykernel-&gt;jupyter) (2.8.2)
-Requirement already satisfied: ptyprocess&gt;=0.5 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from pexpect&gt;4.3-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.7.0)
-Requirement already satisfied: wcwidth in /home/kaylee/anaconda3/lib/python3.9/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.2.5)
-Requirement already satisfied: six&gt;=1.5 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from python-dateutil&gt;=2.1-&gt;jupyter-client&lt;8.0-&gt;ipykernel-&gt;jupyter) (1.16.0)
-Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipywidgets-&gt;jupyter) (1.0.0)
-Requirement already satisfied: widgetsnbextension~=3.5.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipywidgets-&gt;jupyter) (3.5.2)
-Requirement already satisfied: ipython-genutils~=0.2.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipywidgets-&gt;jupyter) (0.2.0)
-Requirement already satisfied: nbformat&gt;=4.2.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from ipywidgets-&gt;jupyter) (5.3.0)
-Requirement already satisfied: fastjsonschema in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;jupyter) (2.15.1)
-Requirement already satisfied: jsonschema&gt;=2.6 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;jupyter) (4.4.0)
-Requirement already satisfied: attrs&gt;=17.4.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;jupyter) (21.4.0)
-Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jsonschema&gt;=2.6-&gt;nbformat&gt;=4.2.0-&gt;ipywidgets-&gt;jupyter) (0.18.0)
-Requirement already satisfied: terminado&gt;=0.8.3 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from notebook-&gt;jupyter) (0.13.1)
-Requirement already satisfied: prometheus-client in /home/kaylee/anaconda3/lib/python3.9/site-packages (from notebook-&gt;jupyter) (0.13.1)
-Requirement already satisfied: jinja2 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from notebook-&gt;jupyter) (3.1.2)
-Requirement already satisfied: Send2Trash&gt;=1.8.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from notebook-&gt;jupyter) (1.8.0)
-Requirement already satisfied: argon2-cffi in /home/kaylee/anaconda3/lib/python3.9/site-packages (from notebook-&gt;jupyter) (21.3.0)
-Requirement already satisfied: argon2-cffi-bindings in /home/kaylee/anaconda3/lib/python3.9/site-packages (from argon2-cffi-&gt;notebook-&gt;jupyter) (21.2.0)
-Requirement already satisfied: cffi&gt;=1.0.1 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook-&gt;jupyter) (1.15.0)
-Requirement already satisfied: pycparser in /home/kaylee/anaconda3/lib/python3.9/site-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi-&gt;notebook-&gt;jupyter) (2.21)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from jinja2-&gt;notebook-&gt;jupyter) (2.1.2)
-Requirement already satisfied: beautifulsoup4 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (4.11.1)
-Requirement already satisfied: testpath in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (0.5.0)
-Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (0.8.4)
-Requirement already satisfied: entrypoints&gt;=0.2.2 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (0.4)
-Requirement already satisfied: defusedxml in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (0.7.1)
-Requirement already satisfied: jupyterlab-pygments in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (0.1.2)
-Requirement already satisfied: pandocfilters&gt;=1.4.1 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (1.5.0)
-Requirement already satisfied: nbclient&lt;0.6.0,&gt;=0.5.0 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (0.5.13)
-Requirement already satisfied: bleach in /home/kaylee/anaconda3/lib/python3.9/site-packages (from nbconvert-&gt;jupyter) (4.1.0)
-Requirement already satisfied: soupsieve&gt;1.2 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from beautifulsoup4-&gt;nbconvert-&gt;jupyter) (2.3.1)
-Requirement already satisfied: webencodings in /home/kaylee/anaconda3/lib/python3.9/site-packages (from bleach-&gt;nbconvert-&gt;jupyter) (0.5.1)
-Requirement already satisfied: packaging in /home/kaylee/anaconda3/lib/python3.9/site-packages (from bleach-&gt;nbconvert-&gt;jupyter) (21.3)
-Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from packaging-&gt;bleach-&gt;nbconvert-&gt;jupyter) (3.0.4)
-Requirement already satisfied: pytz&gt;=2020.1 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from pandas-&gt;themes) (2021.3)
-Requirement already satisfied: qtpy&gt;=2.0.1 in /home/kaylee/anaconda3/lib/python3.9/site-packages (from qtconsole-&gt;jupyter) (2.0.1)
-Requirement already satisfied: asttokens in /home/kaylee/anaconda3/lib/python3.9/site-packages (from stack-data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (2.0.5)
-Requirement already satisfied: pure-eval in /home/kaylee/anaconda3/lib/python3.9/site-packages (from stack-data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.2.2)
-Requirement already satisfied: executing in /home/kaylee/anaconda3/lib/python3.9/site-packages (from stack-data-&gt;ipython&gt;=7.23.1-&gt;ipykernel-&gt;jupyter) (0.8.3)
-Installing collected packages: themes
-Successfully installed themes-0.0.4
-Note: you may need to restart the kernel to use updated packages.
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jt -l
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>/bin/bash: jt: command not found
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><table>
-    <tr>
-        <td><img src="/myproject//images/prof.png" height="60" title="Frontend" alt="" /></td>
-        <td><a href="/myproject/frontend/scrum">Scrum Process and Team Outline</a></td>
-        <td><a href="/myproject/frontend/csterms">Week 2 CS Terms</a></td>
-        <td><a href="/myproject/frontend/api">API Example</a></td>
-    </tr>
-</table></p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="JavaScript-and-Jupyter-references">JavaScript and Jupyter references<a class="anchor-link" href="#JavaScript-and-Jupyter-references"> </a></h2><blockquote><p>JavaScript is the most important language you need to learn as a frontend developer.  Jupyter Notebooks is a convenient way to learn the language without the overhead of creating a full Website.  Jupyter Notebooks had ChatGPT plugins to assist with design and troubleshooting problems.  This Notebook has colors on HTML pages that were designed with a dark mode background.</p>
@@ -391,10 +242,10 @@ Note: you may need to restart the kernel to use updated packages.
 
 
 
-<div id="67405df2-e1e1-473b-8b60-4c6b428fb525"></div>
+<div id="906e2cf1-1fb2-47ae-9f1f-0ff595790b08"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#67405df2-e1e1-473b-8b60-4c6b428fb525');
+var element = $('#906e2cf1-1fb2-47ae-9f1f-0ff595790b08');
 console.log("JavaScript/Jupyter Output Intro");
 
 // Browser Console output; debugging or tracing
@@ -467,10 +318,10 @@ element.append('<br><b>Hello World Again!');
 
 
 
-<div id="84f852ba-f5cd-43d6-a5a3-5c7d9142320e"></div>
+<div id="65c30880-0942-4cab-b503-26160014caf6"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#84f852ba-f5cd-43d6-a5a3-5c7d9142320e');
+var element = $('#65c30880-0942-4cab-b503-26160014caf6');
 console.log("Variable Definition");
 
 var msg = "Hello, World!";
@@ -552,10 +403,10 @@ element.text(msg);
 
 
 
-<div id="34c44a0d-7f99-448a-a28e-ec539472f774"></div>
+<div id="3595a242-21a0-40a0-8289-c779783917df"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#34c44a0d-7f99-448a-a28e-ec539472f774');
+var element = $('#3595a242-21a0-40a0-8289-c779783917df');
 console.log("Function Definition");
 
 /* Function: logIt
@@ -663,10 +514,10 @@ logIt(msg + "  " + classOf); // concatenation of strings
 
 
 
-<div id="bded7e11-8d70-4f67-871e-c2fc4a77e356"></div>
+<div id="424fa84c-24b3-4a3f-8e0a-f1884a3baa82"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#bded7e11-8d70-4f67-871e-c2fc4a77e356');
+var element = $('#424fa84c-24b3-4a3f-8e0a-f1884a3baa82');
 console.log("Examine Data Types");
 
 // Function to add typeof to output
@@ -913,10 +764,10 @@ logIt(JSON.stringify(person));  //method used to convert this object into readab
 
 
 
-<div id="2573b03c-8c53-4cf7-8151-277e367cf31c"></div>
+<div id="ccd67178-6761-419e-b249-defa6619bbcb"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#2573b03c-8c53-4cf7-8151-277e367cf31c');
+var element = $('#ccd67178-6761-419e-b249-defa6619bbcb');
 console.log("Person objects");
 
 /* class: Person
@@ -1134,10 +985,10 @@ student.logIt(); // log to console
 
 
 
-<div id="464dde0d-8775-411b-8c69-4b004556a9ca"></div>
+<div id="e38983f6-be5d-4c71-be55-8b2dffe9eca4"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#464dde0d-8775-411b-8c69-4b004556a9ca');
+var element = $('#e38983f6-be5d-4c71-be55-8b2dffe9eca4');
 console.log("Classroom object");
 
 /* class: Person
@@ -1326,10 +1177,10 @@ $('#jsonText').text(compsci.json);  // posts/embeds/writes compsci.json to HTML 
 
 
 
-<div id="1362f61d-b72a-4985-8118-b7c720e02084"></div>
+<div id="e0d10739-b90d-44e4-9853-c3db3f7730e8"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#1362f61d-b72a-4985-8118-b7c720e02084');
+var element = $('#e0d10739-b90d-44e4-9853-c3db3f7730e8');
 console.log("Classroom Web Page");
 
 // extract JSON text from HTML page
