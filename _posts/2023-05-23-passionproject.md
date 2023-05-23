@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
     <title>Song Recommendation</title>
@@ -14,7 +14,7 @@
         function recommendSongs() {
             var userInput = document.getElementById("songInput").value;
             
-            fetch('http://172.25.189.122:8080/songdatabase')  // Replace with your actual backend API link
+            fetch('https://172.25.189.122:8080/songdatabase')  // Replace with your actual backend API link
                 .then(response => response.json())
                 .then(data => {
                     // Filter the songs based on the user's input
