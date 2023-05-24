@@ -12,55 +12,47 @@
 <script>
         function recommendSongs() {
             var userInput = document.getElementById("songInput").value;
-
-            // Call the new JavaScript function for song recommendation
             recommendSimilarSongs(userInput);
         }
 
         function recommendSimilarSongs(title) {
-            // Define the features to use for similarity calculation
-            var features = ['Beats Per Minute (BPM)', 'Energy', 'Danceability', 'Loudness (dB)', 
-                            'Liveness', 'Valence', 'Length (Duration)', 'Acousticness', 'Speechiness'];
+            var features = ['bpm', 'energy', 'danceability', 'loudness', 'valence'];
 
-            // Fetch the song data from your API
             fetch('http://172.25.189.122:8080/songdatabase')
                 .then(response => response.json())
                 .then(data => {
-                    // Use the fetched song data for recommendation
                     var songData = data;
 
-                    // Find the song with the given title
-                    var song = songData.find(song => song.title.toLowerCase() === title.toLowerCase());
+                    var inputIndex;
+                    var inputSong = songData.find(function (song, index) {
+                        if (song.title.toLowerCase() === title.toLowerCase()) {
+                            inputIndex = index;
+                            return true;
+                        }
+                        return false;
+                    });
 
-                    if (!song) {
+                    if (!inputSong) {
                         console.log("The title you entered is not in our database. Try another, or fix spelling");
                         return;
                     }
 
-                    // Calculate the cosine similarity between the given song and all other songs
-                    var similarities = songData.map(function (otherSong) {
-                        var otherFeatures = features.map(function (feature) {
-                            return otherSong[feature];
-                        });
-                        var songFeatures = features.map(function (feature) {
-                            return song[feature];
-                        });
-                        return cosineSimilarity(otherFeatures, songFeatures);
+                    var similarities = songData.map(function (song, index) {
+                        if (index === inputIndex) return Infinity; // Exclude the inputted song
+                        return calculateSimilarity(inputSong, song);
                     });
 
-                    // Get the indices of the top 5 most similar songs
                     var topIndices = getTopIndices(similarities, 5);
 
-                    // Display the top 5 most similar songs
                     var recommendationsDiv = document.getElementById("recommendations");
                     recommendationsDiv.innerHTML = "<p>Based on the song you like: " + title + ", we recommend these five songs for your new playlist:</p><hr>";
-                    for (var i = 0; i < topIndices.length; i++) {
-                        var index = topIndices[i];
+                    for (var i = 1; i < topIndices.length + 1; i++) {
+                        var index = topIndices[i - 1];
                         var recommendedSong = songData[index];
                         var songTitle = recommendedSong.title;
                         var songArtist = recommendedSong.artist;
                         var recommendation = document.createElement("p");
-                        recommendation.textContent = (i + 1) + ". " + songTitle + " by " + songArtist;
+                        recommendation.textContent = i + ". " + songTitle + " by " + songArtist;
                         recommendationsDiv.appendChild(recommendation);
                     }
                 })
@@ -69,18 +61,14 @@
                 });
         }
 
-        function cosineSimilarity(arr1, arr2) {
-            var dotProduct = 0;
-            var magnitude1 = 0;
-            var magnitude2 = 0;
-            for (var i = 0; i < arr1.length; i++) {
-                dotProduct += arr1[i] * arr2[i];
-                magnitude1 += arr1[i] * arr1[i];
-                magnitude2 += arr2[i] * arr2[i];
-            }
-            magnitude1 = Math.sqrt(magnitude1);
-            magnitude2 = Math.sqrt(magnitude2);
-            return dotProduct / (magnitude1 * magnitude2);
+        function calculateSimilarity(song1, song2) {
+            var features = ['bpm', 'energy', 'danceability', 'loudness', 'valence'];
+            var differences = features.map(function (feature) {
+                return Math.abs(song1[feature] - song2[feature]);
+            });
+            return differences.reduce(function (sum, difference) {
+                return sum + difference;
+            }, 0);
         }
 
         function getTopIndices(arr, count) {
@@ -88,7 +76,7 @@
                 return index;
             });
             indices.sort(function (a, b) {
-                return arr[b] - arr[a];
+                return arr[a] - arr[b];
             });
             return indices.slice(0, count);
         }
