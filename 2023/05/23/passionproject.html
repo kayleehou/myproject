@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <title>Song Recommendation</title>
@@ -13,25 +12,55 @@
 <script>
         function recommendSongs() {
             var userInput = document.getElementById("songInput").value;
-            
-            fetch('https://172.25.189.122:8080/songdatabase')  // Replace with your actual backend API link
+
+            // Call the new JavaScript function for song recommendation
+            recommendSimilarSongs(userInput);
+        }
+
+        function recommendSimilarSongs(title) {
+            // Define the features to use for similarity calculation
+            var features = ['Beats Per Minute (BPM)', 'Energy', 'Danceability', 'Loudness (dB)', 
+                            'Liveness', 'Valence', 'Length (Duration)', 'Acousticness', 'Speechiness'];
+
+            // Fetch the song data from your API
+            fetch('http://172.25.189.122:8080/songdatabase')
                 .then(response => response.json())
                 .then(data => {
-                    // Filter the songs based on the user's input
-                    var filteredSongs = data.filter(song => song.title.toLowerCase().includes(userInput.toLowerCase()));
-                    
-                    // Sort the filtered songs based on all keys dynamically
-                    var sortedSongs = mergeSort(filteredSongs);
-                    
-                    // Display the top 5 recommended songs
+                    // Use the fetched song data for recommendation
+                    var songData = data;
+
+                    // Find the song with the given title
+                    var song = songData.find(song => song.title.toLowerCase() === title.toLowerCase());
+
+                    if (!song) {
+                        console.log("The title you entered is not in our database. Try another, or fix spelling");
+                        return;
+                    }
+
+                    // Calculate the cosine similarity between the given song and all other songs
+                    var similarities = songData.map(function (otherSong) {
+                        var otherFeatures = features.map(function (feature) {
+                            return otherSong[feature];
+                        });
+                        var songFeatures = features.map(function (feature) {
+                            return song[feature];
+                        });
+                        return cosineSimilarity(otherFeatures, songFeatures);
+                    });
+
+                    // Get the indices of the top 5 most similar songs
+                    var topIndices = getTopIndices(similarities, 5);
+
+                    // Display the top 5 most similar songs
                     var recommendationsDiv = document.getElementById("recommendations");
-                    recommendationsDiv.innerHTML = "";
-                    for (var i = 0; i < Math.min(sortedSongs.length, 5); i++) {
-                        var song = sortedSongs[i];
-                        var songTitle = song.title;
-                        var songArtist = song.artist;
+                    recommendationsDiv.innerHTML = "<p>Based on the song you like: " + title + ", we recommend these five songs for your new playlist:</p><hr>";
+                    for (var i = 0; i < topIndices.length; i++) {
+                        var index = topIndices[i];
+                        var recommendedSong = songData[index];
+                        var songTitle = recommendedSong.title;
+                        var songArtist = recommendedSong.artist;
                         var recommendation = document.createElement("p");
-                        recommendation.textContent = "Title: " + songTitle + ", Artist: " + songArtist;
+                        recommendation.textContent = (i + 1) + ". " + songTitle + " by " + songArtist;
                         recommendationsDiv.appendChild(recommendation);
                     }
                 })
@@ -39,52 +68,29 @@
                     console.error("Error fetching data:", error);
                 });
         }
-        
-        // Merge sort implementation
-        function mergeSort(arr) {
-            if (arr.length <= 1) {
-                return arr;
+
+        function cosineSimilarity(arr1, arr2) {
+            var dotProduct = 0;
+            var magnitude1 = 0;
+            var magnitude2 = 0;
+            for (var i = 0; i < arr1.length; i++) {
+                dotProduct += arr1[i] * arr2[i];
+                magnitude1 += arr1[i] * arr1[i];
+                magnitude2 += arr2[i] * arr2[i];
             }
-            
-            var mid = Math.floor(arr.length / 2);
-            var left = mergeSort(arr.slice(0, mid));
-            var right = mergeSort(arr.slice(mid));
-            return merge(left, right);
+            magnitude1 = Math.sqrt(magnitude1);
+            magnitude2 = Math.sqrt(magnitude2);
+            return dotProduct / (magnitude1 * magnitude2);
         }
-        
-        function merge(left, right) {
-            var result = [];
-            var i = 0, j = 0;
-            
-            while (i < left.length && j < right.length) {
-                var compare = compareKeys(left[i], right[j]);
-                if (compare < 0) {
-                    result.push(left[i++]);
-                } else {
-                    result.push(right[j++]);
-                }
-            }
-            
-            while (i < left.length) {
-                result.push(left[i++]);
-            }
-            
-            while (j < right.length) {
-                result.push(right[j++]);
-            }
-            
-            return result;
-        }
-        
-        function compareKeys(song1, song2) {
-            var keys = Object.keys(song1);
-            for (var i = 0; i < keys.length; i++) {
-                var key = keys[i];
-                if (song1[key] !== song2[key]) {
-                    return song1[key] - song2[key];
-                }
-            }
-            return 0;
+
+        function getTopIndices(arr, count) {
+            var indices = arr.map(function (value, index) {
+                return index;
+            });
+            indices.sort(function (a, b) {
+                return arr[b] - arr[a];
+            });
+            return indices.slice(0, count);
         }
     </script>
 </body>
